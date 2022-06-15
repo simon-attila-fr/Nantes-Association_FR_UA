@@ -8,8 +8,8 @@ export default function Body() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/News" element={<News />} />
-        <Route path="/Involve" element={<Involve />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/involve" element={<Involve />} />
       </Routes>
     </div>
   );
