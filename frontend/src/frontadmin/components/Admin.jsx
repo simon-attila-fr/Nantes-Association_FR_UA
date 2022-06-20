@@ -1,6 +1,6 @@
 import { Route, Routes, Link } from "react-router-dom";
 import Login from "../pages/Login";
-import Users from "../pages/Users";
+import Register from "../pages/Register";
 import Logout from "../pages/Logout";
 
 export default function Admin() {
@@ -10,21 +10,21 @@ export default function Admin() {
         <nav>
           <ul>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/admin/login">Login</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/admin/register">Register</Link>
             </li>
             <li>
-              <Link to="/logout">Disconnect</Link>
+              <Link to="/admin/logout">Logout</Link>
             </li>
           </ul>
         </nav>
 
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="/admin/login" element={<Login />} />
+          <Route path="/admin/register" element={<Register />} />
+          <Route path="/admin/logout" element={<Logout />} />
         </Routes>
       </div>
     </div>
