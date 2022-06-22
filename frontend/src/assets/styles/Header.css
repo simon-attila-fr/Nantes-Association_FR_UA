@@ -3,11 +3,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  /*justify-content: space-between;*/
   width: 100%;
   min-height: 75px;
   height: 2rem;
-  /*padding: 1rem;*/
   background-color: white;
   color: #2559b6;
   border-bottom: solid #2559b6;
@@ -40,7 +38,6 @@
   border: none;
   color: inherit;
   background: transparent;
-  /*display: none;*/
 }
 
 @media screen and (max-width: 767px) {
@@ -53,14 +50,11 @@
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    /* ? */
     width: 100vw;
     height: 100vw;
-    /*right: -100vw;*/
     top: -100vw;
     bottom: 0;
     left: 0;
-    /*height: 100vh;*/
     color: #2559b6;
     padding: 2rem;
     background-color: #a7bce1;
@@ -103,12 +97,6 @@
 
   .navbar_burger {
     display: block;
-    /*position: fixed;
-           top: 1rem;
-           right:1rem;
-           border-radius: 20%;
-           border-style:solid;
-           border-color: #2559B6;*/
   }
   .show_nav .navbar_burger {
     position: fixed;

@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.png";
+import logo from "../../assets/img/logo.png";
 import "../../assets/styles/Logo.css";
 
 export default function Logo() {

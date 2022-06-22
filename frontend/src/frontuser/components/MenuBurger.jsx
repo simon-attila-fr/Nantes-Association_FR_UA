@@ -1,21 +1,26 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import "../../assets/styles/MenuBurger.css";
 
-export default function MenuBurger(props) {
-  const { handleShowLinks } = props;
-
+export default function MenuBurger({ handleShowLinks }) {
   return (
     <>
       <div>
         <ul className="navbar_links">
           <li className="navbar_item">
-            <p className="navbar_link">ACCUEIL</p>
+            <NavLink to="/" onClick={handleShowLinks}>
+              ACCUEIL
+            </NavLink>
           </li>
           <li className="navbar_item">
-            <p className="navbar_link">ACTUALITÉS</p>
+            <NavLink to="/news" onClick={handleShowLinks}>
+              ACTUALITÉS
+            </NavLink>
           </li>
           <li className="navbar_item">
-            <p className="navbar_link">ADHÉRER, DONNER</p>
+            <NavLink to="/involve" onClick={handleShowLinks}>
+              ADHÉRER, DONNER
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -25,3 +30,11 @@ export default function MenuBurger(props) {
     </>
   );
 }
+
+MenuBurger.propTypes = {
+  handleShowLinks: PropTypes.func,
+};
+
+MenuBurger.defaultProps = {
+  handleShowLinks: false,
+};

@@ -1,4 +1,4 @@
-import don from "../../assets/coeur.png";
+import don from "../../assets/img/coeur.png";
 
 export default function Don() {
   return (
