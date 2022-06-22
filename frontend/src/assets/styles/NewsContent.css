@@ -1,33 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
 
-/*.news-card {
-    display: flex;
-    flex-direction: column;
-    padding: 1.25em;
-    width: 85%;
-    align-items: center;
-    box-shadow: 5px 5px 10px black;
-    font-size: 0.75em;
-    background-color: #C2D8B9;
-    margin-bottom: 2rem;
-  }
-
-  .news-card-title {
-    font-family: "New Cycle";
-    font-size: 1rem;
-    font-weight: normal;
-  }
-    
-  .news-card-illustration {
-    max-width: 80vw;
-    text-align: center;
-  }
-  
-  .news-card-text {
-    text-align: justify;
-    margin: 1rem;
-  } */
-
 .post-slide {
   font-family: "News Cycle";
   background: #fff;
