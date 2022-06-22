@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../../assets/Login.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/img/logo.png";
 
 function Register() {
   const [email, setEmail] = useState("");
