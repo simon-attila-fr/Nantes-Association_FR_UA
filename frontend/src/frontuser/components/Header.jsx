@@ -15,7 +15,7 @@ export default function Header() {
     <nav className={`navbar ${showLinks ? "show_nav" : null}  `}>
       <Logo />
       <Don />
-      <MenuBurger handleShowLinks={handleShowLinks}/>
+      <MenuBurger handleShowLinks={handleShowLinks} />
     </nav>
   );
 }
