@@ -2,8 +2,10 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const ContentRouter = require("./routes/ContentRouter");
 const adminRouter = require("./routes/adminRouter");
 const memberRouter = require("./routes/memberRouter");
+
 
 const app = express();
 app.use(cookieParser());
@@ -26,15 +28,17 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 
 // API routes
+
+app.use("/content", ContentRouter);
 app.use("/user", adminRouter);
 app.use("/member", memberRouter);
-/*
-// Redirect all requests to the REACT app
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "..", "..", "frontend", "dist", "index.html")
-  );
-}); */
 
+
+// Redirect all requests to the REACT app
+// app.get("*", (req, res) => {
+//   res.sendFile(
+//     path.join(__dirname, "..", "..", "frontend", "dist", "index.html")
+//   );
+// });
 // ready to export
 module.exports = app;
