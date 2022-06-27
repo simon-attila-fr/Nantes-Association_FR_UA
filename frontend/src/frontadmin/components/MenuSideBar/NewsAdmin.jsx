@@ -1,3 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function NewsAdmin() {
-  return <div>Actualités</div>;
+  return (
+    <div>
+      <Link to="/admin/actualites"> Actualites </Link>
+    </div>
+  );
 }
