@@ -52,7 +52,6 @@ export default function JoinForm() {
                 className="newsletter-checkbox"
                 name="checkbox"
                 id=""
-                // onChange={(e) => handleCheck("newsletter", e.target.checked)}
               />
             </div>
           </label>
