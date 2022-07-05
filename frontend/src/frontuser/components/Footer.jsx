@@ -12,6 +12,7 @@ export default function Footer() {
     e.preventDefault();
 
     if (!email) {
+      // eslint-disable-next-line no-alert
       alert("Veuillez entrer votre email");
     }
   };
