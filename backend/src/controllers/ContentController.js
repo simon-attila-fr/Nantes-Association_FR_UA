@@ -50,7 +50,6 @@ class ContentController {
         res.sendStatus(500);
       });
   };
-
 }
 
 module.exports = ContentController;
