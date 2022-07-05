@@ -1,2 +1,7 @@
 node_modules
+<<<<<<< Updated upstream
 .env
+=======
+.env
+frontend/src/assets/img
+>>>>>>> Stashed changes
