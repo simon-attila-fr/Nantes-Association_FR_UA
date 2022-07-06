@@ -1,4 +1,4 @@
-.donate_block {
+/* .donate_block {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -28,4 +28,4 @@
 .donate_block {
   display: flex;
   flex-direction: column;
-}
+} */
