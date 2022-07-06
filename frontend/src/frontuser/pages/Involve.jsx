@@ -58,14 +58,14 @@ export default function Involve() {
             de votre cotisation et l'envoi de votre reçu fiscal.
           </p>
         </div>
-        <button type="button">
-          <a className="join-button" href="formulaire d'adhésion.pdf" download>
+        <button className="join-button" type="button">
+          <a href="formulaire d'adhésion.pdf" download>
             Télécharger notre formulaire d'adhésion
           </a>
         </button>
       </div>
       <div className="contact-block">
-        <h2 className="contact-title">Contactez-nous !</h2>
+        <h2 className="contact-title">Ecrivez-nous !</h2>
         <div className="contact-content">
           <p className="contact-content-text">
             N'hésitez pas à prendre contact avec nous pour en savoir plus sur
@@ -75,9 +75,9 @@ export default function Involve() {
         </div>
       </div>
       <div className="infos-block">
-        <h2 className="infos-title">Restez en contact !</h2>
-        <div className="donate-content">
-          <p className="donate-content-text">
+        <h2 className="infos-title">Appelez-nous !</h2>
+        <div className="infos-content">
+          <p className="infos-content-text">
             N'hésitez pas à nous appeler si vous préférez vous entretenir de
             vive-voix avec nous :
             <ul>
