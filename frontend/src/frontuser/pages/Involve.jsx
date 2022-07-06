@@ -30,6 +30,7 @@ export default function Involve() {
           </div>
         </div>
       </div>
+
       <div className="join-block">
         <h2 className="join-title">Adhérez !</h2>
         <div className="join-content">
@@ -64,6 +65,7 @@ export default function Involve() {
           </a>
         </button>
       </div>
+
       <div className="contact-block">
         <h2 className="contact-title">Ecrivez-nous !</h2>
         <div className="contact-content">
@@ -74,19 +76,19 @@ export default function Involve() {
           </p>
         </div>
       </div>
-      <div className="infos-block">
+      {/* <div className="infos-block">
         <h2 className="infos-title">Appelez-nous !</h2>
         <div className="infos-content">
           <p className="infos-content-text">
             N'hésitez pas à nous appeler si vous préférez vous entretenir de
             vive-voix avec nous :
-            <ul>
+            <ul className="infos-list">
               <li>Julia Lambert 06.71.73.83.49</li>
               <li>Oleksandra Rouxel 06.32.41.44.56</li>
             </ul>
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
