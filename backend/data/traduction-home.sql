@@ -1,0 +1,17 @@
+INSERT INTO traduction (ref, definition, type) VALUES 
+('website_title', 'Titre du site', 0), 
+('website_subtitle', 'Sous-titre du site', 0), 
+('fact_content', 'Introduction Chiffres clés', 0),
+('fact_number1', 'Chiffre Clé #1', 0), 
+('fact_content1', 'Chiffre Clé #1 - Détail', 0),
+('fact_number2', 'Chiffre Clé #2', 0), 
+('fact_content2', 'Chiffre Clé #2 - Détail', 0),
+('fact_number3', 'Chiffre Clé #3', 0), 
+('fact_content3','Chiffre Clé #3 - Détail', 0),
+('presentation_title_section', 'Titre de la section', 0),
+('presentation_title', 'Présentation : titre', 0), 
+('presentation_content', 'Présentation : détail', 1), 
+('mission_title','Missions : titre', 0), 
+('mission_content', 'Mission : détail', 1), 
+('values_title','Valeurs : titre', 0), 
+('values_content', 'Valeurs : détail', 1);
