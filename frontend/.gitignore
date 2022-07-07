@@ -12,8 +12,6 @@ dist
 dist-ssr
 *.local
 .env
-src/assets/img
-
 
 # Editor directories and files
 .vscode/*
@@ -25,4 +23,3 @@ src/assets/img
 *.njsproj
 *.sln
 *.sw?
-/home/nico/wcs/2022-03-JS-Nantes-Association_FR_UA/frontend/src/assets/img

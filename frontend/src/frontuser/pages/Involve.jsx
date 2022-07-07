@@ -35,11 +35,11 @@ export default function Involve() {
         <h2 className="join-title">Adhérez !</h2>
         <div className="join-content">
           <p className="join-content-text">
-            Faire un don c'est nous permettre d'agir, en menant des actions
-            d'aides humanitaires vers les civils ukrainiens victimes de la
-            guerre, et de soutenir les réfugiés en France. Votre don est
-            précieux, nous avons besoin de votre générosité pour intervenir en
-            toute indépendance, afin de soutenir l'Ukraine.
+            Adhérer à Avenir Franco-Ukrainien c'est soutenir l'Ukraine, en lui
+            apportant un peu de votre temps et de vos compétences, c'est
+            également contribuer au développement de l'association par les
+            participations aux manifestations extérieures : marches pour la
+            paix, expositions culturelles, missions de bénévolat.
           </p>
         </div>
         <div className="join-bonus">
@@ -49,6 +49,7 @@ export default function Involve() {
             jeunes (8€), ou encore adhérents bienfaiteurs, associations,
             collectivités publiques, et autres personnes morales ou membres
             honoraires (100€). Merci de votre engagement et à bientôt parmi nous
+            !
           </p>
         </div>
         <div className="join-form">

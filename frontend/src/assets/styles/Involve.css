@@ -5,10 +5,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: "Asap", sans-serif;
 }
 
 .involve-section h2 {
-  font-family: "Asap", sans-serif;
+  /* font-family: , */
   color: #DD403A;
 }
 
@@ -66,12 +67,16 @@
   position: relative;
 }
 
+.donate-bonus-text, .join-bonus-text {
+  padding: 0.5rem;
+  box-shadow: 0px 0px 20px #666
+}
+
 .join-button {
     border-radius: 1.875rem;
     padding: 1rem;
     margin-top: 2rem;
     cursor: pointer;
-    display: inline-block;
     font-family: "Asap",sans-serif;
     font-size: 1rem;
 }
