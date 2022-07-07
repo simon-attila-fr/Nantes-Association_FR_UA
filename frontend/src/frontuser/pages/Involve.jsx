@@ -1,5 +1,4 @@
 import "../../assets/styles/Involve.css";
-import Don from "../components/Don";
 
 export default function Involve() {
   return (
@@ -17,18 +16,18 @@ export default function Involve() {
         </div>
         <div className="donate-bonus">
           <p className="donate-bonus-text">
-            <strong>Bon à savoir :</strong> Votre don vous donne droit à une
-            réduction d'impôts de 75% de son montant dans la limite de 1000
-            euros de dons (plafond 2020). Au-delà, la réduction d’impôt est de
-            66 % du montant dans la limite de 20 % de vos revenus nets
-            imposables. Vous pouvez par la suite remplir vos coordonnées
-            personnelles, elles sont indispensables pour que nous puissions
-            traiter votre don et vous envoyer un reçu fiscal.
+            Bon à savoir : Votre don vous donne droit à une réduction d'impôts
+            de 75% de son montant dans la limite de 1000 euros de dons (plafond
+            2020). Au-delà, la réduction d’impôt est de 66 % du montant dans la
+            limite de 20 % de vos revenus nets imposables. Vous pouvez par la
+            suite remplir vos coordonnées personnelles, elles sont
+            indispensables pour que nous puissions traiter votre don et vous
+            envoyer un reçu fiscal.
           </p>
-          <div className="don-button">
-            <Don />
-          </div>
         </div>
+        <button className="gift-button" type="button">
+          <a href="module de paiement du CM">FAIRE UN DON</a>
+        </button>
       </div>
 
       <div className="join-block">
@@ -44,12 +43,11 @@ export default function Involve() {
         </div>
         <div className="join-bonus">
           <p className="join-bonus-text">
-            <strong>Bon à savoir :</strong> Le montant de votre cotisation sera
-            fonction de votre statut de membre : adhérents (15€), adhérents
-            jeunes (8€), ou encore adhérents bienfaiteurs, associations,
-            collectivités publiques, et autres personnes morales ou membres
-            honoraires (100€). Merci de votre engagement et à bientôt parmi nous
-            !
+            Bon à savoir : Le montant de votre cotisation sera fonction de votre
+            statut de membre : adhérents (15€), adhérents jeunes (8€), ou encore
+            adhérents bienfaiteurs, associations, collectivités publiques, et
+            autres personnes morales ou membres honoraires (100€). Merci de
+            votre engagement et à bientôt parmi nous !
           </p>
         </div>
         <div className="join-form">
@@ -62,7 +60,7 @@ export default function Involve() {
         </div>
         <button className="join-button" type="button">
           <a href="formulaire d'adhésion.pdf" download>
-            Télécharger notre formulaire d'adhésion
+            Télécharger le formulaire
           </a>
         </button>
       </div>
