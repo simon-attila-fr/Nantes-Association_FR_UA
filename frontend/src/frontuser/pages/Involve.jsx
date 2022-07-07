@@ -77,19 +77,6 @@ export default function Involve() {
           </p>
         </div>
       </div>
-      {/* <div className="infos-block">
-        <h2 className="infos-title">Appelez-nous !</h2>
-        <div className="infos-content">
-          <p className="infos-content-text">
-            N'hésitez pas à nous appeler si vous préférez vous entretenir de
-            vive-voix avec nous :
-            <ul className="infos-list">
-              <li>Julia Lambert 06.71.73.83.49</li>
-              <li>Oleksandra Rouxel 06.32.41.44.56</li>
-            </ul>
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 }
