@@ -23,7 +23,7 @@ export default function ContentInvolve() {
 
   return (
     <div>
-      <h1> Modifier la page d'accueil </h1>
+      <h1> Modifier la page de don, d'adhésion et de contact </h1>
       <InvolveForm content={content} />
     </div>
   );
