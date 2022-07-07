@@ -10,7 +10,9 @@ class ContentManager extends AbstractManager {
   }
 
   findAll() {
-    return this.connection.query(`select * from ${this.table}`);
+    return this.connection.query(
+      `select content.*, traduction.ref, traduction.definition, traduction.type  from ${this.table} INNER JOIN traduction on ${this.table}.traduction_id=traduction.id`
+    );
   }
 
   update(content) {
