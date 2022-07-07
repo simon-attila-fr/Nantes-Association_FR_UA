@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 .env
-src/assets/img
 
 # Editor directories and files
 .vscode/*
