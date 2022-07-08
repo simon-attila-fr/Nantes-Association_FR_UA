@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 app.use("/content", ContentRouter);
 app.use("/user", adminRouter);
 app.use("/member", memberRouter);
-app.use("/photo", express.static("public/assets/images"));
+app.use("/photo", PhotoRouter);
 
 // Redirect all requests to the REACT app
 // app.get("*", (req, res) => {
