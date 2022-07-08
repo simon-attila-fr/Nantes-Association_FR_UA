@@ -9,6 +9,7 @@ import NewsAdmin from "./frontadmin/components/MenuSideBar/NewsAdmin";
 import DonsAdmin from "./frontadmin/components/MenuSideBar/DonsAdmin";
 import ButtonDisconnect from "./frontadmin/components/MenuSideBar/ButtonDisconnect";
 import "./assets/styles/App.css";
+import Members from "./frontadmin/pages/Members";
 
 export default function App() {
   return (
@@ -19,8 +20,8 @@ export default function App() {
           {/* <Route path="/news" element={<News />} /> */}
           <Route path="/involve" element={<Involve />} />
         </Route>
-      </Routes>
-      <Routes>
+        <Route path="/admin/members" element={<Members />} />
+
         <Route path="/admin/" element={<ButtonDisconnect />}>
           <Route path="/admin/accueil" element={<HomeAdmin />} />
           <Route path="/admin/actualites" element={<NewsAdmin />} />
