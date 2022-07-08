@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+// eslint-disable-next-line import/no-unresolved
 import { FaAngleUp } from "react-icons/fa";
 import "../../assets/styles/ScrollButton.css";
 
