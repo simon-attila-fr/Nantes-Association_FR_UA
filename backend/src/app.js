@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const ContentRouter = require("./routes/ContentRouter");
 const adminRouter = require("./routes/adminRouter");
 const memberRouter = require("./routes/memberRouter");
+const PhotoRouter = require("./routes/PhotoRouter");
 
 const app = express();
 app.use(cookieParser());
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 app.use("/content", ContentRouter);
 app.use("/user", adminRouter);
 app.use("/member", memberRouter);
+app.use("/photo", PhotoRouter);
 
 // Redirect all requests to the REACT app
 // app.get("*", (req, res) => {
