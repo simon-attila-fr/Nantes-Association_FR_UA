@@ -3,10 +3,9 @@ import Header from "./frontuser/components/Header";
 import Footer from "./frontuser/components/Footer";
 import Home from "./frontuser/pages/Home";
 import Involve from "./frontuser/pages/Involve";
-import HomeAdmin from "./frontadmin/components/MenuSideBar/HomeAdmin";
-import NewsAdmin from "./frontadmin/components/MenuSideBar/NewsAdmin";
-import DonsAdmin from "./frontadmin/components/MenuSideBar/DonsAdmin";
-import ButtonDisconnect from "./frontadmin/components/MenuSideBar/ButtonDisconnect";
+import ContentHome from "./frontadmin/pages/ContentHome";
+// import ContentInvolve from "./frontadmin/pages/ContentInvolve";
+import Login from "./frontadmin/pages/Login";
 import "./assets/styles/App.css";
 
 export default function App() {
@@ -16,10 +15,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/involve" element={<Involve />} />
-        <Route path="/admin/" element={<ButtonDisconnect />} />
-        <Route path="/admin/accueil" element={<HomeAdmin />} />
-        <Route path="/admin/actualites" element={<NewsAdmin />} />
-        <Route path="/admin/donation" element={<DonsAdmin />} />
+        <Route path="/admin/" element={<Login />} />
+        <Route path="/admin/content/home" element={<ContentHome />} />
+        {/* <Route path="/admin/content/involve" element={<ContentInvolve/>} /> */}
       </Routes>
       <Footer />
     </div>

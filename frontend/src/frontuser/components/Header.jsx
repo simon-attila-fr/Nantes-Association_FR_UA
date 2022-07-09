@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "../../assets/styles/Header.css";
-
-import Logo from "./Logo";
 import Don from "./Don";
 import MenuBurger from "./MenuBurger";
 
@@ -14,8 +12,11 @@ export default function Header() {
 
   return (
     <nav className={`navbar ${showLinks ? "show_nav" : null}  `}>
-      <Logo />
       <Don />
+      <div className="lang-choice">
+        <button type="button">Français</button>
+        <button type="button">українська</button>
+      </div>
       <MenuBurger handleShowLinks={handleShowLinks} />
     </nav>
   );
