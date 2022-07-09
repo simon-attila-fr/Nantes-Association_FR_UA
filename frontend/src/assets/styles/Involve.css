@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Knewave&display=swap");
 
 .involve-section {
   display: flex;
@@ -10,15 +10,17 @@
 }
 
 .involve-section h2 {
-  font-family: 'Knewave', cursive;
-  color: #DD403A;
+  font-family: "Knewave", cursive;
+  color: #dd403a;
 }
 
 .involve-section p {
   margin-top: 1.5rem;
 }
 
-.donate-block, .join-block, .contact-block {
+.donate-block,
+.join-block,
+.contact-block {
   padding: 2rem;
   width: 100%;
   height: 100%;
@@ -39,19 +41,19 @@
   padding: 1rem;
   margin-top: 2rem;
   cursor: pointer;
-  font-family: "Asap",sans-serif;
+  font-family: "Asap", sans-serif;
   font-size: 1rem;
-  background-color: #F8D849;
+  background-color: #f8d849;
 }
 
 .join-button {
-    border-radius: 1.875rem;
-    padding: 1rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    font-family: "Asap",sans-serif;
-    font-size: 1rem;
-    background-color: #F8D849;
+  border-radius: 1.875rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-family: "Asap", sans-serif;
+  font-size: 1rem;
+  background-color: #f8d849;
 }
 
 a {
