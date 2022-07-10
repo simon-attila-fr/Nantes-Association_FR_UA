@@ -5,9 +5,9 @@ import Home from "./frontuser/pages/Home";
 import Involve from "./frontuser/pages/Involve";
 import HomeAdmin from "./frontadmin/components/MenuSideBar/HomeAdmin";
 import NewsAdmin from "./frontadmin/components/MenuSideBar/NewsAdmin";
-import DonsAdmin from "./frontadmin/components/MenuSideBar/DonsAdmin";
 import "./assets/styles/App.css";
 import Welcome from "./frontadmin/pages/Welcome";
+import ContentHome from "./frontadmin/pages/ContentHome";
 
 export default function App() {
   return (
@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/admin/" element={<Welcome />}>
           <Route path="/admin/accueil" element={<HomeAdmin />} />
           <Route path="/admin/actualites" element={<NewsAdmin />} />
-          <Route path="/admin/donation" element={<DonsAdmin />} />
+          <Route path="/admin/donation" element={<ContentHome />} />
         </Route>
       </Routes>
       <Footer />

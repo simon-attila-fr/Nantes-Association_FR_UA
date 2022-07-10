@@ -8,7 +8,7 @@ import { Outlet } from "react-router-dom";
 
 export default function Welcome() {
   return (
-    <div>
+    <div className="welcome">
       <div className="sidebar">
         <HomeAdmin />
         <NewsAdmin />
