@@ -55,7 +55,9 @@ CREATE TABLE `content` (
 
 CREATE TABLE `traduction` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `ref` varchar(255) NOT NULL
+  `ref` varchar(255) NOT NULL,
+  `definition` VARCHAR(255), 
+  `type` INT
 );
 
 ALTER TABLE `mosaic` ADD FOREIGN KEY (`photo_id`) REFERENCES `photo` (`id`);
