@@ -1,6 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import { useState } from "react";
+import React, { useState } from "react";
+import data from "./data";
+import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
@@ -9,6 +13,7 @@ import tel from "../../assets/phone.svg";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [questions, setQuestions] = useState(data);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -81,57 +86,25 @@ export default function Footer() {
             </form>
           </div>
           <div className="legalMentionsContainer">
-            <div id="div-accordion" className="container-accordions">
-              <section className="juridique">
-                <h5 className="legalMentions" id="ancre1">
+            <main>
+              <div className="container">
+                <h3 className="legalMentions" id="ancre1">
                   Mentions légales & Politique de Confidentialité
-                </h5>
-                <button className="accordion active" type="button">
-                  Mentions légales
-                </button>
-                <div className="panel">
-                  <p>
-                    L’adresse du site est : https://www. Contact : Marianne –
-                    Nantes – assoavenirukrfr@gmail.com Hébergeur : 1&1 IONOS SE
-                    – Elgendorfer Str. 57 – 56410 Montabaur – Allemagne +49 (0)
-                    721 170 555
-                  </p>
-                </div>
-                <button className="accordion active" type="button">
-                  Politique de Confidentialité
-                </button>
-                <div className="panel">
-                  <p>
-                    Le site n’utilise aucun cookie, ne contient aucune
-                    publicité, aucun traceur, aucune statistique. Aucune
-                    information n’est collectée sur les visiteurs du site. Les
-                    seules informations collectées le sont par l’hébergeur et
-                    concernent les fichiers journaux légaux et obligatoires des
-                    accès au site. Biensûr, lorsque vous adhérez à
-                    l'association, nous collectons les informations que vous
-                    nous avez volontairement transmises à cette fin. Ces données
-                    ne seront utilisées que dans le cadre stricte de
-                    l'association pour gérer l'adhésion mais elles ne seront pas
-                    données ou vendues à des entités tierces. En outre, vous
-                    disposez d'un droit d'accès et de rectification sur vos
-                    données en prenant contact à l'adresse mail suivante :
-                    <a
-                      href="mailto:assoavenirukrfr@gmail.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                  </p>
-                </div>
-              </section>
-            </div>
+                </h3>
+                <section className="info">
+                  {questions.map((question) => (
+                    <Legal key={question.id} {...question} />
+                  ))}
+                </section>
+              </div>
+            </main>
           </div>
-          <div className="copyrightContainer">
-            <p className="copyright">
-              {" "}
-              &copy;{new Date().getFullYear()} Association Avenir Franco
-              Ukrainien
-            </p>
-          </div>
+        </div>
+        <div className="copyrightContainer">
+          <p className="copyright">
+            {" "}
+            &copy;{new Date().getFullYear()} Association Avenir Franco Ukrainien
+          </p>
         </div>
       </div>
     </div>

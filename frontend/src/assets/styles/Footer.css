@@ -110,7 +110,7 @@ img {
 }
 
 .legalMentionsContainer {
-  height: 100rem;
+  height: 15rem;
   border-bottom: 2px solid #424040;
 }
 
@@ -134,44 +134,10 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 0.5rem;
-  height: 6vh;
+  height: 2vh;
 }
 
 .copyright {
   text-align: center;
   color: #fff;
-}
-
-.container-accordions {
-  margin: 6px;
-}
-
-.container-accordions button {
-  color: #3caac1;
-}
-
-.accordion {
-  background-color: #fff;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: center;
-  border: 0.5px solid greenyellow;
-  outline: none;
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-.active, .accordion:hover {
-  background-color: orange;
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-  border: 1px solid green;
-  border-radius: 4px;
 }
