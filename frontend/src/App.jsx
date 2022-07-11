@@ -1,33 +1,40 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
+/* eslint-disable react/jsx-no-comment-textnodes */
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import GlobalContext from "./frontuser/contexts/GlobalContext";
 import Header from "./frontuser/components/Header";
 import Footer from "./frontuser/components/Footer";
 import Home from "./frontuser/pages/Home";
-// import News from "./frontuser/pages/News";
 import Involve from "./frontuser/pages/Involve";
-import HomeAdmin from "./frontadmin/components/MenuSideBar/HomeAdmin";
-import NewsAdmin from "./frontadmin/components/MenuSideBar/NewsAdmin";
-import DonsAdmin from "./frontadmin/components/MenuSideBar/DonsAdmin";
-import ButtonDisconnect from "./frontadmin/components/MenuSideBar/ButtonDisconnect";
+import Login from "./frontadmin/pages/Login";
+import ContentHome from "./frontadmin/pages/ContentHome";
+// import ContentInvolve from "./frontadmin/pages/ContentInvolve";
 import "./assets/styles/App.css";
 
 export default function App() {
+  const [traduction, setTraduction] = useState({});
+  const [lang, setLang] = useState("FR");
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/traduction`)
+      .then((response) => response.json())
+      .then((data) => setTraduction(data));
+  }, []);
+
   return (
     <div className="app">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />}>
-          {/* <Route path="/news" element={<News />} /> */}
+      <GlobalContext.Provider value={{ traduction, lang, setLang }}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/involve" element={<Involve />} />
-        </Route>
-      </Routes>
-      <Routes>
-        <Route path="/admin/" element={<ButtonDisconnect />}>
-          <Route path="/admin/accueil" element={<HomeAdmin />} />
-          <Route path="/admin/actualites" element={<NewsAdmin />} />
-          <Route path="/admin/donation" element={<DonsAdmin />} />
-        </Route>
-      </Routes>
-      <Footer />
+          <Route path="/admin/" element={<Login />} />
+          <Route path="/admin/content/home" element={<ContentHome />} />
+          {/* <Route path="/admin/content/involve" element={<ContentInvolve />} /> */}
+        </Routes>
+        <Footer />
+      </GlobalContext.Provider>
     </div>
   );
 }
