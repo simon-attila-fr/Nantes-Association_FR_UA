@@ -8,6 +8,7 @@ const MemberRouter = require("./routes/MemberRouter");
 const PhotoRouter = require("./routes/PhotoRouter");
 const TraductionRouter = require("./routes/TraductionRouter");
 
+
 const app = express();
 app.use(cookieParser());
 
@@ -36,6 +37,7 @@ app.use("/user", AdminRouter);
 app.use("/member", MemberRouter);
 app.use("/photo", PhotoRouter);
 app.use("/traduction", TraductionRouter);
+
 
 // Redirect all requests to the REACT app
 // app.get("*", (req, res) => {
