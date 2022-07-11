@@ -21,7 +21,7 @@ export default function Footer() {
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "e-mail obligatoire !",
+        title: "e-mail obligatoire",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -94,12 +94,7 @@ export default function Footer() {
               <div className="legalMentions" id="ancre1" />
               <section className="info">
                 {questions.map((question) => (
-                  <Legal
-                    key={question.id}
-                    {...question}
-                    // title={questions.title}
-                    // info={questions.info}
-                  />
+                  <Legal key={question.id} {...question} />
                 ))}
               </section>
             </div>
