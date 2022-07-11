@@ -1,4 +1,6 @@
 import "../../assets/styles/Involve.css";
+import JoinForm from "../components/JoinForm";
+import ContactForm from "../components/ContactForm";
 
 export default function Involve() {
   return (
@@ -58,6 +60,7 @@ export default function Involve() {
             de votre cotisation et l'envoi de votre reçu fiscal.
           </p>
         </div>
+        <JoinForm />
         <button className="join-button" type="button">
           <a href="formulaire d'adhésion.pdf" download>
             Télécharger le formulaire
@@ -74,6 +77,7 @@ export default function Involve() {
             nos actions.
           </p>
         </div>
+        <ContactForm />
       </div>
     </div>
   );

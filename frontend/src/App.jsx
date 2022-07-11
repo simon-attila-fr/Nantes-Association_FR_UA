@@ -24,6 +24,7 @@ export default function App() {
 
   return (
     <div className="app">
+
       <GlobalContext.Provider value={{ traduction, lang, setLang }}>
         <Header />
         <Routes>
