@@ -9,7 +9,7 @@ const questions = [
   },
   {
     id: 2,
-    title: "Politique de confidentialité",
+    title: "Politique de Confidentialité",
     info: `Le site n’utilise aucun cookie, ne contient aucune
           publicité, aucun traceur, aucune statistique. Aucune
           information n’est collectée sur les visiteurs du site. Les
@@ -23,10 +23,8 @@ const questions = [
           données ou vendues à des entités tierces. En outre, vous
           disposez d'un droit d'accès et de rectification sur vos
           données en prenant contact à l'adresse mail suivante :
-          <a
-            href="mailto:assoavenirukrfr@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          />`,
+          assoavenirukrfr@gmail.com`,
   },
 ];
+
+export default questions;

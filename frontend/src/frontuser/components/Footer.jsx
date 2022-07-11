@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable jsx-a11y/anchor-has-content */
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from "react";
 import data from "./data";
 import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
-import facebook from "../../assets/facebook.svg";
-import instagram from "../../assets/instagram.svg";
-import mail from "../../assets/mail.svg";
-import tel from "../../assets/phone.svg";
+import facebook from "../../assets/img/facebook.svg";
+import instagram from "../../assets/img/instagram.svg";
+import mail from "../../assets/img/mail.svg";
+import tel from "../../assets/img/phone.svg";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -86,18 +84,19 @@ export default function Footer() {
             </form>
           </div>
           <div className="legalMentionsContainer">
-            <main>
-              <div className="container">
-                <h3 className="legalMentions" id="ancre1">
-                  Mentions légales & Politique de Confidentialité
-                </h3>
-                <section className="info">
-                  {questions.map((question) => (
-                    <Legal key={question.id} {...question} />
-                  ))}
-                </section>
-              </div>
-            </main>
+            <div className="container">
+              <div className="legalMentions" id="ancre1" />
+              <section className="info">
+                {questions.map((question) => (
+                  <Legal
+                    key={question.id}
+                    {...question}
+                    // title={questions.title}
+                    // info={questions.info}
+                  />
+                ))}
+              </section>
+            </div>
           </div>
         </div>
         <div className="copyrightContainer">
