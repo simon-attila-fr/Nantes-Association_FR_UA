@@ -3,9 +3,10 @@ const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const ContentRouter = require("./routes/ContentRouter");
-const adminRouter = require("./routes/adminRouter");
-const memberRouter = require("./routes/memberRouter");
+const AdminRouter = require("./routes/AdminRouter");
+const MemberRouter = require("./routes/MemberRouter");
 const PhotoRouter = require("./routes/PhotoRouter");
+const TraductionRouter = require("./routes/TraductionRouter");
 
 const app = express();
 app.use(cookieParser());
@@ -23,6 +24,7 @@ app.use(express.json());
 
 // Serve the public folder for public resources
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../public/assets/images")));
 
 // Serve REACT APP
 app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
@@ -30,9 +32,10 @@ app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 // API routes
 
 app.use("/content", ContentRouter);
-app.use("/user", adminRouter);
-app.use("/member", memberRouter);
+app.use("/user", AdminRouter);
+app.use("/member", MemberRouter);
 app.use("/photo", PhotoRouter);
+app.use("/traduction", TraductionRouter);
 
 // Redirect all requests to the REACT app
 // app.get("*", (req, res) => {

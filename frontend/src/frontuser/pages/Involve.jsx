@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../../assets/styles/Involve.css";
+import JoinForm from "../components/JoinForm";
+import ContactForm from "../components/ContactForm";
 
 export default function Involve() {
   return (
@@ -68,18 +70,42 @@ export default function Involve() {
             </a>
           </button>
         </div>
+        <div className="join-bonus">
+          <p className="join-bonus-text">
+            Bon à savoir : Le montant de votre cotisation sera fonction de votre
+            statut de membre : adhérents (15€), adhérents jeunes (8€), ou encore
+            adhérents bienfaiteurs, associations, collectivités publiques, et
+            autres personnes morales ou membres honoraires (100€). Merci de
+            votre engagement et à bientôt parmi nous !
+          </p>
+        </div>
+        <div className="join-form">
+          <p className="join-form-text">
+            Remplissez le formulaire ci-dessous en complétant bien tous les
+            champs afin de devenir adhérent de l'Association. Nous reviendrons
+            vers vous dès que votre adhésion sera enregistrée pour le réglement
+            de votre cotisation et l'envoi de votre reçu fiscal.
+          </p>
+        </div>
+        <JoinForm />
+        <button className="join-button" type="button">
+          <a href="formulaire d'adhésion.pdf" download>
+            Télécharger le formulaire
+          </a>
+        </button>
+      </div>
 
-        <div className="contact-block">
-          <h2 className="contact-title">Ecrivez-nous !</h2>
-          <div className="contact-content">
-            <p className="contact-content-text">
-              N'hésitez pas à prendre contact avec nous pour en savoir plus sur
-              l'Association, son fonctionnement, devenir membre et participer à
-              nos actions.
-            </p>
-          </div>
+      <div className="contact-block">
+        <h2 className="contact-title">Ecrivez-nous !</h2>
+        <div className="contact-content">
+          <p className="contact-content-text">
+            N'hésitez pas à prendre contact avec nous pour en savoir plus sur
+            l'Association, son fonctionnement, devenir membre et participer à
+            nos actions.
+          </p>
         </div>
       </div>
+      <ContactForm />
       <Footer />
     </div>
   );

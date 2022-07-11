@@ -44,7 +44,7 @@
   width: 70%;
 }
 
-.footerSocialList {
+ul {
   list-style: none;
   border-bottom: 2px solid #424040;
 }
@@ -110,14 +110,15 @@ img {
 }
 
 .legalMentionsContainer {
-  height: 2rem;
+  height: 3rem;
   margin-top: 0.5rem;
   border-bottom: 2px solid #424040;
 }
 
 .legalMentions {
   margin: 1rem;
-  display: inline;
+  display: flex;
+  justify-content: center;
 }
 
 .legalMentionsTitle {
@@ -135,8 +136,9 @@ img {
 .copyrightContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 0.5rem;
-  height: 3vh;
+  height: 7vh;
 }
 
 .copyright {

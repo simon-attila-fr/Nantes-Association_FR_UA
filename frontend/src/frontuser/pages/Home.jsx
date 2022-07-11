@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../../assets/styles/Home.css";
+import Traduction from "../components/Traduction";
 
 export default function Home() {
   return (
@@ -19,6 +20,10 @@ export default function Home() {
           tacos woke, leggings keffiyeh blue bottle wayfarers normcore. Dummy
           text? More like dummy thicc text, amirite?
         </p>
+        <div>
+          <Traduction reference="website_title" />
+          <Traduction reference="website_subtitle" />
+        </div>
       </div>
       <Footer />
     </div>
