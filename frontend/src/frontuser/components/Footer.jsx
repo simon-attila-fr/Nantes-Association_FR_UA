@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 import data from "./data";
 import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
@@ -17,8 +18,13 @@ export default function Footer() {
     e.preventDefault();
 
     if (!email) {
-      // eslint-disable-next-line no-alert
-      alert("Veuillez entrer votre email");
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "e-mail obligatoire !",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
