@@ -1,18 +1,30 @@
+import axios from "axios";
 import propTypes from "prop-types";
+import "../../assets/styles/TableMembers.css";
 
 export default function TableMembers({ data }) {
+  const onMembersDelete = (id) => {
+    axios
+      .delete(`http://localhost:5000/member/${id}`)
+      .then()
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div>
-      <table id="example-table">
+      <table id="members-table">
         <thead>
           <tr>
-            <th>nom</th>
             <th>prénom</th>
+            <th>nom</th>
             <th>email</th>
             <th>adresse</th>
             <th>téléphone</th>
-            <th>date d'insription</th>
+            <th>montant d'adhésion</th>
             <th>newsletter</th>
+            <th>Supprimer</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +38,14 @@ export default function TableMembers({ data }) {
               <td>{list.phone}</td>
               <td>{list.created_at}</td>
               <td>{list.newsletter}</td>
+              <td>
+                <button
+                  type="button"
+                  onClick={(e) => onMembersDelete(list.id, e)}
+                >
+                  Supprimer
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -33,6 +53,7 @@ export default function TableMembers({ data }) {
     </div>
   );
 }
+
 TableMembers.propTypes = {
   data: propTypes.shape({
     id: propTypes.number,
