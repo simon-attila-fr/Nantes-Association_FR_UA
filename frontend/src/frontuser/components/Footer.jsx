@@ -25,6 +25,14 @@ export default function Footer() {
         showConfirmButton: false,
         timer: 1500,
       });
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "e-mail enregistré",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
