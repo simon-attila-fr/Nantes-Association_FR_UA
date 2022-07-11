@@ -1,24 +1,24 @@
 .question-title {
-    color: #3caac1;
-    font-family: "Asap", sans-serif;
-    font-size: 0.9375rem;
-    letter-spacing: 0.06rem;
-    line-height: 1.2;
-    font-weight: normal;
-    font-style: normal;
-    text-rendering: optimizeLegibility;
-    text-align: center;
+  color: #3caac1;
+  font-family: "Asap", sans-serif;
+  font-size: 0.9375rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  text-align: center;
 }
 
 .question-info {
-    color : white;
-    padding-bottom: 1rem;
+  color: white;
+  padding-bottom: 1rem;
 }
 
 .btn-legal {
-   margin-left: 1rem;
-   background-color: black;
-   color: white;
-   border: 0;
-   height: 2rem;
+  margin-left: 1rem;
+  background-color: black;
+  color: white;
+  border: 0;
+  height: 2rem;
 }
