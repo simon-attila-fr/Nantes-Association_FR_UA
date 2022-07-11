@@ -17,4 +17,8 @@
 
 .btn-legal {
    margin-left: 1rem;
+   background-color: black;
+   color: white;
+   border: 0;
+   height: 2rem;
 }
