@@ -37,7 +37,7 @@
   margin-right: auto;
   float: none;
   padding: 1.0625rem 0;
-  width: 13.75rem;
+  width: 100%;
 }
 
 .footer .footerSocial .footerSocialList .menuLinkIcon {
@@ -47,6 +47,7 @@
 .footerSocialList {
   list-style: none;
   border-bottom: 2px solid #424040;
+  border-width: 91.66667%;
 }
 
 a img {
@@ -106,7 +107,7 @@ img {
   transition: all 0.3s ease-in-out;
   background-color: #3caac1;
   color: #fff;
-  border: 0;
+
 }
 
 .legalMentionsContainer {
