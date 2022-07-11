@@ -62,7 +62,7 @@ export default function Involve() {
         </div>
         <JoinForm />
         <button className="join-button" type="button">
-          <a href="formulaire d'adhésion.pdf" download>
+          <a href="adhesion.pdf" download>
             Télécharger le formulaire
           </a>
         </button>
