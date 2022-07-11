@@ -1,29 +1,23 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "./frontuser/components/Header";
-import Footer from "./frontuser/components/Footer";
-import Home from "./frontuser/pages/Home";
 import Involve from "./frontuser/pages/Involve";
+import Home from "./frontuser/pages/Home";
 import HomeAdmin from "./frontadmin/components/MenuSideBar/HomeAdmin";
-import NewsAdmin from "./frontadmin/components/MenuSideBar/NewsAdmin";
 import "./assets/styles/App.css";
-import Welcome from "./frontadmin/pages/Welcome";
 import ContentHome from "./frontadmin/pages/ContentHome";
+import LayoutAdmin from "./frontadmin/pages/Welcome";
 
 export default function App() {
   return (
     <div className="app">
-      <Header />
       <Routes>
         <Route path="/" element={<Home />}>
           <Route path="/involve" element={<Involve />} />
         </Route>
-        <Route path="/admin/" element={<Welcome />}>
+        <Route path="/admin/" element={<LayoutAdmin />}>
           <Route path="/admin/accueil" element={<HomeAdmin />} />
-          <Route path="/admin/actualites" element={<NewsAdmin />} />
-          <Route path="/admin/donation" element={<ContentHome />} />
+          <Route path="/admin/home" element={<ContentHome />} />
         </Route>
       </Routes>
-      <Footer />
     </div>
   );
 }
