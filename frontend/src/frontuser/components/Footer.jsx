@@ -1,19 +1,38 @@
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { useState } from "react";
+import Swal from "sweetalert2";
+import data from "./data";
+import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
-import facebook from "../../assets/facebook.svg";
-import instagram from "../../assets/instagram.svg";
-import mail from "../../assets/mail.svg";
-import tel from "../../assets/phone.svg";
+import facebook from "../../assets/img/facebook.svg";
+import instagram from "../../assets/img/instagram.svg";
+import mail from "../../assets/img/mail.svg";
+import tel from "../../assets/img/phone.svg";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [questions, setQuestions] = useState(data);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!email) {
-      // eslint-disable-next-line no-alert
-      alert("Veuillez entrer votre email");
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "e-mail obligatoire",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "e-mail enregistré",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
@@ -78,21 +97,22 @@ export default function Footer() {
               </button>
             </form>
           </div>
-          {/* Lien à venir */}
           <div className="legalMentionsContainer">
-            <h5 className="legalMentions">
-              <a className="legalMentionsTitle" href="Link à venir">
-                Mentions Légales & politique de confidentialité{" "}
-              </a>
-            </h5>
+            <div className="container">
+              <div className="legalMentions" id="ancre1" />
+              <section className="info">
+                {questions.map((question) => (
+                  <Legal key={question.id} {...question} />
+                ))}
+              </section>
+            </div>
           </div>
-          <div className="copyrightContainer">
-            <p className="copyright">
-              {" "}
-              &copy;{new Date().getFullYear()} Association Avenir Franco
-              Ukrainien
-            </p>
-          </div>
+        </div>
+        <div className="copyrightContainer">
+          <p className="copyright">
+            {" "}
+            &copy;{new Date().getFullYear()} Association Avenir Franco Ukrainien
+          </p>
         </div>
       </div>
     </div>

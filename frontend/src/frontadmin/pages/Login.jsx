@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from "react";
 import axios from "axios";
-import "../../assets/Login.css";
+import "../../assets/styles/Login.css";
 import logo from "../../assets/img/logo.png";
 
 function Login() {

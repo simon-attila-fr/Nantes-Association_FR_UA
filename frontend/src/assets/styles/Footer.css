@@ -1,5 +1,5 @@
 .footer {
-  background: #524f4f;
+  background: black;
   border-top: 0.25rem solid #424040;
   border-bottom: 2px solid #424040;
   padding-bottom: 0.6rem;
@@ -37,7 +37,7 @@
   margin-right: auto;
   float: none;
   padding: 1.0625rem 0;
-  width: 13.75rem;
+  width: 100%;
 }
 
 .footer .footerSocial .footerSocialList .menuLinkIcon {
@@ -47,6 +47,7 @@
 ul {
   list-style: none;
   border-bottom: 2px solid #424040;
+  border-width: 91.66667%;
 }
 
 a img {
@@ -106,22 +107,19 @@ img {
   transition: all 0.3s ease-in-out;
   background-color: #3caac1;
   color: #fff;
-  border: 0;
 }
 
 .legalMentionsContainer {
-  height: 3rem;
-  margin-top: 0.5rem;
+  height: 100%;
   border-bottom: 2px solid #424040;
+  padding-bottom: 1rem;
 }
 
 .legalMentions {
   margin: 1rem;
-  display: flex;
-  justify-content: center;
 }
 
-.legalMentionsTitle {
+.legalMentions {
   color: #3caac1;
   font-family: "Asap", sans-serif;
   font-size: 0.9375rem;
@@ -138,7 +136,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  height: 7vh;
+  height: 2vh;
 }
 
 .copyright {
