@@ -3,7 +3,7 @@
 /* eslint-disable no-restricted-syntax */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../../assets/Login.css";
+import "../../assets/styles/Login.css";
 import logo from "../../assets/img/logo.png";
 
 function Register() {
