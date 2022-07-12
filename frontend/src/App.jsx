@@ -11,7 +11,6 @@ import Login from "./frontadmin/pages/Login";
 import ContentHome from "./frontadmin/pages/ContentHome";
 // import ContentInvolve from "./frontadmin/pages/ContentInvolve";
 import "./assets/styles/App.css";
-import Members from "./frontadmin/pages/Members";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
