@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "../../assets/styles/Footer.css";
-import facebook from "../../assets/facebook.svg";
-import instagram from "../../assets/instagram.svg";
-import mail from "../../assets/mail.svg";
-import tel from "../../assets/phone.svg";
+import facebook from "../../assets/img/facebook.svg";
+import instagram from "../../assets/img/instagram.svg";
+import mail from "../../assets/img/mail.svg";
+import tel from "../../assets/img/phone.svg";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
