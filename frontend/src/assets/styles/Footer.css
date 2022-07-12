@@ -44,7 +44,7 @@
   width: 70%;
 }
 
-.footerSocialList {
+ul {
   list-style: none;
   border-bottom: 2px solid #424040;
   border-width: 91.66667%;
@@ -107,7 +107,6 @@ img {
   transition: all 0.3s ease-in-out;
   background-color: #3caac1;
   color: #fff;
-
 }
 
 .legalMentionsContainer {
@@ -135,6 +134,7 @@ img {
 .copyrightContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 0.5rem;
   height: 2vh;
 }
