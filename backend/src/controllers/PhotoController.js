@@ -36,6 +36,7 @@ class PhotoController {
       .replace(/\\/g, "/")
       .replace("public/", "")}`;
     photo.id = parseInt(req.params.id, 10);
+    photo.updated_at = new Date(Date.now()).toLocaleDateString();
 
     // TODO validations (length, format...)
 

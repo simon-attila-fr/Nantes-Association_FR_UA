@@ -7,7 +7,7 @@ export default function Involve() {
   return (
     <div className="container">
       <h1>
-        <span>Engagez-vousgit !</span>
+        <span>Engagez-vous !</span>
         <span>
           Avec un don, en devenant membre ou en participant à nos actions...
         </span>
