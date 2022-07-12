@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
-import "../../assets/styles/Welcome.css";
 import NavAdmin from "../components/NavAdmin";
-import "../components/NavAdmin.css";
+import "../../assets/styles/NavAdmin.css";
+import "../../assets/styles/Layout.css";
 
 export default function LayoutAdmin() {
   return (
-    <div className="welcome">
+    <div className="layout">
       <NavAdmin />
-      <div style={{ marginLeft: "17rem" }}>
+      <div className="outlet">
         <Outlet />
       </div>
     </div>

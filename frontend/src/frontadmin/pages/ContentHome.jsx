@@ -9,8 +9,9 @@ export default function ContentHome() {
   // Récupérer la donnée initial à afficher dans le formulaire
   async function getInitialData() {
     await axios
-      .get("http://localhost:5000/content")
+      .get("http://localhost:5000/content/home")
       .then((data) => setContent(data.data))
+      .then()
       .catch((error) => {
         console.error(error);
       });
@@ -22,7 +23,7 @@ export default function ContentHome() {
   }, []);
 
   return (
-    <div>
+    <div className="admin-home">
       <h1> Modifier la page d'accueil </h1>
       <HomeForm content={content} />
     </div>

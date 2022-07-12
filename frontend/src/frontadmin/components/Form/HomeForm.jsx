@@ -8,9 +8,8 @@ export default function HomeForm({ content }) {
       <div className="lang-column">
         <div>
           <h3>Français</h3>
-          <hr className="hr-text" />
         </div>
-        <div>
+        <div className="home-admin">
           {content
             // eslint-disable-next-line react/prop-types
             .filter((e) => e.language_code === "FR")
@@ -22,9 +21,8 @@ export default function HomeForm({ content }) {
       <div className="lang-column">
         <div>
           <h3>Ukrainien</h3>
-          <hr className="hr-text" />
         </div>
-        <div>
+        <div className="home-admin">
           {content
             // eslint-disable-next-line react/prop-types
             .filter((e) => e.language_code === "UK")

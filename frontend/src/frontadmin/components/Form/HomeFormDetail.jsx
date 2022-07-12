@@ -28,7 +28,7 @@ export default function HomeFormDetail({ initialContent }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="home-admin-form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor={content.ref}> {content.definition}</label>
 

@@ -13,6 +13,42 @@ class ContentController {
       });
   };
 
+  static browsehome = (req, res) => {
+    models.content
+      .findHome()
+      .then(([rows]) => {
+        res.send(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
+  static browseinvolve = (req, res) => {
+    models.content
+      .findInvolve()
+      .then(([rows]) => {
+        res.send(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
+  static browseother = (req, res) => {
+    models.content
+      .findOther()
+      .then(([rows]) => {
+        res.send(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
   static read = (req, res) => {
     models.content
       .find(req.params.id)

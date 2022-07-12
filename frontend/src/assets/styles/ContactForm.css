@@ -29,7 +29,7 @@
     text-align: center;
     height: 15vh;
   }
-  .form {
+  .contct-form {
     background-color: var(--second-color);
     height: 60vh;
     margin-left: 400px;
@@ -37,7 +37,7 @@
     border-radius: 15px;
     margin-bottom: 2rem;
   }
-  form {
+  .contct-form {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
