@@ -4,8 +4,8 @@ import Traduction from "../components/Traduction";
 export default function Home() {
   return (
     <div>
-      <Traduction reference="website_title" />
-      <Traduction reference="website_subtitle" />
+      <Traduction reference="home_website_title" />
+      <Traduction reference="home_website_subtitle" />
     </div>
   );
 }
