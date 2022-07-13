@@ -55,20 +55,32 @@
 
 /* --- Media queries tablet--- */
 
-@media only screen and (min-width: 600px) {
-  .homePresentationAssociation {
-    display: block;
-  }
+ @media only screen and (min-width: 600px) {
+    .homeArticles {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 
-  .homeArticles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .homeValuesArticle {
+        grid-column-end: span 2;
+    }
 
-  .homeArticles article {
-    min-width: 10vw;
-  }
+    .homeMosaic {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        place-items: center;
+        margin: 6vh 5vw;
+    }
+
+    .homePresentationAssociation article p {
+        width: fit-content;
+        margin: 0.5rem 1rem;
+      }
+
+      .homeArticles article {
+        border-radius: 15%;
+      }
 }
 
 /* --- Media queries desktop --- */

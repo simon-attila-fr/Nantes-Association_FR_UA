@@ -51,10 +51,10 @@ input:hover {
   width: 3rem;
 }
 
-button:hover {
+/* button:hover {
   background-color: #f8d849;
   color: black;
-}
+} */
 
 form {
   display: flex;
