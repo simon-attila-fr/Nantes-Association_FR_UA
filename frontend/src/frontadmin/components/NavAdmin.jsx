@@ -5,7 +5,9 @@ export default function NavAdmin() {
   return (
     <aside className="sidebar">
       <div>
-        <div className="espace-admin">Espace Administrateur</div>
+        <NavLink to="/admin">
+          <div className="espace-admin">Espace Administrateur</div>
+        </NavLink>
         <nav>
           <ul>
             <li className="nav-category">
@@ -25,6 +27,12 @@ export default function NavAdmin() {
                 </li>
                 <li className="nav-detail">
                   <NavLink to="/admin/donation"> Page engagement </NavLink>
+                </li>
+                <li className="nav-detail">
+                  <NavLink to="/admin/other"> Autre contenu </NavLink>
+                </li>
+                <li className="nav-detail">
+                  <NavLink to="/admin/photos"> Photos </NavLink>
                 </li>
               </ul>
             </li>

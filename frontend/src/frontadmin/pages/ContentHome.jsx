@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import HomeForm from "../components/Form/HomeForm";
-import "./ContentHome.css";
+import ContentForm from "../components/Form/ContentForm";
+import "../../assets/styles/ContentAdmin.css";
 
 export default function ContentHome() {
   const [content, setContent] = useState([]);
@@ -23,9 +23,9 @@ export default function ContentHome() {
   }, []);
 
   return (
-    <div className="admin-home">
+    <div className="admin-content">
       <h1> Modifier la page d'accueil </h1>
-      <HomeForm content={content} />
+      <ContentForm content={content} />
     </div>
   );
 }

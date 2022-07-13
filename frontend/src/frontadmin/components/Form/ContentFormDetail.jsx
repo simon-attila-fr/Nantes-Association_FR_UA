@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export default function InvolveFormDetail({ initialContent }) {
+export default function ContentFormDetail({ initialContent }) {
   const [content, setContent] = useState(initialContent);
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ export default function InvolveFormDetail({ initialContent }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="admin-form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor={content.ref}> {content.definition}</label>
 
@@ -59,7 +59,7 @@ export default function InvolveFormDetail({ initialContent }) {
   );
 }
 
-InvolveFormDetail.propTypes = {
+ContentFormDetail.propTypes = {
   initialContent: PropTypes.shape({
     body: PropTypes.string,
     language_code: PropTypes.string,
@@ -67,7 +67,7 @@ InvolveFormDetail.propTypes = {
   }),
 };
 
-InvolveFormDetail.defaultProps = {
+ContentFormDetail.defaultProps = {
   initialContent: PropTypes.shape({
     body: "ceci est du contenu",
     language_code: "FR",

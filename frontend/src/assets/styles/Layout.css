@@ -6,6 +6,5 @@
 .outlet {
   padding-top: 3rem;
   padding-left: 1rem;
-  background-color: rgb(218, 198, 236);
-  width: max-content;
+  width: 100%;
 }
