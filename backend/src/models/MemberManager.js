@@ -12,20 +12,20 @@ class MemberManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `select id, name, lastName, email, address, phone, created_at, newsletter from ${this.table}`
+      `select id, name, lastName, email, address, phone, cotisation, newsletter from ${this.table}`
     );
   }
 
   insert(member) {
     return this.connection.query(
-      `insert into ${MemberManager.table} (name, lastName, email, address, phone, created_at, newsletter) values (?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${MemberManager.table} (name, lastName, email, address, phone, cotisation, newsletter) values (?, ?, ?, ?, ?, ?, ?)`,
       [
         member.name,
         member.lastName,
         member.email,
         member.address,
         member.phone,
-        member.created_at,
+        member.cotisation,
         member.newsletter,
       ]
     );
@@ -33,14 +33,14 @@ class MemberManager extends AbstractManager {
 
   update(member) {
     return this.connection.query(
-      `update ${MemberManager.table} set name = ?, lastName = ?, email = ?, address = ?, phone = ?, created_at = ?, newsletter = ? where id = ?`,
+      `update ${MemberManager.table} set name = ?, lastName = ?, email = ?, address = ?, phone = ?, cotisation = ?, newsletter = ? where id = ?`,
       [
         member.name,
         member.lastName,
         member.email,
         member.address,
         member.phone,
-        member.created_at,
+        member.cotisation,
         member.newsletter,
         member.id,
       ]

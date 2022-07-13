@@ -8,8 +8,9 @@ import Involve from "./frontuser/pages/Involve";
 import Login from "./frontadmin/pages/Login";
 import ContentHome from "./frontadmin/pages/ContentHome";
 import "./assets/styles/App.css";
-import LayoutAdmin from "./frontadmin/pages/Welcome";
+import LayoutAdmin from "./frontadmin/pages/LayoutAdmin";
 import ContentInvolve from "./frontadmin/pages/ContentInvolve";
+import Members from "./frontadmin/pages/Members";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/admin/login" element={<Login />} />
             <Route path="/admin/accueil" element={<ContentHome />} />
             <Route path="/admin/donation" element={<ContentInvolve />} />
+            <Route path="/admin/membres" element={<Members />} />
           </Route>
         </Routes>
       </GlobalContext.Provider>

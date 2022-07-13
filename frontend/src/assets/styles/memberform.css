@@ -1,0 +1,4 @@
+.form_memberadmin {
+  display: flex;
+  flex-direction: column;
+}

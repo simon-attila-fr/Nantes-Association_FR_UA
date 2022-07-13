@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import MemberForm from "../components/Form/MemberForm";
 import TableMembers from "../components/TableMembers";
 
 export default function Members() {
@@ -16,8 +17,13 @@ export default function Members() {
 
   return (
     <div>
-      <h1> Tous les membres</h1>
-      <TableMembers data={members} />
+      <div>
+        <MemberForm />
+      </div>
+      <div>
+        <h1> Tous les membres</h1>
+        <TableMembers data={members} />
+      </div>
     </div>
   );
 }
