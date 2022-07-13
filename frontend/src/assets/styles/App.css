@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --mainColor: #2559B6;
+  --mainColorLight: #A7BCE1;
+  --secondaryColor: #F8D849;
+  --secondaryColorLight: #fbeab9;
+}

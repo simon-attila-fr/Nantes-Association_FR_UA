@@ -11,5 +11,7 @@ export default function Mosaic() {
       .then((data) => setMosaic(data));
   }, []);
 
-  return mosaic.map((e) => <img key={e.id} src={e.photo_url} alt={e.photo_name} />);
+  return mosaic.map((e) => (
+    <img key={e.id} src={e.photo_url} alt={e.photo_name} />
+  ));
 }
