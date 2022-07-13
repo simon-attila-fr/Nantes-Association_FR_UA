@@ -8,8 +8,8 @@ export default function ContactForm() {
     e.preventDefault();
   };
   return (
-    <div className="form">
-      <form className="contct-form" onSubmit={handleSubmit}>
+    <div className="contactFormFormContainer">
+      <form className="contactFormForm" onSubmit={handleSubmit}>
         <input
           className="inputContact"
           type="text"
@@ -33,12 +33,14 @@ export default function ContactForm() {
         <textarea name="message" minLength="16" cols="30" rows="10" required />
         <input
           onClick={() => setMessage(!message)}
-          className="submit"
+          className="contactFormSubmit"
           type="submit"
           value="Envoyer"
         />
         {message && (
-          <p className="message">Nous avons bien reçu votre message</p>
+          <p className="contactFormMessage">
+            Nous avons bien reçu votre message
+          </p>
         )}
       </form>
     </div>
