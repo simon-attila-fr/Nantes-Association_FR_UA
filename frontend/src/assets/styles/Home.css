@@ -1,8 +1,17 @@
+.homeContent,
 .homePresentationAssociation,
 .homeArticles {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* .homePresentationAssociation, .homeMosaic {
+    margin-bottom: 5vh;
+} */
+
+.separator {
+    margin: 7vh 0;
 }
 
 .homePresentationAssociation h2 {
@@ -11,7 +20,12 @@
   margin-bottom: 5vh;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--mainColor);
+  /* background-color: var(--mainColor); */
+}
+
+.homePresentationAssociation article p {
+    width: 70vw;
+    margin: 0.5rem 1rem;
 }
 
 .homeArticles {
@@ -23,18 +37,13 @@
   border-radius: 10%;
 }
 
-.homePresentationAssociation article p {
-  width: 70vw;
-  margin: 0.5rem 1rem;
-}
-
 .homeSectionTitleZone {
   display: flex;
   justify-content: center;
   margin-top: 2vh;
   margin-bottom: 1vh;
   gap: 5px;
-  background-color: var(--mainColorLight);
+  /* background-color: var(--mainColorLight); */
 }
 
 .homeSectionTitleZone img {
@@ -42,7 +51,7 @@
 }
 
 .homeMosaic {
-  margin: 5vh 0vh;
+  /* margin: 5vh 0vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,32 +64,32 @@
 
 /* --- Media queries tablet--- */
 
- @media only screen and (min-width: 600px) {
-    .homeArticles {
-        width: 90vw;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+@media only screen and (min-width: 600px) {
+  .homeArticles {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 
-    .homeValuesArticle {
-        grid-column-end: span 2;
-    }
+  .homeValuesArticle {
+    grid-column-end: span 2;
+  }
 
-    .homeMosaic {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        place-items: center;
-        margin: 6vh 5vw;
-    }
+  .homeMosaic {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    margin: 0vh 5vw;
+  }
 
-    .homePresentationAssociation article p {
-        width: fit-content;
-        margin: 0.5rem 1rem;
-      }
+  .homePresentationAssociation article p {
+    width: fit-content;
+    margin: 0.5rem 1rem;
+  }
 
-      .homeArticles article {
-        border-radius: 15%;
-      }
+  .homeArticles article {
+    border-radius: 15%;
+  }
 }
 
 /* --- Media queries desktop --- */

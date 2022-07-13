@@ -4,6 +4,7 @@ import "../../assets/styles/Home.css";
 import Traduction from "../components/Traduction";
 import Mosaic from "../components/Mosaic";
 import HomeH2Img from "../../assets/img/HomeH2Img.png1657639372003.png";
+import Separator from "../components/Separator";
 
 export default function Home() {
   return (
@@ -50,9 +51,11 @@ export default function Home() {
             </article>
           </div>
         </section>
+        <Separator className="separatorLine"/>
         <div className="homeMosaic">
           <Mosaic />
         </div>
+        <Separator className="separatorLine"/>
       </div>
       <Footer />
     </div>
