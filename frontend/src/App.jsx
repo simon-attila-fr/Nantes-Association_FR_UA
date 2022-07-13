@@ -8,8 +8,10 @@ import Involve from "./frontuser/pages/Involve";
 import Login from "./frontadmin/pages/Login";
 import ContentHome from "./frontadmin/pages/ContentHome";
 import "./assets/styles/App.css";
-import LayoutAdmin from "./frontadmin/pages/Welcome";
+import LayoutAdmin from "./frontadmin/pages/LayoutAdmin";
 import ContentInvolve from "./frontadmin/pages/ContentInvolve";
+import ContentOther from "./frontadmin/pages/ContentOther";
+import ContentPhoto from "./frontadmin/pages/ContentPhoto";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
@@ -28,9 +30,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/involve" element={<Involve />} />
           <Route path="/admin/" element={<LayoutAdmin />}>
+            <Route index element={<ContentHome />} />
             <Route path="/admin/login" element={<Login />} />
             <Route path="/admin/accueil" element={<ContentHome />} />
             <Route path="/admin/donation" element={<ContentInvolve />} />
+            <Route path="/admin/other" element={<ContentOther />} />
+            <Route path="/admin/photo" element={<ContentPhoto />} />
           </Route>
         </Routes>
       </GlobalContext.Provider>
