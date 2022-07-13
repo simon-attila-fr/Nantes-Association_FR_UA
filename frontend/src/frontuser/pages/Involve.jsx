@@ -1,3 +1,5 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../../assets/styles/Involve.css";
 import corner from "../../assets/img/corner.png";
 import monument1 from "../../assets/img/monument1.png";
@@ -61,6 +63,7 @@ export default function Involve() {
               <img className="involve-pic" alt="monument2" src={monument2} />
             </div>
           </div>
+
         </div>
 
         <div className="card-wrapper">
@@ -121,6 +124,8 @@ export default function Involve() {
           </div>
         </div>
       </div>
+      <ContactForm />
+      <Footer />
     </div>
   );
 }
