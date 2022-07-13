@@ -50,17 +50,19 @@ export default function NavAdmin() {
               </NavLink>
               <ul>
                 <li className="nav-detail">
-                  <NavLink to="/admin/logout">Tous les membres</NavLink>
+                  <NavLink to="/admin/">Tous les membres</NavLink>
                 </li>
                 <li className="nav-detail">
-                  <NavLink to="/admin/logout">Ajouter un membre</NavLink>
+                  <NavLink to="/admin/">Ajouter un membre</NavLink>
                 </li>
               </ul>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="disconnect"> Se déconnecter</div>
+      <NavLink to="/admin/logout">
+        <div className="disconnect"> Se déconnecter</div>
+      </NavLink>
     </aside>
   );
 }
