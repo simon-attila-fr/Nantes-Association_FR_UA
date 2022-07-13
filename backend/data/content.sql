@@ -36,4 +36,4 @@ INSERT INTO content (body, language_code, traduction_id) VALUES
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
 , "UK", 16), 
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesuada sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra quam enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "FR", 16); 
+, "FR", 16);
