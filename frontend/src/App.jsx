@@ -10,8 +10,6 @@ import ContentHome from "./frontadmin/pages/ContentHome";
 import "./assets/styles/App.css";
 import LayoutAdmin from "./frontadmin/pages/Welcome";
 import ContentInvolve from "./frontadmin/pages/ContentInvolve";
-import Members from "./frontadmin/pages/Members";
-
 
 export default function App() {
   const [traduction, setTraduction] = useState({});

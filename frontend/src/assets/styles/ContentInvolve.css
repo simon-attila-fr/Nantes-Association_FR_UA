@@ -4,36 +4,33 @@
   padding: 4rem;
 }
 
-textarea {
+.InvolveAdminFormContainer textarea {
   display: block;
-  min-width: 90%;
-  margin: 1em;
-  padding: 1em;
-  width: 35em;
-  border-radius: 8px;
-  border-style: none;
-  border: 1px solid #e4e6e8;
-  transition: 0.1s ease;
-}
-
-input {
-  display: block;
-  min-width: 90%;
-  margin: 1em;
-  padding: 1em;
-  width: 35em;
-  border-radius: 8px;
-  border-style: none;
-  border: 1px solid #e4e6e8;
-  transition: 0.1s ease;
-}
-
-textarea {
   height: 12rem;
   background-color: #f8d849;
+  min-width: 90%;
+  margin: 1em;
+  padding: 1em;
+  width: 35em;
+  border-radius: 8px;
+  border-style: none;
+  border: 1px solid #e4e6e8;
+  transition: 0.1s ease;
 }
 
-input:hover {
+.InvolveAdminFormContainer input {
+  display: block;
+  min-width: 90%;
+  margin: 1em;
+  padding: 1em;
+  width: 35em;
+  border-radius: 8px;
+  border-style: none;
+  border: 1px solid #e4e6e8;
+  transition: 0.1s ease;
+}
+
+.InvolveAdminFormContainer input:hover {
   border-color: #2559b6;
 }
 
@@ -51,12 +48,12 @@ input:hover {
   width: 3rem;
 }
 
-button:hover {
+.save:hover {
   background-color: #f8d849;
   color: black;
 }
 
-form {
+.InvolveAdminForm {
   display: flex;
 }
 
@@ -98,7 +95,7 @@ hr:after {
   );
 }
 
-label {
+.InvolveAdminFormContainer label {
   font-weight: bold;
   color: grey;
 }
