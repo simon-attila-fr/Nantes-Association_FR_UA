@@ -28,8 +28,8 @@ export default function InvolveFormDetail({ initialContent }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className="InvolveAdminForm" onSubmit={handleSubmit}>
+      <div className="InvolveAdminFormContainer">
         <label htmlFor={content.ref}> {content.definition}</label>
 
         {content.type ? (
