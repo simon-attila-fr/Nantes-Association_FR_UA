@@ -1,3 +1,7 @@
+* {
+  color: var(--fontColorMain);
+}
+
 .homeContent,
 .homePresentationAssociation,
 .homeArticles {
@@ -11,30 +15,35 @@
 } */
 
 .separator {
-    margin: 7vh 0;
+  margin: 7vh 0;
 }
 
 .homePresentationAssociation h2 {
   display: inline-block;
   margin-top: 3vh;
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
   margin-left: auto;
   margin-right: auto;
   /* background-color: var(--mainColor); */
 }
 
 .homePresentationAssociation article p {
-    width: 70vw;
-    margin: 0.5rem 1rem;
+  width: 70vw;
+  margin: 0.5rem 1rem;
 }
 
 .homeArticles {
-  gap: 2vh;
+  gap: 9vh;
 }
 
 .homeArticles article {
-  background-color: var(--secondaryColorLight);
-  border-radius: 10%;
+  /* background-color: var(--secondaryColorLight); */
+  /* border-bottom: solid 3px var(--mainColor);
+  border-left: solid 3px var(--mainColor); */
+  border-radius: 20px;
+  box-shadow: 
+  4px 4px 10px 2px var(--mainColor),
+  -4px -4px 14px 3px var(--secondaryColorLight);
 }
 
 .homeSectionTitleZone {
@@ -42,8 +51,20 @@
   justify-content: center;
   margin-top: 2vh;
   margin-bottom: 1vh;
-  gap: 5px;
+  gap: 10px;
   /* background-color: var(--mainColorLight); */
+}
+
+.homeSectionTitleZone {
+  width:max-content;
+  position: relative;
+  padding: 0.2rem;
+  margin: auto;
+  top: -4vh;
+  background-color: white;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px 2px var(--mainColor);
 }
 
 .homeSectionTitleZone img {
@@ -66,13 +87,17 @@
 
 @media only screen and (min-width: 600px) {
   .homeArticles {
-    width: 90vw;
+    width: 84vw;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
   }
 
   .homeValuesArticle {
     grid-column-end: span 2;
+    height: 70%;
   }
 
   .homeMosaic {
@@ -85,10 +110,6 @@
   .homePresentationAssociation article p {
     width: fit-content;
     margin: 0.5rem 1rem;
-  }
-
-  .homeArticles article {
-    border-radius: 15%;
   }
 }
 

@@ -51,11 +51,11 @@ export default function Home() {
             </article>
           </div>
         </section>
-        <Separator className="separatorLine"/>
+        <Separator className="separatorLine" />
         <div className="homeMosaic">
           <Mosaic />
         </div>
-        <Separator className="separatorLine"/>
+        <Separator className="separatorLine" />
       </div>
       <Footer />
     </div>
