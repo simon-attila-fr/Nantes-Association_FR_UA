@@ -1,35 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-import HomeFormDetail from "./HomeFormDetail";
+import ContentFormDetail from "./ContentFormDetail";
 
-export default function HomeForm({ content }) {
+export default function ContentForm({ content }) {
   return (
-    <section className="home-admin-contnair">
+    <section className="admin-contnair">
       <div className="lang-column">
         <div>
           <h3>Français</h3>
-          <hr className="hr-text" />
         </div>
-        <div>
+        <div className="admin-content">
           {content
             // eslint-disable-next-line react/prop-types
             .filter((e) => e.language_code === "FR")
             .map((e) => {
-              return <HomeFormDetail key={e.id} initialContent={e} />;
+              return <ContentFormDetail key={e.id} initialContent={e} />;
             })}
         </div>
       </div>
       <div className="lang-column">
         <div>
           <h3>Ukrainien</h3>
-          <hr className="hr-text" />
         </div>
-        <div>
+        <div className="admin-content">
           {content
             // eslint-disable-next-line react/prop-types
             .filter((e) => e.language_code === "UK")
             .map((e) => {
-              return <HomeFormDetail key={e.id} initialContent={e} />;
+              return <ContentFormDetail key={e.id} initialContent={e} />;
             })}
         </div>
       </div>
@@ -37,7 +35,7 @@ export default function HomeForm({ content }) {
   );
 }
 
-HomeForm.propTypes = {
+ContentForm.propTypes = {
   content: PropTypes.shape({
     body: PropTypes.string,
     language_code: PropTypes.string,
@@ -47,7 +45,7 @@ HomeForm.propTypes = {
   }),
 };
 
-HomeForm.defaultProps = {
+ContentForm.defaultProps = {
   content: PropTypes.shape({
     body: "ceci est du contenu",
     language_code: "FR",

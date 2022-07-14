@@ -1,19 +1,15 @@
-import HomeAdmin from "../components/MenuSideBar/HomeAdmin";
-import DonsAdmin from "../components/MenuSideBar/DonsAdmin";
-import ButtonDisconnect from "../components/MenuSideBar/ButtonDisconnect";
-import "../../assets/styles/Welcome.css";
-// eslint-disable-next-line import/order
 import { Outlet } from "react-router-dom";
+import NavAdmin from "../components/NavAdmin";
+import "../../assets/styles/NavAdmin.css";
+import "../../assets/styles/Layout.css";
 
 export default function LayoutAdmin() {
   return (
-    <div className="welcome">
-      <div className="sidebar">
-        <HomeAdmin />
-        <DonsAdmin />
-        <ButtonDisconnect />
+    <div className="layout">
+      <NavAdmin />
+      <div className="outlet">
+        <Outlet />
       </div>
-      <Outlet />
     </div>
   );
 }
