@@ -1,10 +1,11 @@
-import Header from "../components/Header";
+// import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import "../../assets/styles/Involve.css";
 import corner from "../../assets/img/corner.png";
 import monument1 from "../../assets/img/monument1.png";
 import monument2 from "../../assets/img/monument2.png";
 import monument3 from "../../assets/img/monument3.png";
+import Header from "../components/Header";
 
 export default function Involve() {
   return (
@@ -69,11 +70,23 @@ export default function Involve() {
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="card-wrapper">
-            <div className="card">
-              <div className="card-front">
-                <h2 className="involve-h2">Adhérez !</h2>
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="card-front">
+              <h2 className="involve-h2">Adhérez !</h2>
+              <p className="involve-p">
+                Adhérer à Avenir Franco-Ukrainien c'est soutenir l'Ukraine, en
+                lui apportant un peu de votre temps et de vos compétences, c'est
+                également contribuer au développement de l'association par les
+                participations aux manifestations extérieures : marches pour la
+                paix, expositions culturelles, missions de bénévolat.
+              </p>
+              <img className="corner-icon" alt="corner" src={corner} />
+            </div>
+            <div className="card-back">
+              <div>
                 <p className="involve-p">
                   Adhérer à Avenir Franco-Ukrainien c'est soutenir l'Ukraine, en
                   lui apportant un peu de votre temps et de vos compétences,
