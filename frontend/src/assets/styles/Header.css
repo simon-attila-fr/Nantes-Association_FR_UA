@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -147,4 +147,4 @@
   .show_nav .burger_bar::after {
     transform: rotate(-45deg);
   }
-}
+} */
