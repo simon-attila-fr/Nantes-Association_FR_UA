@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
@@ -25,26 +26,28 @@ export default function Header() {
         </a>
       </div>
 
+      <div className="nav-gift-btn">
+        <a href="" className="gift-btn">
+          <span className="gift-span-btn">Donner</span>
+        </a>
+      </div>
+
       <div className="nav-translation">
         <a href="#" className="nav-flag" aria-label="translation">
           <img className="lang-flag" src={FR} alt="fench-icon" />
           <img className="lang-flag" src={UK} alt="ukrainian-icon" />
         </a>
-        <div className="flag-btns">
+        {/* <div className="flag-btns">
           <Translate />
-        </div>
+        </div> */}
       </div>
 
       <div className="nav-menu">
         <a href="#" className="menu-toggler" aria-label="page menu">
           <img className="menu-icon" src={compass} alt="menu-icon" />
         </a>
-        <a href="#" className="menu-btn1">
-          <span className="menu-span-btn1">Accueil</span>
-        </a>
-        <a href="#" className="menu-btn2">
-          <span className="menu-span-btn2">Faites la différence !</span>
-        </a>
+        <button className="spin circle">Accueil</button>
+        <button className="spin circle">Participer</button>
       </div>
     </nav>
   );
