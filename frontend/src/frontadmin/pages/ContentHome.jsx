@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import HomeForm from "../components/Form/HomeForm";
-import "./ContentHome.css";
+import ContentForm from "../components/Form/ContentForm";
+import "../../assets/styles/ContentAdmin.css";
 
 export default function ContentHome() {
   const [content, setContent] = useState([]);
@@ -9,8 +9,9 @@ export default function ContentHome() {
   // Récupérer la donnée initial à afficher dans le formulaire
   async function getInitialData() {
     await axios
-      .get("http://localhost:5000/content")
+      .get("http://localhost:5000/content/home")
       .then((data) => setContent(data.data))
+      .then()
       .catch((error) => {
         console.error(error);
       });
@@ -22,9 +23,9 @@ export default function ContentHome() {
   }, []);
 
   return (
-    <div>
+    <div className="admin-content">
       <h1> Modifier la page d'accueil </h1>
-      <HomeForm content={content} />
+      <ContentForm content={content} />
     </div>
   );
 }

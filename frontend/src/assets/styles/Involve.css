@@ -1,7 +1,12 @@
+.involve-body {
+  display: flex;
+  flex-direction: column;
+}
+
 .involve-container {
   width: 90%;
   max-width: 1400px;
-  margin-top: 2rem;
+  margin-top: 12rem;
   margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
@@ -89,6 +94,10 @@
   transform: rotateY(180deg);
 }
 
+.card-wrapper:nth-child(odd):hover .card {
+  cursor: default;
+}
+
 .card {
   position: relative;
   height: 100%;
@@ -153,7 +162,7 @@
 
 .involve-btn {
   display: inline-block;
-  background: black;
+  background: grey;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -174,17 +183,8 @@
     background-color 0.15s ease-out;
 }
 
-.involve-btn:hover span {
+.involve-span-btn:hover {
   transform: translate(-6px, -6px);
   color: white;
   background: #155079;
-}
-
-.card-wrapper:nth-child(odd) .card-back a:hover {
-  background-color: #1a2f42;
-  color: #fff;
-}
-.card-wrapper:nth-child(even) .card-back a:hover {
-  background-color: #1a2f42;
-  color: #fff;
 }

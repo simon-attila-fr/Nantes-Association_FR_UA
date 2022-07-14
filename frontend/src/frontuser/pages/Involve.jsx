@@ -1,8 +1,10 @@
+import ContactForm from "../components/ContactForm";
 import "../../assets/styles/Involve.css";
 import corner from "../../assets/img/corner.png";
 import monument1 from "../../assets/img/monument1.png";
 import monument2 from "../../assets/img/monument2.png";
 import monument3 from "../../assets/img/monument3.png";
+import JoinForm from "../components/JoinForm";
 
 export default function Involve() {
   return (
@@ -121,6 +123,8 @@ export default function Involve() {
           </div>
         </div>
       </div>
+      <JoinForm />
+      <ContactForm />
     </div>
   );
 }
