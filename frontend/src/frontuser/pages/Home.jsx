@@ -2,28 +2,69 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../../assets/styles/Home.css";
 import Traduction from "../components/Traduction";
+import Mosaic from "../components/Mosaic";
+import HomeH2Img from "../../assets/img/HomeH2Img.png1657639372003.png";
+import Separator from "../components/Separator";
+import Placeholder from "../../assets/img/HomePlaceholder.png";
 
 export default function Home() {
   return (
-    <div>
+    <div className="HomePage">
       <Header />
-      <div>
-        <h1>Home</h1>
-        <p>
-          I'm baby ramps etsy pinterest, lyft plaid taxidermy sustainable DSA
-          raw denim direct trade shabby chic pour-over. Crucifix hella
-          microdosing heirloom messenger bag, tofu slow-carb. Banh mi 8-bit
-          hammock man braid mixtape microdosing polaroid put a bird on it
-          cardigan tacos fashion axe. Adaptogen pickled plaid poutine church-key
-          pour-over flannel biodiesel yes plz. Prism freegan migas messenger bag
-          truffaut pok pok fashion axe wolf farm-to-table. Banh mi live-edge
-          tacos woke, leggings keffiyeh blue bottle wayfarers normcore. Dummy
-          text? More like dummy thicc text, amirite?
-        </p>
-        <div>
-          <Traduction reference="website_title" />
-          <Traduction reference="website_subtitle" />
+      <div className="homeContent">
+        <section className="homePresentationAssociation">
+          <div className="homePresentationTitleContainer">
+            <h2>
+              <Traduction reference="home_presentation_title_section" />
+            </h2>
+          </div>
+          <div className="homeArticles">
+            <article className="homePresentationArticle">
+              <div className="homeSectionTitleZone">
+                <img src={HomeH2Img} alt="a" />
+                <h3>
+                  <Traduction reference="home_presentation_title" />
+                </h3>
+              </div>
+              <p>
+                <Traduction reference="home_presentation_content" />
+              </p>
+            </article>
+            <article className="homeMissionArticle">
+              <div className="homeSectionTitleZone">
+                <img src={HomeH2Img} alt="a" />
+                <h3>
+                  <Traduction reference="home_mission_title" />
+                </h3>
+              </div>
+              <p>
+                <Traduction reference="home_mission_content" />
+              </p>
+            </article>
+            <article className="homeValuesArticle">
+              <div className="homeSectionTitleZone">
+                <img src={HomeH2Img} alt="a" />
+                <h3>
+                  <Traduction reference="home_values_title" />
+                </h3>
+              </div>
+              <p>
+                <Traduction reference="home_values_content" />
+              </p>
+            </article>
+            <div className="homeDesktopImg1">
+              <img src={Placeholder} alt="" />
+            </div>
+            <div className="homeDesktopImg2">
+              <img src={Placeholder} alt="" />
+            </div>
+          </div>
+        </section>
+        <Separator className="separatorLine" />
+        <div className="homeMosaic">
+          <Mosaic />
         </div>
+        <Separator className="separatorLine" />
       </div>
       <Footer />
     </div>
