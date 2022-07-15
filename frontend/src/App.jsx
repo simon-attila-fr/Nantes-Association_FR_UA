@@ -37,7 +37,7 @@ export default function App() {
             <Route path="/admin/accueil" element={<ContentHome />} />
             <Route path="/admin/donation" element={<ContentInvolve />} />
             <Route path="/admin/other" element={<ContentOther />} />
-            <Route path="/admin/photo" element={<ContentPhoto />} />
+            <Route path="/admin/photos" element={<ContentPhoto />} />
             <Route path="/admin/membre" element={<TableMembers />} />
             <Route path="/admin/addmembre" element={<MemberForm />} />
           </Route>
