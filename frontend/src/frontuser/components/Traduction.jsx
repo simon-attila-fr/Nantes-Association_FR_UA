@@ -5,10 +5,10 @@ import GlobalContext from "../contexts/GlobalContext";
 export default function Traduction({ reference }) {
   const { traduction, lang } = useContext(GlobalContext);
   return (
-    <div>
+    <span>
       {traduction[reference]
         ? traduction[reference][lang]
         : "Chargement en cours..."}
-    </div>
+    </span>
   );
 }
