@@ -50,10 +50,10 @@ export default function NavAdmin() {
               </NavLink>
               <ul>
                 <li className="nav-detail">
-                  <NavLink to="/admin/">Tous les membres</NavLink>
+                  <NavLink to="/admin/membre">Tous les membres</NavLink>
                 </li>
                 <li className="nav-detail">
-                  <NavLink to="/admin/">Ajouter un membre</NavLink>
+                  <NavLink to="/admin/addmembre">Ajouter un membre</NavLink>
                 </li>
               </ul>
             </li>
