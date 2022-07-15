@@ -36,8 +36,8 @@ export default function TableMembers({ data }) {
               <td>{list.email}</td>
               <td>{list.address}</td>
               <td>{list.phone}</td>
-              <td>{list.created_at}</td>
-              <td>{list.newsletter}</td>
+              <td>{list.cotisation}</td>
+              <td>{list.newsletter === 1 ? "oui" : "non"}</td>
               <td>
                 <button
                   type="button"
@@ -61,7 +61,7 @@ TableMembers.propTypes = {
     lastname: propTypes.string,
     address: propTypes.string,
     phone: propTypes.number,
-    created_at: propTypes.number,
+    cotisation: propTypes.number,
     newsletter: propTypes.number,
   }),
 };
@@ -73,7 +73,7 @@ TableMembers.defaultProps = {
     lastname: "titi",
     address: "rue baron",
     phone: "06.06.06.06.06",
-    created_at: "08.07.2022",
+    cotisation: "08.07.2022",
     newsletter: 1,
   }),
 };

@@ -12,6 +12,8 @@ import LayoutAdmin from "./frontadmin/pages/LayoutAdmin";
 import ContentInvolve from "./frontadmin/pages/ContentInvolve";
 import ContentOther from "./frontadmin/pages/ContentOther";
 import ContentPhoto from "./frontadmin/pages/ContentPhoto";
+import TableMembers from "./frontadmin/components/TableMembers";
+import MemberForm from "./frontadmin/components/Form/MemberForm";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
@@ -36,6 +38,8 @@ export default function App() {
             <Route path="/admin/donation" element={<ContentInvolve />} />
             <Route path="/admin/other" element={<ContentOther />} />
             <Route path="/admin/photo" element={<ContentPhoto />} />
+            <Route path="/admin/membre" element={<TableMembers />} />
+            <Route path="/admin/addmembre" element={<MemberForm />} />
           </Route>
         </Routes>
       </GlobalContext.Provider>
