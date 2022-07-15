@@ -37,9 +37,9 @@ export default function Header() {
           <img className="lang-flag" src={FR} alt="fench-icon" />
           <img className="lang-flag" src={UK} alt="ukrainian-icon" />
         </a>
-        {/* <div className="flag-btns">
+        <div className="flag-btns">
           <Translate />
-        </div> */}
+        </div>
       </div>
 
       <div className="nav-menu">
