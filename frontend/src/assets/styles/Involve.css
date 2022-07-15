@@ -1,21 +1,20 @@
-.involve-body {
-  display: flex;
-  flex-direction: column;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .involve-container {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
   width: 90%;
   max-width: 1400px;
-  margin-top: 12rem;
+  margin-top: 5rem;
   margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .involve-title {
-  font-family: Montserrat, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: #192f50;
+  color: #2773c3;
   font-weight: 900;
   font-size: 0px;
   color: transparent;
@@ -49,13 +48,13 @@
 }
 
 .involve-title:nth-child(1) span::after {
-  background: #155079;
+  background: #2773c3;
   animation: slide-in 0.75s ease-out forwards,
     slide-out 0.75s 1s ease-out forwards;
 }
 
 .involve-title:nth-child(2) span::after {
-  background: #ffd252;
+  background: #ffd928;
   animation: slide-in 0.75s 0.3s ease-out forwards,
     slide-out 0.75s 1.3s ease-out forwards;
 }
@@ -88,6 +87,7 @@
   min-height: 350px;
   perspective: 2000px;
   perspective-origin: top;
+  border-radius: 10px;
 }
 
 .card-wrapper:nth-child(even):hover .card {
@@ -114,7 +114,7 @@
   height: 100%;
   width: 100%;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 10px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -126,8 +126,11 @@
   align-items: center;
 }
 
-.card-wrapper:nth-child(even) .card-front {
-  background-color: #fbeab9;
+.card-wrapper .card-front {
+  border: 1px solid black;
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
 }
 
 .involve-p {
@@ -143,7 +146,7 @@
 }
 
 .card-back {
-  background: #ffd252;
+  background: #ffd928;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -157,10 +160,10 @@
 }
 
 .card-wrapper:nth-child(even) .card-back {
-  background-color: #ffd252;
+  background-color: #ffd928;
 }
 
-.involve-btn {
+.gift-btn {
   display: inline-block;
   background: grey;
   border-radius: 10px;
@@ -169,8 +172,8 @@
 
 .involve-span-btn {
   display: inline-block;
-  background: white;
-  color: #333;
+  background: #2773c3;
+  color: white;
   border: 1px solid #333;
   border-radius: 10px;
   padding: 15px;
@@ -184,7 +187,84 @@
 }
 
 .involve-span-btn:hover {
-  transform: translate(-6px, -6px);
-  color: white;
-  background: #155079;
+  transform: translate(-9px, -9px);
+  color: black;
+  background: #ffd928;
+}
+
+.involve-pic {
+  width: 250px;
+  height: 300px;
+  margin: 0;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 5em;
+}
+
+.gift-btn-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+}
+
+.gift-btn {
+  margin-top: 25px;
+}
+
+.final-img {
+  margin-top: 5rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes scribble {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+div#stripped {
+  width: 100%;
+  margin: 0 auto;
+  background: #000;
+  background-image: url(../../assets/img/youkraine.jpg);
+  background-size: cover;
+  font-size: 0;
+  border-radius: 10px;
+}
+div#stripped svg {
+  background: white;
+  background-image: url(../../assets/img/paintflag.jpg);
+  border-radius: 10px;
+  mix-blend-mode: screen;
+}
+
+div#stripped svg polyline {
+  fill: none;
+  stroke: black;
+  stroke-width: 200;
+  stroke-dasharray: 20000;
+  stroke-dashoffset: 20000;
+  animation: scribble 10s linear forwards;
+  animation-iteration-count: infinite;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  div#stripped {
+    background-image: url(../../assets/img/stopwar.jpg);
+  }
 }
