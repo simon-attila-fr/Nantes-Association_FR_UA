@@ -2,18 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: solid 1px red;
 }
 
 .photoForm {
-    border: solid 1px blue;
+    border-radius: 8px;
+    border-style: none;
+    border: 2px solid #e4e6e8;
+    box-shadow: 2px 2px 12px 2px rgba(111, 111, 114, 0.2);
 }
 
 .photoForm div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 42vw;
+    width: 40vw;
 }
 
 .photoForm div img {
