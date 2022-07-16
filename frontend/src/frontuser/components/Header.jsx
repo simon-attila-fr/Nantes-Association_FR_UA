@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
@@ -17,7 +16,7 @@ export default function Header() {
     <nav className="nav-main">
       <div className="nav-logo">
         <a
-          href="#"
+          href=""
           className="nav-logo-link"
           aria-label="visit homepage"
           aria-current="page"
@@ -46,8 +45,12 @@ export default function Header() {
         <a href="#" className="menu-toggler" aria-label="page menu">
           <img className="menu-icon" src={compass} alt="menu-icon" />
         </a>
-        <button className="spin circle">Accueil</button>
-        <button className="spin circle">Participer</button>
+        <button className="spin circle" type="button">
+          Accueil
+        </button>
+        <button className="spin circle" type="button">
+          Participer
+        </button>
       </div>
     </nav>
   );
