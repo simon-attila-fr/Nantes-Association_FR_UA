@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import GlobalContext from "../contexts/GlobalContext";
 import logo from "../../assets/img/logo.png";
 import FR from "../../assets/img/FR.png";
@@ -46,10 +47,34 @@ export default function Header() {
           <img className="menu-icon" src={compass} alt="menu-icon" />
         </a>
         <button className="spin circle" type="button">
-          Accueil
+          <NavLink
+            to="/"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#ffc330",
+                    textDecoration: "underline",
+                  }
+                : { textDecoration: "none", hover: "#0073db" }
+            }
+          >
+            Accueil
+          </NavLink>
         </button>
         <button className="spin circle" type="button">
-          Participer
+          <NavLink
+            to="/involve"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#ffc330",
+                    textDecoration: "underline",
+                  }
+                : { color: "black", textDecoration: "none" }
+            }
+          >
+            Participer
+          </NavLink>
         </button>
       </div>
     </nav>

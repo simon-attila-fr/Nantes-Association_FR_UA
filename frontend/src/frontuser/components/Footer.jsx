@@ -42,8 +42,9 @@ export default function Footer() {
         <div className="footerBorderBottom">
           <div className="footerSocial">
             <ul className="footerSocialList">
-              <li>
+              <li className="footerSocialChip">
                 <a
+                  className="footerLink"
                   href="https://m.facebook.com/Association-Avenir-Franco-Ukrainien-110917231562439/"
                   target="_blank"
                   rel="noreferrer"
@@ -51,8 +52,9 @@ export default function Footer() {
                   <img className="menuLinkIcon" src={facebook} alt="facebook" />
                 </a>
               </li>
-              <li>
+              <li className="footerSocialChip">
                 <a
+                  className="footerLink"
                   href="https://instagram.com/asso_avenirfrancoukrainien?igshid=YmMyMTA2M2Y="
                   target="_blank"
                   rel="noreferrer"
@@ -64,8 +66,9 @@ export default function Footer() {
                   />
                 </a>
               </li>
-              <li>
+              <li className="footerSocialChip">
                 <a
+                  className="footerLink"
                   href="mailto:assoavenirukrfr@gmail.com"
                   target="_blank"
                   rel="noreferrer"
@@ -73,8 +76,13 @@ export default function Footer() {
                   <img className="menuLinkIcon" src={mail} alt="mail" />
                 </a>
               </li>
-              <li>
-                <a href="tel:(+33)0632414456" target="_blank" rel="noreferrer">
+              <li className="footerSocialChip">
+                <a
+                  className="footerLink"
+                  href="tel:(+33)0632414456"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img className="menuLinkIcon" src={tel} alt="tel" />
                 </a>
               </li>
