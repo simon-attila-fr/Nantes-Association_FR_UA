@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/accounts/login/?next=/tryzubasso/"
+                  href="https://instagram.com/asso_avenirfrancoukrainien?igshid=YmMyMTA2M2Y="
                   target="_blank"
                   rel="noreferrer"
                 >
