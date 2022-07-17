@@ -30,16 +30,27 @@ class PhotoController {
   };
 
   static edit = (req, res) => {
-    const image = req.file.path;
-    const info = req.body;
-    info.id = parseInt(req.params.id, 10);
+    const photo = req.body;
+    photo.photo_url = req.file.path;
+    photo.photo_url = `http://localhost:5000/${photo.photo_url
+      .replace(/\\/g, "/")
+      .replace("public/", "")}`;
+    photo.id = parseInt(req.params.id, 10);
+    photo.updated_at = new Date(Date.now()).toLocaleDateString();
+
+    // TODO validations (length, format...)
+
     models.photo
-      .insert(image, info)
+      .update(photo)
       .then(([result]) => {
-        res.status(201).send({ ...image, info, id: result.insertId });
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
       })
       .catch((err) => {
-        console.error(err, image);
+        console.error(err);
         res.sendStatus(500);
       });
   };

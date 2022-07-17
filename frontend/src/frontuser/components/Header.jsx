@@ -1,26 +1,54 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import GlobalContext from "../contexts/GlobalContext";
-import Don from "./Don";
-import MenuBurger from "./MenuBurger";
+import logo from "../../assets/img/logo.png";
+import FR from "../../assets/img/FR.png";
+import UK from "../../assets/img/UK.png";
 import Translate from "./Translate";
+import compass from "../../assets/img/compass.png";
 import "../../assets/styles/Header.css";
 
 export default function Header() {
   const { setLang } = useContext(GlobalContext);
-  const [showLinks, setShowLinks] = useState(false);
-
-  const handleShowLinks = () => {
-    setShowLinks(!showLinks);
-  };
 
   return (
-    <div>
-      <nav className={`navbar ${showLinks ? "show_nav" : null}  `}>
-        <Don />
-        <Translate />
-        <MenuBurger handleShowLinks={handleShowLinks} />
-      </nav>
-    </div>
+    <nav className="nav-main">
+      <div className="nav-logo">
+        <a
+          href="#"
+          className="nav-logo-link"
+          aria-label="visit homepage"
+          aria-current="page"
+        >
+          <img className="nav-logo-pic" src={logo} alt="logo-pic" />
+        </a>
+      </div>
+
+      <div className="nav-gift-btn">
+        <a href="" className="gift-btn">
+          <span className="gift-span-btn">Donner</span>
+        </a>
+      </div>
+
+      <div className="nav-translation">
+        <a href="#" className="nav-flag" aria-label="translation">
+          <img className="lang-flag" src={FR} alt="fench-icon" />
+          <img className="lang-flag" src={UK} alt="ukrainian-icon" />
+        </a>
+        <div className="flag-btns">
+          <Translate />
+        </div>
+      </div>
+
+      <div className="nav-menu">
+        <a href="#" className="menu-toggler" aria-label="page menu">
+          <img className="menu-icon" src={compass} alt="menu-icon" />
+        </a>
+        <button className="spin circle">Accueil</button>
+        <button className="spin circle">Participer</button>
+      </div>
+    </nav>
   );
 }

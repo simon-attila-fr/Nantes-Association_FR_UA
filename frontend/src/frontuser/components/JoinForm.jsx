@@ -1,79 +1,122 @@
-import "../../assets/styles/JoinForm.css";
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState } from "react";
+import "../../assets/styles/Form.css";
 
 export default function JoinForm() {
+  const [message, setMessage] = useState(false);
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
+
   return (
-    <div className="container">
-      <form id="contact" action="" method="post">
-        <h3>Formulaire d'Adhésion</h3>
-        <h4>
-          Adhérez aujourd'hui et vous obtiendrez un retour de notre part dans
-          les 48H
-        </h4>
-        <fieldset>
-          <input
-            placeholder="Vos nom et prénom"
-            type="text"
-            tabIndex="a"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <input placeholder="Votre Email" type="email" tabIndex="b" required />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder="Votre numéro de téléphone"
-            type="tel"
-            tabIndex="c"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <input
-            placeholder="Votre adresse"
-            type="text"
-            tabIndex="d"
-            required
-          />
-          <input
-            placeholder="Votre code postal"
-            type="text"
-            tabIndex="e"
-            required
-          />
-          <input placeholder="Votre ville" type="text" tabIndex="e" required />
-        </fieldset>
-        <fieldset>
-          <label htmlFor="newsletter" className="checkbox">
-            <div className="newsletter">
-              Cochez si vous voulez recevoir la newsletter
-              <input
-                type="checkbox"
-                className="newsletter-checkbox"
-                name="checkbox"
-                id=""
+    <div className="form-container">
+      <div className="formrow formheader">
+        <h1 className="form-h1">ADHERER</h1>
+      </div>
+      <div className="formbody">
+        <form className="form-form">
+          <ul className="form-ul">
+            <li className="form-li">
+              <p className="stay-left">
+                <label className="form-label" htmlFor="firstname">
+                  Prénom <span className="req">*</span>
+                </label>
+                <input className="forminput" type="text" name="firstname" />
+              </p>
+              <p className="stay-left">
+                <label className="form-label" htmlFor="lastname">
+                  Nom <span className="req">*</span>
+                </label>
+                <input className="forminput" type="text" name="lastname" />
+              </p>
+            </li>
+
+            <li className="form-li">
+              <p className="stay-left">
+                <label className="form-label" htmlFor="email">
+                  email <span className="req">*</span>
+                </label>
+                <input className="forminput" type="email" name="email" />
+              </p>
+            </li>
+            <li className="form-li">
+              <p className="stay-left">
+                <label className="form-label" htmlFor="phone">
+                  Téléphone
+                </label>
+                <input className="forminput" type="text" name="phone" />
+              </p>
+            </li>
+            <li className="form-li">
+              <label className="form-label" htmlFor="address">
+                Adresse <span className="req">*</span>
+              </label>
+              <textarea
+                className="formtextarea"
+                id="address"
+                name="address"
+                cols="35"
+                rows="10"
               />
+            </li>
+
+            <div className="form-radio">
+              <h4 className="form-h4">
+                Choisissez votre cotisation <span className="req">*</span>
+              </h4>
+              <div className="radio">
+                <label>
+                  <input type="radio" name="radio" />
+                  <i className="helper" />
+                  Adhérent : 18€
+                </label>
+              </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" name="radio" />
+                  <i className="helper" />
+                  Adhérent jeune : 8€
+                </label>
+              </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" name="radio" />
+                  <i className="helper" />
+                  Adhérent Bienfaiteur : 100€
+                </label>
+              </div>
             </div>
-          </label>
-        </fieldset>
-        <fieldset>
-          <textarea
-            placeholder="Si vous voulez nous joindre un message"
-            tabIndex="f"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <button
-            name="submit"
-            type="submit"
-            id="contact-submit"
-            data-submit="...Sending"
-          >
-            ADHERER
-          </button>
-        </fieldset>
-      </form>
+            <div className="checkbox">
+              <label>
+                <input type="checkbox" />
+                <i className="helper" />
+                Cochez pour vous inscrire à notre newsletter
+              </label>
+            </div>
+
+            <li className="form-li">
+              <div className="divider" />
+            </li>
+            <li className="form-li">
+              <button
+                className="custom-btn btn-12"
+                type="button"
+                value="adhérer"
+                onClick={() => setMessage(!message)}
+              >
+                <span>Merci !</span>
+                <span>Adhérer</span>
+              </button>
+              {message && (
+                <p className="contactFormMessage">
+                  Nous avons bien reçu votre demande d'adhésion
+                </p>
+              )}
+            </li>
+          </ul>
+        </form>
+      </div>
     </div>
   );
 }

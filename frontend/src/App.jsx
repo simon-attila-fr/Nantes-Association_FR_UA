@@ -3,14 +3,17 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import GlobalContext from "./frontuser/contexts/GlobalContext";
-import Header from "./frontuser/components/Header";
-import Footer from "./frontuser/components/Footer";
 import Home from "./frontuser/pages/Home";
 import Involve from "./frontuser/pages/Involve";
 import Login from "./frontadmin/pages/Login";
 import ContentHome from "./frontadmin/pages/ContentHome";
-// import ContentInvolve from "./frontadmin/pages/ContentInvolve";
 import "./assets/styles/App.css";
+import LayoutAdmin from "./frontadmin/pages/LayoutAdmin";
+import ContentInvolve from "./frontadmin/pages/ContentInvolve";
+import ContentOther from "./frontadmin/pages/ContentOther";
+import ContentPhoto from "./frontadmin/pages/ContentPhoto";
+import TableMembers from "./frontadmin/components/TableMembers";
+import MemberForm from "./frontadmin/components/Form/MemberForm";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
@@ -25,15 +28,20 @@ export default function App() {
   return (
     <div className="app">
       <GlobalContext.Provider value={{ traduction, lang, setLang }}>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/involve" element={<Involve />} />
-          <Route path="/admin/" element={<Login />} />
-          <Route path="/admin/content/home" element={<ContentHome />} />
-          {/* <Route path="/admin/content/involve" element={<ContentInvolve />} /> */}
+          <Route path="/admin/" element={<LayoutAdmin />}>
+            <Route index element={<ContentHome />} />
+            <Route path="/admin/login" element={<Login />} />
+            <Route path="/admin/accueil" element={<ContentHome />} />
+            <Route path="/admin/donation" element={<ContentInvolve />} />
+            <Route path="/admin/other" element={<ContentOther />} />
+            <Route path="/admin/photos" element={<ContentPhoto />} />
+            <Route path="/admin/membre" element={<TableMembers />} />
+            <Route path="/admin/addmembre" element={<MemberForm />} />
+          </Route>
         </Routes>
-        <Footer />
       </GlobalContext.Provider>
     </div>
   );
