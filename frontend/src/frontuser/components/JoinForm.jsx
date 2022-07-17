@@ -19,16 +19,16 @@ export default function JoinForm() {
           <ul className="form-ul">
             <li className="form-li">
               <p className="stay-left">
-                <label className="form-label" htmlFor="first_name">
+                <label className="form-label" htmlFor="firstname">
                   Prénom <span className="req">*</span>
                 </label>
-                <input type="text" name="first_name" />
+                <input className="forminput" type="text" name="firstname" />
               </p>
               <p className="stay-left">
-                <label className="form-label" htmlFor="last_name">
+                <label className="form-label" htmlFor="lastname">
                   Nom <span className="req">*</span>
                 </label>
-                <input type="text" name="last_name" />
+                <input className="forminput" type="text" name="lastname" />
               </p>
             </li>
 
@@ -37,15 +37,15 @@ export default function JoinForm() {
                 <label className="form-label" htmlFor="email">
                   email <span className="req">*</span>
                 </label>
-                <input type="email" name="email" />
+                <input className="forminput" type="email" name="email" />
               </p>
             </li>
             <li className="form-li">
               <p className="stay-left">
                 <label className="form-label" htmlFor="phone">
-                  Téléphone <span className="req">*</span>
+                  Téléphone
                 </label>
-                <input type="text" name="phone" />
+                <input className="forminput" type="text" name="phone" />
               </p>
             </li>
             <li className="form-li">
@@ -54,9 +54,10 @@ export default function JoinForm() {
               </label>
               <textarea
                 className="formtextarea"
-                cols="46"
-                rows="3"
+                id="address"
                 name="address"
+                cols="35"
+                rows="10"
               />
             </li>
 

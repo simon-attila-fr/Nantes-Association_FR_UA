@@ -1,5 +1,5 @@
 .footer {
-  background: #524f4f;
+  background: #2559B6;
   border-top: 0.25rem solid #424040;
   border-bottom: 2px solid #424040;
   padding-bottom: 0.6rem;
@@ -32,7 +32,7 @@
 
 .footer .footerSocial .footerSocialList {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;
   float: none;
@@ -40,21 +40,12 @@
   width: 100%;
 }
 
-.footer .footerSocial .footerSocialList .menuLinkIcon {
-  width: 70%;
-}
-
 .footerSocialList {
   list-style: none;
   border-bottom: 2px solid #424040;
-  border-width: 91.66667%;
 }
 
-a img {
-  border: none;
-}
-
-img {
+.menuLinkIcon {
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
@@ -75,7 +66,7 @@ img {
 }
 
 .signupTitle {
-  color: #3caac1;
+  color: white;
   font-family: "Asap", sans-serif;
   font-size: 0.9375rem;
   letter-spacing: 0.06rem;
@@ -106,7 +97,7 @@ img {
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
   background-color: #3caac1;
-  color: #fff;
+  color: black;
 }
 
 .legalMentionsContainer {
@@ -120,7 +111,7 @@ img {
 }
 
 .legalMentions {
-  color: #3caac1;
+  color: white;
   font-family: "Asap", sans-serif;
   font-size: 0.9375rem;
   letter-spacing: 0.06rem;

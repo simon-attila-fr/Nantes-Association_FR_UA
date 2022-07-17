@@ -2,8 +2,9 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const ContentRouter = require("./routes/ContentRouter");
 const AdminRouter = require("./routes/AdminRouter");
+const ContentRouter = require("./routes/ContentRouter");
+const MailRouter = require("./routes/MailRouter");
 const MemberRouter = require("./routes/MemberRouter");
 const PhotoRouter = require("./routes/PhotoRouter");
 const TraductionRouter = require("./routes/TraductionRouter");
@@ -11,7 +12,7 @@ const TraductionRouter = require("./routes/TraductionRouter");
 const app = express();
 app.use(cookieParser());
 
-// use some application-level middlewares
+// Use some application-level middlewares
 app.use(
   cors({
     origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
@@ -30,9 +31,9 @@ app.use(express.static(path.join(__dirname, "../public/assets/images")));
 app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 
 // API routes
-
-app.use("/content", ContentRouter);
 app.use("/user", AdminRouter);
+app.use("/content", ContentRouter);
+app.use("/sendmail", MailRouter);
 app.use("/member", MemberRouter);
 app.use("/photo", PhotoRouter);
 app.use("/traduction", TraductionRouter);
