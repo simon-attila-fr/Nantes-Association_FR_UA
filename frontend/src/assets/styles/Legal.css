@@ -1,5 +1,5 @@
 .question-title {
-  color: #3caac1;
+  color: white;
   font-family: "Asap", sans-serif;
   font-size: 0.9375rem;
   letter-spacing: 0.06rem;
@@ -8,17 +8,18 @@
   font-style: normal;
   text-rendering: optimizeLegibility;
   text-align: center;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .question-info {
-  color: white;
+  color: black;
   padding-bottom: 1rem;
 }
 
 .btn-legal {
   margin-left: 1rem;
-  background-color: black;
+  background-color: #2559B6;
   color: white;
-  border: 0;
-  height: 2rem;
+  border: none;
 }
