@@ -170,7 +170,16 @@
   text-decoration: none;
 }
 
-.involve-span-btn {
+.upload-btn {
+  width: 80%;
+  display: inline-block;
+  background: grey;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.gift-span-btn {
   display: inline-block;
   background: #2773c3;
   color: white;
@@ -186,7 +195,24 @@
     background-color 0.15s ease-out;
 }
 
-.involve-span-btn:hover {
+.upload-span-btn {
+  width: 100%;
+  display: inline-block;
+  background: #2773c3;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.upload-span-btn:hover {
   transform: translate(-9px, -9px);
   color: black;
   background: #ffd928;
@@ -206,12 +232,12 @@
   gap: 5em;
 }
 
-.gift-btn-form {
+.gift-btn-form, .upload-btn-form {
   display: flex;
   justify-content: center;
-  margin-top: 5em;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  margin-top: 1.5em;
+  padding-top: 1.65rem;
+  padding-bottom: 1.65rem;
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
@@ -219,11 +245,10 @@
   -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
 }
 
-.gift-btn {
-  margin-top: 25px;
-}
-
 .final-img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 5rem;
   border-radius: 10px;
   border: 1px solid black;
@@ -265,6 +290,6 @@ div#stripped svg polyline {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   div#stripped {
-    background-image: url(../../assets/img/stopwar.jpg);
+    background-image: url(../../assets/img/youkraine.jpg);
   }
 }
