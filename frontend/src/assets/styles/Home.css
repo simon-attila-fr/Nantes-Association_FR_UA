@@ -1,5 +1,59 @@
 * {
   color: var(--fontColorMain);
+  opacity: 0;
+  animation: apparition 0.6s 0.3s forwards;
+}
+
+.homeStartScreenContainer {
+  width: 100vw;
+  height: 70vh;
+  background: linear-gradient(0deg, white, var(--mainColorLight) 60%, var(--mainColorLight));
+}
+
+.homeStartScreenContainer p {
+  font-family: "Lato", sans-serif;
+}
+
+.homeStartScreenContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.homeStartScreenContainer img {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.homeStartScreenTextArea h1, .homeStartScreenTextArea p {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.headerLogo {
+  animation: apparition 0.5s 1s ease-out forwards;
+
+}
+
+.homeStartScreenTextArea h1 {
+  animation: apparition 0.5s 1.2s ease-out forwards;
+}
+
+.homeStartScreenTextArea p {
+  animation: apparition 0.5s 1.5s ease-out forwards;
+}
+
+.homeStartScreenTextArea h1 {
+  margin-top: 7vh;
+}
+
+.homeStartScreenTextArea p {
+  margin-top: 15vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.3rem;
 }
 
 .homeContent,
@@ -10,10 +64,15 @@
   align-items: center;
 }
 
+.homeContent h1,
 .homeContent h2,
 .homeContent h3 {
   font-family: var(--fontTitle);
   text-transform: uppercase;
+}
+
+.homePresentationTitleContainer {
+  animation: apparition 0.5s 1.7s ease-out forwards;
 }
 
 .homePresentationTitleContainer h2 span {
@@ -102,9 +161,24 @@
   display: none;
 }
 
+@keyframes apparition {
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* --- Media queries tablet--- */
 
 @media only screen and (min-width: 600px) {
+  .homeStartScreenContainer {
+    align-items: center;
+  }
+
+  .homeStartScreenContainer img {
+    max-width: 60%;
+  }
+
   .homePresentationTitleContainer h2 span {
     font-size: 1.8rem;
   }
@@ -139,6 +213,10 @@
 /* --- Media queries desktop --- */
 
 @media only screen and (min-width: 1024px) {
+  .homeStartScreenContainer img {
+    max-width: 45%;
+  }
+
   .homePresentationTitleContainer h2 span {
     font-size: 2rem;
   }
