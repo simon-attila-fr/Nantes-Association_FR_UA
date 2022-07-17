@@ -93,7 +93,9 @@ export default function MemberForm() {
           />
         </label>
 
-        <button type="submit">Envoyer</button>
+        <button className="btn-addmember" type="submit">
+          Envoyer
+        </button>
       </form>
     </div>
   );

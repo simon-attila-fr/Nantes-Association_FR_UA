@@ -26,3 +26,11 @@
 .inputCheck {
   display: flex;
 }
+.btn-addmember{
+  background-color: white;
+  padding: 10px 24px;
+}
+.btn-addmember:hover {
+  background-color: #f8d849;
+  color: black;
+}

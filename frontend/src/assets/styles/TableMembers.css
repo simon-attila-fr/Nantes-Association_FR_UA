@@ -13,3 +13,6 @@ tbody td {
   justify-content: space-around;
   margin-top: 50px;
 }
+.btn-deletemember{
+  background-color: #a7bce1;
+}

@@ -1,15 +1,20 @@
 import axios from "axios";
 import propTypes from "prop-types";
+import Swal from "sweetalert2";
 import "../../assets/styles/TableMembers.css";
 
 export default function TableMembers({ data }) {
   const onMembersDelete = (id) => {
-    axios
-      .delete(`http://localhost:5000/member/${id}`)
-      .then()
-      .catch((error) => {
-        console.error(error);
-      });
+    axios.delete(`http://localhost:5000/member/${id}`);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Le contenu a bien été supprimé",
+      showConfirmButton: false,
+      timer: 1500,
+    }).catch((error) => {
+      console.error(error);
+    });
   };
 
   return (
@@ -41,6 +46,7 @@ export default function TableMembers({ data }) {
               <td>
                 <button
                   type="button"
+                  className="btn-deletemember"
                   onClick={(e) => onMembersDelete(list.id, e)}
                 >
                   Supprimer
