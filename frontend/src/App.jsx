@@ -12,8 +12,9 @@ import LayoutAdmin from "./frontadmin/pages/LayoutAdmin";
 import ContentInvolve from "./frontadmin/pages/ContentInvolve";
 import ContentOther from "./frontadmin/pages/ContentOther";
 import ContentPhoto from "./frontadmin/pages/ContentPhoto";
-import TableMembers from "./frontadmin/components/TableMembers";
 import MemberForm from "./frontadmin/components/Form/MemberForm";
+import Members from "./frontadmin/pages/Members";
+import Register from "./frontadmin/pages/Register";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
@@ -34,11 +35,12 @@ export default function App() {
           <Route path="/admin/" element={<LayoutAdmin />}>
             <Route index element={<ContentHome />} />
             <Route path="/admin/login" element={<Login />} />
+            <Route path="/admin/register" element={<Register />} />
             <Route path="/admin/accueil" element={<ContentHome />} />
             <Route path="/admin/donation" element={<ContentInvolve />} />
             <Route path="/admin/other" element={<ContentOther />} />
             <Route path="/admin/photos" element={<ContentPhoto />} />
-            <Route path="/admin/membre" element={<TableMembers />} />
+            <Route path="/admin/membre" element={<Members />} />
             <Route path="/admin/addmembre" element={<MemberForm />} />
           </Route>
         </Routes>

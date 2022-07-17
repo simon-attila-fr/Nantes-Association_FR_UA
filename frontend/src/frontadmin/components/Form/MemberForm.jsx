@@ -65,30 +65,37 @@ export default function MemberForm() {
         method="post"
         onSubmit={handleSubmit}
       >
-        <label htmlFor={members.name}>Prénom</label>
+        <label name="name">Prénom</label>
         <input type="text" name="name" onChange={changeName} />
 
-        <label htmlFor={members.lastName}>Nom</label>
+        <label name="lastName">Nom</label>
         <input type="text" name="lastName" onChange={changeLastname} />
 
-        <label htmlFor={members.email}>Email</label>
+        <label name="email">Email</label>
         <input type="text" name="email" onChange={changeEmail} />
 
-        <label htmlFor={members.address}>Adresse</label>
+        <label name="address">Adresse</label>
         <input type="text" name="adress" onChange={changeAddress} />
 
-        <label htmlFor={members.phone}>Téléphone</label>
+        <label name="telephone">Téléphone</label>
         <input type="number" name="telephone" onChange={changePhone} />
 
-        <label htmlFor={members.cotisation}>Cotisation</label>
+        <label name="cotisation">Cotisation</label>
         <input type="number" name="cotisation" onChange={changeCotisation} />
 
-        <label htmlFor={members.newsletter}>
+        <label name="checkbox">
           Inscription à la newsletter
-          <input type="checkbox" checked={isChecked} onChange={checkHandler} />
+          <input
+            className="inputCheck"
+            type="checkbox"
+            checked={isChecked}
+            onChange={checkHandler}
+          />
         </label>
 
-        <button type="submit">Envoyer</button>
+        <button className="btn-addmember" type="submit">
+          Envoyer
+        </button>
       </form>
     </div>
   );
