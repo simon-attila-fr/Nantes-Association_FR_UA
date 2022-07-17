@@ -85,7 +85,12 @@ export default function MemberForm() {
 
         <label htmlFor={members.newsletter}>
           Inscription à la newsletter
-          <input type="checkbox" checked={isChecked} onChange={checkHandler} />
+          <input
+            className="inputCheck"
+            type="checkbox"
+            checked={isChecked}
+            onChange={checkHandler}
+          />
         </label>
 
         <button type="submit">Envoyer</button>

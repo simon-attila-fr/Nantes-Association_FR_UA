@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import MemberForm from "../components/Form/MemberForm";
 import TableMembers from "../components/TableMembers";
+import "../../assets/styles/members.css";
 
 export default function Members() {
   const [members, setMembers] = useState([]);
@@ -17,11 +17,8 @@ export default function Members() {
 
   return (
     <div>
-      <div>
-        <MemberForm />
-      </div>
-      <div>
-        <h1> Tous les membres</h1>
+      <div className="divtable">
+        <h1> Tous les membres </h1>
         <TableMembers data={members} />
       </div>
     </div>

@@ -109,6 +109,14 @@ class UserController {
     }
   };
 
+  // eslint-disable-next-line consistent-return
+  static isAdmin = (req, res, next) => {
+    if (req.userRole === "ROLE_ADMIN") {
+      return next();
+    }
+    res.sendStatus(403);
+  };
+
   static logout = (req, res) => {
     res.clearCookie("access_token").sendStatus(204);
   };
