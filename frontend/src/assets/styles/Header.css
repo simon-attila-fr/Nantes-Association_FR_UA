@@ -3,6 +3,7 @@
   top: 0;
   z-index: 1;
   width: 100%;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,6 +45,10 @@
   width: 7em;
   height: 7em;
   padding: 0;
+}
+
+.spin:hover {
+  color: #0073db;
 }
 
 .spin::before,
@@ -88,6 +93,10 @@
 .circle::before,
 .circle::after {
   border-radius: 100%;
+}
+
+.spin:active {
+  color:#ffc330;
 }
 
 .gift-btn {

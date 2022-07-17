@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   border: none;
+  list-style: none;
 }
 
 .sidebar nav ul li ul {
@@ -59,19 +60,15 @@
 }
 
 .sidebar nav h4 {
-  background: rgba(0, 0, 0, 0.2);
+  background: white;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   border-radius: 0 0 2rem;
-  border-bottom: 0.1rem solid white;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
-}
-
-.sidebar nav h4:hover {
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .nav-detail {
@@ -90,6 +87,8 @@
 
 .nav-category {
   margin-bottom: 2rem;
+  color: white;
+  
 }
 
 .welcome {
