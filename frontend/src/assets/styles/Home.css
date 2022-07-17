@@ -33,16 +33,16 @@
 }
 
 .headerLogo {
-  animation: apparition 0.5s 1s ease-out forwards;
+  animation: apparition 0.8s 1s ease-out forwards;
 
 }
 
 .homeStartScreenTextArea h1 {
-  animation: apparition 0.5s 1.2s ease-out forwards;
+  animation: apparition 0.8s 1.2s ease-out forwards;
 }
 
 .homeStartScreenTextArea p {
-  animation: apparition 0.5s 1.5s ease-out forwards;
+  animation: apparition 0.8s 1.5s ease-out forwards;
 }
 
 .homeStartScreenTextArea h1 {
@@ -72,7 +72,7 @@
 }
 
 .homePresentationTitleContainer {
-  animation: apparition 0.5s 1.7s ease-out forwards;
+  animation: apparition 1s 2s ease-out forwards;
 }
 
 .homePresentationTitleContainer h2 span {
