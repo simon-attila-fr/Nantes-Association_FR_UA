@@ -1,47 +1,31 @@
 INSERT INTO content (body, language_code, traduction_id) VALUES 
-("Ceci est un titre", "FR", 17),
-("Це титул", "UK", 17),
+("Ceci est un slogan 1", "FR", 10),
+("це гасло 1", "UK", 10),
+("Ceci est un slogan 2", "FR", 11),
+("це гасло 2", "UK", 11),
+("Ceci est un titre", "FR", 12),
+("Це титул", "UK", 12),
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "FR", 18), 
+, "FR", 13), 
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "UK", 18), 
-("Ceci est un titre", "FR", 19),
-("Це титул", "UK", 19),
+, "UK", 13),
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "FR", 20), 
+, "FR", 14), 
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "UK", 20), 
-("Ceci est un titre", "FR", 21),
-("Це титул", "UK", 21),
+, "UK", 14), 
+("Ceci est un titre", "FR", 15),
+("Це титул", "UK", 15),
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "FR", 22), 
+, "FR", 16), 
 ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
-, "UK", 22), 
-("Ceci est un label", "FR", 23),
-("Це титул", "UK", 23),
-("Ceci est un label", "FR", 24),
-("Це титул", "UK", 24),
-("Ceci est un label", "FR", 25),
-("Це титул", "UK", 25),
-("Ceci est un label", "FR", 26),
-("Це титул", "UK", 26),
-("Ceci est un label", "FR", 27),
-("Це титул", "UK", 27),
-("Ceci est un label", "FR", 28),
-("Це титул", "UK", 28),
-("Ceci est un label", "FR", 29),
-("Це титул", "UK", 29),
-("Ceci est un message de validation", "FR", 30),
-("Це титул", "UK", 30),
-("Ceci est un titre", "FR", 31),
-("Це титул", "UK", 31),
-("Ceci est un contenu", "FR", 32),
-("Це титул", "UK", 32),
-("Ceci est un label", "FR", 33),
-("Це титул", "UK", 33),
-("Ceci est un label", "FR", 34),
-("Це титул", "UK", 34),
-("Ceci est un label", "FR", 35),
-("Це титул", "UK", 35),
-("Ceci est un message de validation", "FR", 36),
-("Це титул", "UK", 36);
+, "UK", 16),
+("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+, "FR", 17), 
+("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+, "UK", 17), 
+("Ceci est un titre", "FR", 18),
+("Це титул", "UK", 18),
+("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+, "FR", 19), 
+("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+, "UK", 19);
