@@ -15,8 +15,14 @@ class PhotoManager extends AbstractManager {
 
   update(photo) {
     return this.connection.query(
-      `update ${PhotoManager.table} set photo_name = ?, photo_url = ?, updated_at = STR_TO_DATE(?, '%d/%m/%Y')  where id = ?`,
-      [photo.photo_name, photo.photo_url, photo.updated_at, photo.id]
+      `update ${PhotoManager.table} set photo_name = ?, photo_url = ?, updated_at = STR_TO_DATE(?, '%d/%m/%Y'), description = ?  where id = ?`,
+      [
+        photo.photo_name,
+        photo.photo_url,
+        photo.updated_at,
+        photo.description,
+        photo.id,
+      ]
     );
   }
 }
