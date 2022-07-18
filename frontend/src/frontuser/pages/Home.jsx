@@ -6,12 +6,24 @@ import Mosaic from "../components/Mosaic";
 import HomeH2Img from "../../assets/img/HomeH2Img.png1657639372003.png";
 import Separator from "../components/Separator";
 import Placeholder from "../../assets/img/HomePlaceholder.png";
+import Logo from "../components/Logo";
 
 export default function Home() {
   return (
     <div className="HomePage">
       <Header />
       <div className="homeContent">
+        <div className="homeStartScreenContainer">
+          <Logo />
+          <div className="homeStartScreenTextArea">
+            <h1>
+              <Traduction reference="home_website_title" />
+            </h1>
+            <p>
+              <Traduction reference="home_website_subtitle" />
+            </p>
+          </div>
+        </div>
         <section className="homePresentationAssociation">
           <div className="homePresentationTitleContainer">
             <h2>
