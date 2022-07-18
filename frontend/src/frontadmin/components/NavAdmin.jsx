@@ -12,12 +12,10 @@ export default function NavAdmin() {
           <ul>
             <li className="nav-category">
               <NavLink to="/admin/accueil">
-                {" "}
                 <h4>
                   <span>
-                    {" "}
-                    <AiOutlineEdit />{" "}
-                  </span>{" "}
+                    <AiOutlineEdit />
+                  </span>
                   Editer le contenu
                 </h4>
               </NavLink>
@@ -39,10 +37,8 @@ export default function NavAdmin() {
 
             <li className="nav-category">
               <NavLink to="">
-                {" "}
                 <h4>
                   <span>
-                    {" "}
                     <AiOutlineHeart />
                   </span>
                   Gérer les membres

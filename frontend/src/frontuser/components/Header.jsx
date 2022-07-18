@@ -4,8 +4,6 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import GlobalContext from "../contexts/GlobalContext";
 import logo from "../../assets/img/logo.png";
-import FR from "../../assets/img/FR.png";
-import UK from "../../assets/img/UK.png";
 import Translate from "./Translate";
 import compass from "../../assets/img/compass.png";
 import "../../assets/styles/Header.css";
@@ -33,10 +31,6 @@ export default function Header() {
       </div>
 
       <div className="nav-translation">
-        <a href="#" className="nav-flag" aria-label="translation">
-          <img className="lang-flag" src={FR} alt="fench-icon" />
-          <img className="lang-flag" src={UK} alt="ukrainian-icon" />
-        </a>
         <div className="flag-btns">
           <Translate />
         </div>
@@ -46,36 +40,38 @@ export default function Header() {
         <a href="#" className="menu-toggler" aria-label="page menu">
           <img className="menu-icon" src={compass} alt="menu-icon" />
         </a>
-        <button className="spin circle" type="button">
-          <NavLink
-            to="/"
-            style={({ isActive }) =>
-              isActive
-                ? {
-                    color: "#ffc330",
-                    textDecoration: "underline",
-                  }
-                : { textDecoration: "none", hover: "#0073db" }
-            }
-          >
+
+        <NavLink
+          to="/"
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  color: "#ffc330",
+                  textDecoration: "underline",
+                }
+              : { textDecoration: "none", hover: "#0073db" }
+          }
+        >
+          <button className="spin circle" type="button">
             Accueil
-          </NavLink>
-        </button>
-        <button className="spin circle" type="button">
-          <NavLink
-            to="/involve"
-            style={({ isActive }) =>
-              isActive
-                ? {
-                    color: "#ffc330",
-                    textDecoration: "underline",
-                  }
-                : { color: "black", textDecoration: "none" }
-            }
-          >
+          </button>
+        </NavLink>
+
+        <NavLink
+          to="/involve"
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  color: "#ffc330",
+                  textDecoration: "underline",
+                }
+              : { color: "black", textDecoration: "none" }
+          }
+        >
+          <button className="spin circle" type="button">
             Participer
-          </NavLink>
-        </button>
+          </button>
+        </NavLink>
       </div>
     </nav>
   );

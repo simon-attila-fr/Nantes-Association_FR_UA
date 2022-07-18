@@ -25,7 +25,7 @@ export default function ContactForm() {
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "email ou message obligatoire",
+        title: "email et message obligatoires",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -62,7 +62,7 @@ export default function ContactForm() {
                   onChange={(e) => setFirstname(e.target.value)}
                 />
               </p>
-              <p className="pull-right">
+              <p className="stay-left">
                 <label className="form-label" htmlFor="lastname">
                   Nom
                 </label>

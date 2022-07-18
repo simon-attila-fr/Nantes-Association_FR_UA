@@ -14,7 +14,6 @@
 
 .involve-title {
   text-transform: uppercase;
-  color: #2773c3;
   font-weight: 900;
   font-size: 0px;
   color: transparent;
@@ -110,6 +109,7 @@
 
 .card-front,
 .card-back {
+
   position: absolute;
   height: 100%;
   width: 100%;
@@ -127,10 +127,12 @@
 }
 
 .card-wrapper .card-front {
-  border: 1px solid black;
-  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  border-bottom: solid 3px var(--mainColor);
+  border-left: solid 3px var(--mainColor);
+  border-right: solid 3px var(--mainColor);
 }
 
 .involve-p {
@@ -146,7 +148,6 @@
 }
 
 .card-back {
-  background: #ffd928;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -160,7 +161,7 @@
 }
 
 .card-wrapper:nth-child(even) .card-back {
-  background-color: #ffd928;
+  background-color: var(--secondaryColorLight);
 }
 
 .gift-btn {
@@ -181,7 +182,7 @@
 
 .gift-span-btn {
   display: inline-block;
-  background: #2773c3;
+  background: var(--mainColor);
   color: white;
   border: 1px solid #333;
   border-radius: 10px;
@@ -198,7 +199,7 @@
 .upload-span-btn {
   width: 100%;
   display: inline-block;
-  background: #2773c3;
+  background: var(--mainColor);
   color: white;
   border: 1px solid #333;
   border-radius: 10px;
@@ -228,7 +229,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 100px;
   gap: 5em;
 }
 
@@ -240,21 +240,22 @@
   padding-bottom: 1.65rem;
   border-radius: 10px;
   border: 1px solid black;
-  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
 }
 
 .final-img {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
   border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.5);
+  border-bottom: solid 3px var(--mainColor);
+  border-left: solid 3px var(--mainColor);
+  border-right: solid 3px var(--mainColor);
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes scribble {
@@ -293,3 +294,4 @@ div#stripped svg polyline {
     background-image: url(../../assets/img/youkraine.jpg);
   }
 }
+
