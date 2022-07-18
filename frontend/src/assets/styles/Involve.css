@@ -109,7 +109,6 @@
 
 .card-front,
 .card-back {
-
   position: absolute;
   height: 100%;
   width: 100%;
@@ -232,7 +231,8 @@
   gap: 5em;
 }
 
-.gift-btn-form, .upload-btn-form {
+.gift-btn-form,
+.upload-btn-form {
   display: flex;
   justify-content: center;
   margin-top: 1.5em;
@@ -294,4 +294,3 @@ div#stripped svg polyline {
     background-image: url(../../assets/img/youkraine.jpg);
   }
 }
-

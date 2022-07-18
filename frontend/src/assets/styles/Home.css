@@ -1,6 +1,5 @@
 * {
   color: var(--fontColorMain);
-
 }
 
 .HomePage {
@@ -11,7 +10,12 @@
 .homeStartScreenContainer {
   width: 100vw;
   height: 70vh;
-  background: linear-gradient(0deg, white, var(--mainColorLight) 60%, var(--mainColorLight));
+  background: linear-gradient(
+    0deg,
+    white,
+    var(--mainColorLight) 60%,
+    var(--mainColorLight)
+  );
 }
 
 .homeStartScreenContainer p {
@@ -30,7 +34,8 @@
   transform: translateY(-30px);
 }
 
-.homeStartScreenTextArea h1, .homeStartScreenTextArea p {
+.homeStartScreenTextArea h1,
+.homeStartScreenTextArea p {
   display: inline-block;
   opacity: 0;
   transform: translateY(-30px);
@@ -38,7 +43,6 @@
 
 .headerLogo {
   animation: apparition 0.8s 1s ease-out forwards;
-
 }
 
 .homeStartScreenTextArea h1 {
@@ -159,7 +163,7 @@
 }
 
 @keyframes apparition {
-  100%{
+  100% {
     opacity: 1;
     transform: none;
   }
@@ -215,7 +219,7 @@
   }
 
   .homeStartScreenContainer img {
-    display:none;
+    display: none;
   }
 
   .homePresentationTitleContainer h2 span {

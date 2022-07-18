@@ -96,7 +96,7 @@
 }
 
 .spin:active {
-  color:#ffc330;
+  color: #ffc330;
 }
 
 .gift-btn {
@@ -180,7 +180,7 @@
   }
   .menu-icon {
     width: 60px;
-    display:initial;
+    display: initial;
   }
   .gift-span-btn {
     padding: 9px;
