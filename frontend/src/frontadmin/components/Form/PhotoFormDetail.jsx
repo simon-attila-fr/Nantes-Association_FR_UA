@@ -6,7 +6,9 @@ import Swal from "sweetalert2";
 
 export default function PhotoFormDetail({ initialContent }) {
   const [myfile, setMyfile] = useState(null);
+  const [description, setDescription] = useState(initialContent.description);
   const photoName = initialContent.photo_name;
+  const refresh = () => window.location.reload(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +16,7 @@ export default function PhotoFormDetail({ initialContent }) {
     const formData = new FormData();
     formData.append("photo_name", photoName);
     formData.append("myfile", myfile);
+    formData.append("description", description);
 
     axios
       .put(
@@ -28,12 +31,18 @@ export default function PhotoFormDetail({ initialContent }) {
           showConfirmButton: false,
           timer: 1500,
         })
-      );
+      )
+      .then(setTimeout(refresh, 1600));
   };
 
-  const handleChange = (event) => {
+  const handleFileChange = (event) => {
     const value = event.target.files[0];
     setMyfile(value);
+  };
+
+  const handleDescriptionChange = (event) => {
+    const desc = event.target.value;
+    setDescription(desc);
   };
 
   return (
@@ -47,7 +56,13 @@ export default function PhotoFormDetail({ initialContent }) {
       <div className="admin-form">
         <h3 className="photoFormCardTitle">Photo n° {initialContent.id}</h3>
         <img src={initialContent.photo_url} alt={initialContent.photo_name} />
-        <input type="file" name="myfile" onChange={handleChange} />
+        <input type="file" name="myfile" onChange={handleFileChange} />
+        <input
+          type="text"
+          onChange={handleDescriptionChange}
+          placeholder="Description"
+          value={description}
+        />
         <div className="btn-form">
           <button type="submit" className="save">
             <AiFillSave />
@@ -63,6 +78,7 @@ PhotoFormDetail.propTypes = {
     id: PropTypes.number,
     photo_name: PropTypes.string,
     photo_url: PropTypes.string,
+    description: PropTypes.string,
   }),
 };
 
@@ -72,5 +88,6 @@ PhotoFormDetail.defaultProps = {
     photo_name: "mosaic1",
     photo_url:
       "http://localhost:5000/assets/images/ProfilAttila.png1657924240178.png",
+    description: "Description",
   }),
 };
