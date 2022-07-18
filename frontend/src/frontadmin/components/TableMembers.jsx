@@ -5,7 +5,7 @@ import "../../assets/styles/TableMembers.css";
 
 export default function TableMembers({ data }) {
   const onMembersDelete = (id) => {
-    axios.delete(`http://localhost:5000/member/${id}`);
+    axios.delete(`${import.meta.env.VITE_BACKEND_URL}/member/${id}`);
     Swal.fire({
       position: "center",
       icon: "success",

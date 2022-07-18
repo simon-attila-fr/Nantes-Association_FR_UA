@@ -15,7 +15,7 @@ INSERT INTO traduction (ref, definition, type) VALUES
 ('involve_donate_addendum', 'Donnez : bon à savoir', 1),
 ('involve_join_title', 'Adhérez : titre', 0),
 ('involve_join_content', 'Adhérez : texte', 1),
-('involve_donate_addendum', 'Adhérez : bon à savoir', 1),
+('involve_join_addendum', 'Adhérez : bon à savoir', 1),
 ('involve_engage_title', 'Participez : titre', 0),
 ('involve_engage_content', 'Participez : texte', 1),
 ('involve_joinform_title', 'Formulaire adhésion : titre', 0),
