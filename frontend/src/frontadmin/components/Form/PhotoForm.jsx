@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import PhotoFormDetail from "./PhotoFormDetail";
 import "../../../assets/styles/PhotosAdmin.css";
@@ -30,7 +31,6 @@ PhotoForm.defaultProps = {
   content: PropTypes.shape({
     id: 1,
     photo_name: "mosaic1",
-    photo_url:
-      "http://localhost:5000/assets/images/ProfilAttila.png1657924240178.png",
+    photo_url: `${import.meta.env.VITE_BACKEND_URL}/assets/images/generic.png`,
   }),
 };
