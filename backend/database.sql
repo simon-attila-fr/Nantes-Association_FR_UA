@@ -1,10 +1,13 @@
-CREATE TABLE `user` (
+CREATE DATABASE IF NOT EXISTS afu;
+USE afu;
+
+CREATE TABLE IF NOT EXISTS `user` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `email` varchar(255) UNIQUE NOT NULL,
   `password` varchar(255) NOT NULL
 );
 
-CREATE TABLE `member` (
+CREATE TABLE IF NOT EXISTS `member` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
@@ -15,13 +18,13 @@ CREATE TABLE `member` (
   `newsletter` boolean
 );
 
-CREATE TABLE `news` (
+CREATE TABLE IF NOT EXISTS `news` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `is_published` boolean,
   `photo_id` int
 );
 
-CREATE TABLE `newscontent` (
+CREATE TABLE IF NOT EXISTS `newscontent` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `text` varchar(1500) NOT NULL,
@@ -29,7 +32,7 @@ CREATE TABLE `newscontent` (
   `news_id` int
 );
 
-CREATE TABLE `photo` (
+CREATE TABLE IF NOT EXISTS `photo` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `photo_name` varchar(255) NOT NULL,
   `photo_url` varchar(255) NOT NULL,
@@ -37,24 +40,24 @@ CREATE TABLE `photo` (
   `description` VARCHAR(225) NOT NULL
 );
 
-CREATE TABLE `mosaic` (
+CREATE TABLE IF NOT EXISTS `mosaic` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `photo_id` int
 );
 
-CREATE TABLE `language` (
+CREATE TABLE IF NOT EXISTS `language` (
   `code` varchar(5) PRIMARY KEY NOT NULL,
   `name` varchar(50) NOT NULL
 );
 
-CREATE TABLE `content` (
+CREATE TABLE IF NOT EXISTS `content` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `body` text NOT NULL,
   `language_code` varchar(5) NOT NULL,
   `traduction_id` int
 );
 
-CREATE TABLE `traduction` (
+CREATE TABLE IF NOT EXISTS `traduction` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `ref` varchar(255) NOT NULL,
   `definition` VARCHAR(255), 
