@@ -1,0 +1,25 @@
+.question-title {
+  color: white;
+  font-family: "Asap", sans-serif;
+  font-size: 0.9375rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.question-info {
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.btn-legal {
+  margin-left: 1rem;
+  background-color: #2559b6;
+  color: white;
+  border: none;
+}

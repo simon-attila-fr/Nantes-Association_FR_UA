@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.involve-container {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1400px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.involve-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0px;
+  color: transparent;
+}
+
+.involve-span-title {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-size: clamp(1.75rem, 7vw, 3rem);
+}
+
+.involve-span-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.involve-title:nth-child(1) {
+  font-weight: 300;
+  animation: txt-appearance 0s 1s forwards;
+}
+
+.involve-title:nth-child(2) {
+  animation: txt-appearance 0s 1.25s forwards;
+}
+
+.involve-title:nth-child(1) span::after {
+  background: #2773c3;
+  animation: slide-in 0.75s ease-out forwards,
+    slide-out 0.75s 1s ease-out forwards;
+}
+
+.involve-title:nth-child(2) span::after {
+  background: #ffd928;
+  animation: slide-in 0.75s 0.3s ease-out forwards,
+    slide-out 0.75s 1.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes txt-appearance {
+  100% {
+    color: #222;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card-wrapper {
+  position: relative;
+  min-height: 350px;
+  perspective: 2000px;
+  perspective-origin: top;
+  border-radius: 10px;
+}
+
+.card-wrapper:nth-child(even):hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-wrapper:nth-child(odd):hover .card {
+  cursor: default;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  color: #1a2f42;
+  font-weight: unset;
+  cursor: grab;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-wrapper .card-front {
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  border-bottom: solid 3px var(--mainColor);
+  border-left: solid 3px var(--mainColor);
+  border-right: solid 3px var(--mainColor);
+}
+
+.involve-p {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  padding-top: 1rem;
+}
+
+.corner-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+
+.card-wrapper:nth-child(even) .card-back {
+  background-color: var(--secondaryColorLight);
+}
+
+.gift-btn {
+  display: inline-block;
+  background: grey;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.upload-btn {
+  width: 80%;
+  display: inline-block;
+  background: grey;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.gift-span-btn {
+  display: inline-block;
+  background: var(--mainColor);
+  color: white;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.upload-span-btn {
+  width: 100%;
+  display: inline-block;
+  background: var(--mainColor);
+  color: white;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.upload-span-btn:hover {
+  transform: translate(-9px, -9px);
+  color: black;
+  background: #ffd928;
+}
+
+.involve-pic {
+  width: 250px;
+  height: 300px;
+  margin: 0;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5em;
+}
+
+.gift-btn-form,
+.upload-btn-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+  padding-top: 1.65rem;
+  padding-bottom: 1.65rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+}
+
+.final-img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border-bottom: solid 3px var(--mainColor);
+  border-left: solid 3px var(--mainColor);
+  border-right: solid 3px var(--mainColor);
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scribble {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+div#stripped {
+  width: 100%;
+  margin: 0 auto;
+  background: #000;
+  background-image: url(../../assets/img/youkraine.jpg);
+  background-size: cover;
+  font-size: 0;
+  border-radius: 10px;
+}
+div#stripped svg {
+  background: white;
+  background-image: url(../../assets/img/paintflag.jpg);
+  border-radius: 10px;
+  mix-blend-mode: screen;
+}
+
+div#stripped svg polyline {
+  fill: none;
+  stroke: black;
+  stroke-width: 200;
+  stroke-dasharray: 20000;
+  stroke-dashoffset: 20000;
+  animation: scribble 10s linear forwards;
+  animation-iteration-count: infinite;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  div#stripped {
+    background-image: url(../../assets/img/youkraine.jpg);
+  }
+}

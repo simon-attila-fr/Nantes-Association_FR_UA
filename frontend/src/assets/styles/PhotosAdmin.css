@@ -1,0 +1,28 @@
+.photoMosaiqueZone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photoForm {
+  border-radius: 8px;
+  border-style: none;
+  border: 2px solid #e4e6e8;
+  box-shadow: 2px 2px 12px 2px rgba(111, 111, 114, 0.2);
+}
+
+.photoForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+
+.photoForm div img {
+  max-width: 80%;
+  max-height: 50%;
+}
+
+.photoFormCardTitle {
+  margin-bottom: 5px;
+}

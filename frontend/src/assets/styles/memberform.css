@@ -1,0 +1,36 @@
+.form_memberadmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a7bce1;
+  border-radius: 20%;
+  font-family: inherit;
+  font-size: 100;
+  padding: 10px;
+  margin: 100px;
+  padding-top: 100px;
+  width: 1000px;
+  height: 700px;
+  resize: none;
+  overflow: auto;
+  gap: 1rem;
+}
+.memberadmin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.memberadmin input {
+  width: 700px;
+}
+.inputCheck {
+  display: flex;
+}
+.btn-addmember {
+  background-color: white;
+  padding: 10px 24px;
+}
+.btn-addmember:hover {
+  background-color: #f8d849;
+  color: black;
+}
