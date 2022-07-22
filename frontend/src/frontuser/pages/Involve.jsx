@@ -10,6 +10,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Traduction from "../components/Traduction";
 import Separator from "../components/Separator";
+import adhesion from "../../assets/adhesion.pdf";
 
 export default function Involve() {
   return (
@@ -115,11 +116,7 @@ export default function Involve() {
           <div className="contact-form">
             <ContactForm />
             <div className="upload-btn-form">
-              <a
-                href="../../assets/adhesion.pdf"
-                download
-                className="upload-btn"
-              >
+              <a href={adhesion} download className="upload-btn">
                 <span className="upload-span-btn">
                   Télécharger le formulaire d'adhésion
                 </span>
