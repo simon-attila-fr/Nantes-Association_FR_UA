@@ -10,6 +10,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Traduction from "../components/Traduction";
 import Separator from "../components/Separator";
+import adhesion from "../../assets/adhesion.pdf";
 
 export default function Involve() {
   return (
@@ -17,10 +18,14 @@ export default function Involve() {
       <Header />
       <div className="involve-container">
         <p className="involve-title">
-          <span className="involve-span-title">Choisissez la Paix,</span>
+          <span className="involve-span-title">
+            <Traduction reference="involve_slogan1" />
+          </span>
         </p>
         <p className="involve-title">
-          <span className="involve-span-title">soutenez l'Ukraine ! </span>
+          <span className="involve-span-title">
+            <Traduction reference="involve_slogan1" />
+          </span>
         </p>
 
         <div className="card-container">
@@ -115,19 +120,17 @@ export default function Involve() {
           <div className="contact-form">
             <ContactForm />
             <div className="upload-btn-form">
-              <a
-                href="../../assets/adhesion.pdf"
-                download
-                className="upload-btn"
-              >
+              <a href={adhesion} download className="upload-btn">
                 <span className="upload-span-btn">
-                  Télécharger le formulaire d'adhésion
+                  <Traduction reference="other_button_upload" />
                 </span>
               </a>
             </div>
             <div className="gift-btn-form">
               <a href="crédit mutuel" className="gift-btn">
-                <span className="gift-span-btn">Faire un don</span>
+                <span className="gift-span-btn">
+                  <Traduction reference="other_button_gift" />
+                </span>
               </a>
             </div>
           </div>

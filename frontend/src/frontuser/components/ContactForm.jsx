@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import Traduction from "./Traduction";
 import "../../assets/styles/Form.css";
+import like from "../../assets/img/like.png";
 
 export default function ContactForm() {
   const [firstname, setFirstname] = useState("");
@@ -43,7 +45,9 @@ export default function ContactForm() {
   return (
     <div className="form-container">
       <div className="formrow formheader two">
-        <h1 className="form-h1">NOUS CONTACTER</h1>
+        <h1 className="form-h1">
+          <Traduction reference="involve_contactform_title" />
+        </h1>
       </div>
       <div className="formbody">
         <form className="form-form" onSubmit={handleSubmit}>
@@ -51,7 +55,7 @@ export default function ContactForm() {
             <li className="form-li">
               <p className="stay-left">
                 <label className="form-label" htmlFor="firstname">
-                  Prénom
+                  <Traduction reference="involve_contactform_label_firstname" />
                 </label>
                 <input
                   className="forminput"
@@ -64,7 +68,7 @@ export default function ContactForm() {
               </p>
               <p className="stay-left">
                 <label className="form-label" htmlFor="lastname">
-                  Nom
+                  <Traduction reference="involve_contactform_label_lastname" />
                 </label>
                 <input
                   className="forminput"
@@ -80,7 +84,8 @@ export default function ContactForm() {
             <li className="form-li">
               <p className="stay-left">
                 <label className="form-label" htmlFor="email">
-                  email <span className="req">*</span>
+                  <Traduction reference="involve_contactform_label_email" />{" "}
+                  <span className="req">*</span>
                 </label>
                 <input
                   className="forminput"
@@ -93,7 +98,7 @@ export default function ContactForm() {
               </p>
               <p className="stay-left">
                 <label className="form-label" htmlFor="subject">
-                  Objet
+                  <Traduction reference="involve_contactform_label_subject" />
                 </label>
                 <input
                   className="forminput"
@@ -107,7 +112,8 @@ export default function ContactForm() {
             </li>
             <li className="form-li">
               <label className="form-label" htmlFor="message">
-                Message <span className="req">*</span>
+                <Traduction reference="involve_contactform_label_message" />{" "}
+                <span className="req">*</span>
               </label>
               <textarea
                 className="formtextarea"
@@ -129,8 +135,12 @@ export default function ContactForm() {
                 type="submit"
                 value="envoyer"
               >
-                <span>Merci !</span>
-                <span>Envoyer</span>
+                <span>
+                  <img className="like-icon" src={like} alt="like-icon" />
+                </span>
+                <span>
+                  <Traduction reference="other_button_contact" />
+                </span>
               </button>
             </li>
           </ul>

@@ -8,7 +8,7 @@ export default function Members() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/member")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/member`)
       .then((res) => setMembers(res.data))
       .catch((error) => {
         console.error(error);

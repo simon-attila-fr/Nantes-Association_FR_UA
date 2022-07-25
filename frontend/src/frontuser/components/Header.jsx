@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import GlobalContext from "../contexts/GlobalContext";
 import logo from "../../assets/img/logo.png";
 import Translate from "./Translate";
 import compass from "../../assets/img/compass.png";
+import Traduction from "./Traduction";
 import "../../assets/styles/Header.css";
 
 export default function Header() {
@@ -13,20 +14,26 @@ export default function Header() {
 
   return (
     <nav className="nav-main">
-      <div className="nav-logo">
-        <a
-          href=""
-          className="nav-logo-link"
-          aria-label="visit homepage"
-          aria-current="page"
-        >
-          <img className="nav-logo-pic" src={logo} alt="logo-pic" />
-        </a>
+      <div>
+        <Link to="/">
+          <div className="nav-logo">
+            <a
+              href=""
+              className="nav-logo-link"
+              aria-label="visit homepage"
+              aria-current="page"
+            >
+              <img className="nav-logo-pic" src={logo} alt="logo-pic" />
+            </a>
+          </div>
+        </Link>
       </div>
 
       <div className="nav-gift-btn">
         <a href="" className="gift-btn">
-          <span className="gift-span-btn">Donner</span>
+          <span className="gift-span-btn">
+            <Traduction reference="other_button_gift" />
+          </span>
         </a>
       </div>
 
@@ -53,7 +60,7 @@ export default function Header() {
           }
         >
           <button className="spin circle" type="button">
-            Accueil
+            <Traduction reference="other_page_name_home" />
           </button>
         </NavLink>
 
@@ -69,7 +76,7 @@ export default function Header() {
           }
         >
           <button className="spin circle" type="button">
-            Participer
+            <Traduction reference="other_page_name_involve" />
           </button>
         </NavLink>
       </div>
