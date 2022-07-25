@@ -117,11 +117,20 @@
 }
 
 .homeArticles article {
-  background-color: var(--secondaryColorLight);
+  background-color: white;
+  padding: 30px;
   border-bottom: solid 3px var(--mainColor);
   border-left: solid 3px var(--mainColor);
   border-right: solid 3px var(--mainColor);
   border-radius: 20px;
+}
+
+.homeArticleImageContainer img {
+  display: block;
+  max-height: 5vh;
+  margin: auto;
+  margin-top: calc(2vh + 30px);
+  margin-bottom: 2vh;
 }
 
 .homeSectionTitleZone {
@@ -135,7 +144,7 @@
   position: relative;
   padding: 0.2rem;
   margin: auto;
-  top: -2vh;
+  top: calc(-2vh - 30px);
   background-color: white;
   border: 0px;
   border-radius: 5px;
