@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import Traduction from "./Traduction";
 import "../../assets/styles/Legal.css";
 
 export default function Legal({ title, info }) {
@@ -15,7 +16,7 @@ export default function Legal({ title, info }) {
         onClick={() => setExpanded(!expanded)}
         onKeyDown={() => setExpanded(!expanded)}
       >
-        {title}
+        <Traduction reference={title} />
         <button
           type="button"
           className="btn-legal"
@@ -25,7 +26,11 @@ export default function Legal({ title, info }) {
         </button>
       </div>
 
-      {expanded && <p className="question-info">{info}</p>}
+      {expanded && (
+        <p className="question-info">
+          <Traduction reference={info} />
+        </p>
+      )}
     </article>
   );
 }

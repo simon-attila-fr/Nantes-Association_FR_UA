@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import Traduction from "./Traduction";
 import data from "./data";
 import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
@@ -88,7 +89,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <h5 className="signupTitle">Inscrivez vous à la newsletter</h5>
+          <h5 className="signupTitle">
+            <Traduction reference="other_newsletter_title" />
+          </h5>
           <div className="signupFormContainer">
             <form onSubmit={handleSubmit} className="newsletterSignup">
               <input
@@ -96,7 +99,6 @@ export default function Footer() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="Entrez votre email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
