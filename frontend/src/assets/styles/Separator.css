@@ -1,6 +1,19 @@
 .separator {
   margin: 7vh 0;
-  width: 25%;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .separator {
+    width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .separator {
+    margin: 15vh 0;
+    width: 40vw;
+  }
 }
