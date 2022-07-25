@@ -1,44 +1,62 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
-// import Swal from "sweetalert2";
-// import axios from "axios";
+import Swal from "sweetalert2";
+import axios from "axios";
 import Traduction from "./Traduction";
 import "../../assets/styles/Form.css";
 import like from "../../assets/img/like.png";
 
 export default function JoinForm() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(0);
-  const [address, setAddress] = useState("");
-  const [adherent, setAdherent] = useState(null);
-  const [adherentJeune, setAdherentJeune] = useState(null);
-  const [adherentBienfaiteur, setAdherentBienfaiteur] = useState(null);
-  const [newsletter, setNewsletter] = useState(false);
+  const [members, setMembers] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    address: "",
+    phone: "",
+    cotisation: 0,
+    newsletter: 0,
+  });
+
+  const [isChecked, setIsChecked] = useState(false);
+  const checkHandler = () => {
+    setIsChecked(!isChecked);
+    if (isChecked) {
+      setMembers({ ...members, newsletter: 0 });
+    } else {
+      setMembers({ ...members, newsletter: 1 });
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //   if (!firstname || !lastname || !email || !address || !contribution) {
-    //     Swal.fire({
-    //       position: "center",
-    //       icon: "error",
-    //       title:
-    //         "Merci de renseigner vos prénom, nom, email, adresse et la cotisation choisie",
-    //       showConfirmButton: false,
-    //       timer: 2000,
-    //     });
-    //   } else {
-    //     axios.post(`${import.meta.env.VITE_BACKEND_URL}/member, members`).then(
-    //       Swal.fire({
-    //         position: "center",
-    //         icon: "success",
-    //         title: "Le contenu a bien été mis à jour",
-    //         showConfirmButton: false,
-    //         timer: 1500,
-    //       })
-    //     );
-    //   }
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/member`, members).then(
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Le contenu a bien été mis à jour",
+        showConfirmButton: false,
+        timer: 1500,
+      })
+    );
+  };
+  const changeName = (e) => {
+    setMembers({ ...members, name: e.target.value });
+  };
+
+  const changeLastname = (e) => {
+    setMembers({ ...members, lastName: e.target.value });
+  };
+  const changeEmail = (e) => {
+    setMembers({ ...members, email: e.target.value });
+  };
+  const changeAddress = (e) => {
+    setMembers({ ...members, address: e.target.value });
+  };
+  const changePhone = (e) => {
+    setMembers({ ...members, phone: e.target.value });
+  };
+  const changeCotisation = (e) => {
+    setMembers({ ...members, cotisation: e.target.value });
   };
 
   return (
@@ -66,8 +84,7 @@ export default function JoinForm() {
                   className="forminput"
                   type="text"
                   name="firstname"
-                  value={firstname}
-                  onChange={(e) => setFirstname(e.target.value)}
+                  onChange={changeName}
                 />
               </p>
               <p className="stay-left">
@@ -79,8 +96,7 @@ export default function JoinForm() {
                   className="forminput"
                   type="text"
                   name="lastname"
-                  value={lastname}
-                  onChange={(e) => setLastname(e.target.value)}
+                  onChange={changeLastname}
                 />
               </p>
             </li>
@@ -95,8 +111,7 @@ export default function JoinForm() {
                   className="forminput"
                   type="email"
                   name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={changeEmail}
                 />
               </p>
             </li>
@@ -109,8 +124,7 @@ export default function JoinForm() {
                   className="forminput"
                   type="text"
                   name="phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={changePhone}
                 />
               </p>
             </li>
@@ -125,8 +139,7 @@ export default function JoinForm() {
                 name="address"
                 cols="35"
                 rows="10"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                onChange={changeAddress}
               />
             </li>
 
@@ -139,9 +152,9 @@ export default function JoinForm() {
                 <label>
                   <input
                     type="radio"
-                    name="radio"
-                    value={adherent}
-                    onChange={(e) => setAdherent(e.target.value)}
+                    name="cotisation"
+                    value="18"
+                    onChange={changeCotisation}
                   />
                   <i className="helper" />
                   <Traduction reference="involve_joinform_label_contribution_adherent" />
@@ -151,9 +164,9 @@ export default function JoinForm() {
                 <label>
                   <input
                     type="radio"
-                    name="radio"
-                    value={adherentJeune}
-                    onChange={(e) => setAdherentJeune(e.target.value)}
+                    name="cotisation"
+                    value="8"
+                    onChange={changeCotisation}
                   />
                   <i className="helper" />
                   <Traduction reference="involve_joinform_label_contribution_adherentjeune" />
@@ -163,9 +176,9 @@ export default function JoinForm() {
                 <label>
                   <input
                     type="radio"
-                    name="radio"
-                    value={adherentBienfaiteur}
-                    onChange={(e) => setAdherentBienfaiteur(e.target.value)}
+                    name="cotisation"
+                    value="100"
+                    onChange={changeCotisation}
                   />
                   <i className="helper" />
                   <Traduction reference="involve_joinform_label_contribution_adherentbienfaiteur" />
@@ -176,8 +189,8 @@ export default function JoinForm() {
               <label>
                 <input
                   type="checkbox"
-                  value={newsletter}
-                  onChange={(e) => setNewsletter(e.target.checked)}
+                  checked={isChecked}
+                  onChange={checkHandler}
                 />
                 <i className="helper" />
                 <Traduction reference="involve_joinform_label_newsletter" />
