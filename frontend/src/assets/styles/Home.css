@@ -128,7 +128,7 @@
 .homeArticleImageContainer img {
   display: block;
   max-height: 5vh;
-  margin:auto;
+  margin: auto;
   margin-top: calc(2vh + 30px);
   margin-bottom: 2vh;
 }
