@@ -157,11 +157,6 @@
   max-width: 70vw;
 }
 
-.homeDesktopImg1,
-.homeDesktopImg2 {
-  display: none;
-}
-
 @keyframes apparition {
   100% {
     opacity: 1;
@@ -208,6 +203,10 @@
   .homePresentationAssociation article p {
     width: fit-content;
     margin: 0.5rem 1rem;
+  }
+
+  .homeMosaic img {
+    max-width: 50vw;
   }
 }
 
@@ -260,26 +259,11 @@
     grid-column-end: 5;
   }
 
-  .homeDesktopImg1,
-  .homeDesktopImg2 {
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
-
-  .homeDesktopImg1 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-  }
-
-  .homeDesktopImg2 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
   .homeMosaic {
     grid-template-columns: 45vw 45vw;
+  }
+
+  .homeMosaic img {
+    max-width: 50vw;
   }
 }

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import Traduction from "./Traduction";
-import data from "./data";
 import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
 import facebook from "../../assets/img/facebook.svg";
@@ -14,7 +13,6 @@ import send from "../../assets/img/send.png";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
-  const [questions, setQuestions] = useState(data);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -112,16 +110,13 @@ export default function Footer() {
             <div className="container">
               <div className="legalMentions" id="ancre1" />
               <section className="info">
-                {questions.map((question) => (
-                  <Legal key={question.id} {...question} />
-                ))}
+                <Legal />
               </section>
             </div>
           </div>
         </div>
         <div className="copyrightContainer">
           <p className="copyright">
-            {" "}
             &copy;{new Date().getFullYear()} Association Avenir Franco Ukrainien
           </p>
         </div>
