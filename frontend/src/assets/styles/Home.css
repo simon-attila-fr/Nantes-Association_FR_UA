@@ -195,8 +195,8 @@
     width: 84vw;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 1rem;
+    grid-template-rows: 1fr auto;
+    row-gap: 3rem;
     column-gap: 2rem;
   }
 
