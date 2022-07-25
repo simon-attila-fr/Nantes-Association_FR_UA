@@ -9,7 +9,6 @@
 
 .homeStartScreenContainer {
   width: 100vw;
-  /* height: 70vh; */
   background: linear-gradient(
     0deg,
     white,
@@ -41,7 +40,7 @@
   transform: translateY(-30px);
 }
 
-.headerLogo {
+.homeTitleImg {
   animation: apparition 0.8s 1s ease-out forwards;
 }
 
@@ -225,11 +224,24 @@
 
 @media only screen and (min-width: 1024px) {
   .homeStartScreenContainer {
-    height: 70vh;
+    position: relative;
   }
 
   .homeStartScreenContainer img {
-    display: none;
+    margin-top: 5vh;
+    max-height: 80vh;
+  }
+
+  .homeStartScreenTextArea {
+    position: absolute;
+    top: 5%;
+    max-width: 100%;
+  }
+
+  .homeStartScreenTextArea h1,
+  .homeStartScreenTextArea p {
+    width: 60%;
+    backdrop-filter: blur(30px) brightness(2);
   }
 
   .homePresentationTitleContainer h2 span {

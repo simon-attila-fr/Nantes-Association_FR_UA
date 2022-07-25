@@ -131,11 +131,12 @@
 }
 
 .card-front h2 {
-  font-family: var(--fontText);
+  font-family: var(--fontTitle);
   text-transform: uppercase;
 }
 
-.card-front p, .card-back p {
+.card-front p,
+.card-back p {
   font-family: var(--fontText);
   font-size: 1.25rem;
 }
