@@ -1,4 +1,5 @@
 .form-container {
+  font-family: var(--fontTitle);
   max-width: 510px;
   min-width: 324px;
   margin-right: auto;
@@ -8,6 +9,10 @@
   box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h1 {
+  font-weight: 900;
 }
 
 .formrow {
@@ -42,8 +47,6 @@
 }
 
 .form-h1 {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
   display: inline-block;
   font-weight: 100;
   font-size: 2.3em;
@@ -261,7 +264,7 @@
   height: 40px;
   border-radius: 10px;
   padding: 10px 25px;
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontTitle);
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -271,9 +274,11 @@
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
+  text-transform: uppercase;
 }
 
 .btn-12 {
+  text-transform: uppercase;
   position: relative;
   right: 20px;
   bottom: 20px;

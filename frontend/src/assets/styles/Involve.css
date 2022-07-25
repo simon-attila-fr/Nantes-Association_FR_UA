@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .involve-container {
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontTitle);
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -12,7 +12,12 @@
   margin-right: auto;
 }
 
+.form-container {
+  font-family: var(--fontTitle);
+}
+
 .involve-title {
+  font-family: var(--fontTitle);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 0px;
@@ -125,6 +130,16 @@
   align-items: center;
 }
 
+.card-front h2 {
+  font-family: var(--fontText);
+  text-transform: uppercase;
+}
+
+.card-front p, .card-back p {
+  font-family: var(--fontText);
+  font-size: 1.25rem;
+}
+
 .card-wrapper .card-front {
   box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
@@ -155,7 +170,7 @@
 }
 
 .card-back p {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   padding-bottom: 2rem;
 }
 

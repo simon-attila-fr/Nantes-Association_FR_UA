@@ -9,7 +9,7 @@
 
 .homeStartScreenContainer {
   width: 100vw;
-  height: 70vh;
+  /* height: 70vh; */
   background: linear-gradient(
     0deg,
     white,
@@ -19,7 +19,7 @@
 }
 
 .homeStartScreenContainer p {
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontText);
 }
 
 .homeStartScreenContainer {
@@ -51,17 +51,15 @@
 
 .homeStartScreenTextArea p {
   animation: apparition 0.8s 1.5s ease-out forwards;
+  margin-top: 5vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.7rem;
 }
 
 .homeStartScreenTextArea h1 {
+  font-size: 3rem;
   margin-top: 7vh;
-}
-
-.homeStartScreenTextArea p {
-  margin-top: 15vh;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 1.3rem;
 }
 
 .homeContent,
@@ -114,6 +112,11 @@
 
 .homeArticles {
   gap: 9vh;
+}
+
+.homeArticles p {
+  font-family: var(--fontText);
+  font-size: 1.2rem;
 }
 
 .homeArticles article {
