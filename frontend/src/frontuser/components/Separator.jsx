@@ -1,4 +1,4 @@
-import separator from "../../assets/img/SeparatorStrongLine3.svg";
+import separator from "../../assets/img/MotifKalinaDesktop.svg";
 import "../../assets/styles/Separator.css";
 
 export default function Separator() {
