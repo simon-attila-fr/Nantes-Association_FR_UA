@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import GlobalContext from "../contexts/GlobalContext";
 import logo from "../../assets/img/logo.png";
 import Translate from "./Translate";
@@ -13,15 +13,19 @@ export default function Header() {
 
   return (
     <nav className="nav-main">
-      <div className="nav-logo">
-        <a
-          href=""
-          className="nav-logo-link"
-          aria-label="visit homepage"
-          aria-current="page"
-        >
-          <img className="nav-logo-pic" src={logo} alt="logo-pic" />
-        </a>
+      <div>
+        <Link to="/">
+          <div className="nav-logo">
+            <a
+              href=""
+              className="nav-logo-link"
+              aria-label="visit homepage"
+              aria-current="page"
+            >
+              <img className="nav-logo-pic" src={logo} alt="logo-pic" />
+            </a>
+          </div>
+        </Link>
       </div>
 
       <div className="nav-gift-btn">
