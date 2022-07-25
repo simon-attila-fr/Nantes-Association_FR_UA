@@ -10,6 +10,7 @@ import facebook from "../../assets/img/facebook.svg";
 import instagram from "../../assets/img/instagram.svg";
 import mail from "../../assets/img/mail.svg";
 import tel from "../../assets/img/phone.svg";
+import send from "../../assets/img/send.png";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -103,7 +104,7 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button className="newsletterSubmit" type="submit" value="submit">
-                Envoyer
+                <img src={send} alt="send-icon" />
               </button>
             </form>
           </div>

@@ -1,48 +1,44 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
-import Swal from "sweetalert2";
-import Traduction from "./Traduction";
+// import Swal from "sweetalert2";
 // import axios from "axios";
+import Traduction from "./Traduction";
 import "../../assets/styles/Form.css";
+import like from "../../assets/img/like.png";
 
 export default function JoinForm() {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState(0);
   const [address, setAddress] = useState("");
-  const [contribution, setContribution] = useState("");
-  const [newsletter, setNewsletter] = useState("");
+  const [adherent, setAdherent] = useState(null);
+  const [adherentJeune, setAdherentJeune] = useState(null);
+  const [adherentBienfaiteur, setAdherentBienfaiteur] = useState(null);
+  const [newsletter, setNewsletter] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!firstname || !lastname || !email || !address || !contribution) {
-      Swal.fire({
-        position: "center",
-        icon: "error",
-        title:
-          "Merci de renseigner vos prénom, nom, email, adresse et la cotisation choisie",
-        showConfirmButton: false,
-        timer: 2000,
-      });
-    } else {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Votre demande d'adhésion a bien été envoyée",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    }
-    // axios.post(`${import.meta.env.VITE_BACKEND_URL}/member, members`).then(
-    // Swal.fire({
-    //   position: "center",
-    //   icon: "success",
-    //   title: "Le contenu a bien été mis à jour",
-    //   showConfirmButton: false,
-    //   timer: 1500,
-    // })
-    // );
+    //   if (!firstname || !lastname || !email || !address || !contribution) {
+    //     Swal.fire({
+    //       position: "center",
+    //       icon: "error",
+    //       title:
+    //         "Merci de renseigner vos prénom, nom, email, adresse et la cotisation choisie",
+    //       showConfirmButton: false,
+    //       timer: 2000,
+    //     });
+    //   } else {
+    //     axios.post(`${import.meta.env.VITE_BACKEND_URL}/member, members`).then(
+    //       Swal.fire({
+    //         position: "center",
+    //         icon: "success",
+    //         title: "Le contenu a bien été mis à jour",
+    //         showConfirmButton: false,
+    //         timer: 1500,
+    //       })
+    //     );
+    //   }
   };
 
   return (
@@ -144,8 +140,8 @@ export default function JoinForm() {
                   <input
                     type="radio"
                     name="radio"
-                    value={contribution}
-                    onChange={(e) => setContribution(e.target.value)}
+                    value={adherent}
+                    onChange={(e) => setAdherent(e.target.value)}
                   />
                   <i className="helper" />
                   <Traduction reference="involve_joinform_label_contribution_adherent" />
@@ -156,8 +152,8 @@ export default function JoinForm() {
                   <input
                     type="radio"
                     name="radio"
-                    value={contribution}
-                    onChange={(e) => setContribution(e.target.value)}
+                    value={adherentJeune}
+                    onChange={(e) => setAdherentJeune(e.target.value)}
                   />
                   <i className="helper" />
                   <Traduction reference="involve_joinform_label_contribution_adherentjeune" />
@@ -168,8 +164,8 @@ export default function JoinForm() {
                   <input
                     type="radio"
                     name="radio"
-                    value={contribution}
-                    onChange={(e) => setContribution(e.target.value)}
+                    value={adherentBienfaiteur}
+                    onChange={(e) => setAdherentBienfaiteur(e.target.value)}
                   />
                   <i className="helper" />
                   <Traduction reference="involve_joinform_label_contribution_adherentbienfaiteur" />
@@ -181,7 +177,7 @@ export default function JoinForm() {
                 <input
                   type="checkbox"
                   value={newsletter}
-                  onChange={(e) => setNewsletter(e.target.value)}
+                  onChange={(e) => setNewsletter(e.target.checked)}
                 />
                 <i className="helper" />
                 <Traduction reference="involve_joinform_label_newsletter" />
@@ -197,8 +193,12 @@ export default function JoinForm() {
                 type="submit"
                 value="adhérer"
               >
-                <span>Merci !</span>
-                <span>Adhérer</span>
+                <span>
+                  <img className="like-icon" src={like} alt="like-icon" />
+                </span>
+                <span>
+                  <Traduction reference="other_button_join" />
+                </span>
               </button>
             </li>
           </ul>

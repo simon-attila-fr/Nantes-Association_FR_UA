@@ -6,6 +6,7 @@ import GlobalContext from "../contexts/GlobalContext";
 import logo from "../../assets/img/logo.png";
 import Translate from "./Translate";
 import compass from "../../assets/img/compass.png";
+import Traduction from "./Traduction";
 import "../../assets/styles/Header.css";
 
 export default function Header() {
@@ -26,7 +27,9 @@ export default function Header() {
 
       <div className="nav-gift-btn">
         <a href="" className="gift-btn">
-          <span className="gift-span-btn">Donner</span>
+          <span className="gift-span-btn">
+            <Traduction reference="other_button_gift" />
+          </span>
         </a>
       </div>
 
@@ -53,7 +56,7 @@ export default function Header() {
           }
         >
           <button className="spin circle" type="button">
-            Accueil
+            <Traduction reference="other_page_name_home" />
           </button>
         </NavLink>
 
@@ -69,7 +72,7 @@ export default function Header() {
           }
         >
           <button className="spin circle" type="button">
-            Participer
+            <Traduction reference="other_page_name_involve" />
           </button>
         </NavLink>
       </div>

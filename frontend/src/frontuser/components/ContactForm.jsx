@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import Traduction from "./Traduction";
 import "../../assets/styles/Form.css";
+import like from "../../assets/img/like.png";
 
 export default function ContactForm() {
   const [firstname, setFirstname] = useState("");
@@ -134,8 +135,12 @@ export default function ContactForm() {
                 type="submit"
                 value="envoyer"
               >
-                <span>Merci !</span>
-                <span>Envoyer</span>
+                <span>
+                  <img className="like-icon" src={like} alt="like-icon" />
+                </span>
+                <span>
+                  <Traduction reference="other_button_contact" />
+                </span>
               </button>
             </li>
           </ul>
