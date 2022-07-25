@@ -336,3 +336,7 @@
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
+
+.like-icon {
+  padding-top: 0.5rem;
+}
