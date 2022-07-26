@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-
 .involve-container {
-  font-family: "Lato", sans-serif;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -134,16 +131,24 @@
   border-right: solid 3px var(--mainColor);
 }
 
+.card-front h2 {
+  text-transform: uppercase;
+  font-family: var(--fontTitle);
+}
+
 .involve-p {
   font-size: 1.25rem;
   line-height: 1.25rem;
   padding-top: 1rem;
+  font-family: var(--fontText);
 }
 
-.corner-icon {
+.Kalina1-icon {
   position: absolute;
   right: 10px;
   bottom: 10px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .card-back {
