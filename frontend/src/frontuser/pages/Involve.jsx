@@ -2,7 +2,7 @@ import JoinForm from "../components/JoinForm";
 import ContactForm from "../components/ContactForm";
 import "../../assets/styles/Involve.css";
 import corner from "../../assets/img/corner.png";
-import hand1 from "../../assets/img/hand1.png";
+import hand1 from "../../assets/img/hand1.jpg";
 import hand2 from "../../assets/img/hand2.png";
 import hand3 from "../../assets/img/hand3.png";
 import heart from "../../assets/img/heart.png";
