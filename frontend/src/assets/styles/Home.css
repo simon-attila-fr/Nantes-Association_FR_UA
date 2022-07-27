@@ -9,26 +9,24 @@
 
 .homeStartScreenContainer {
   width: 100vw;
-  height: 70vh;
+  height: unset;
   background: linear-gradient(
     0deg,
     white,
     var(--mainColorLight) 60%,
     var(--mainColorLight)
   );
-}
-
-.homeStartScreenContainer p {
-  font-family: "Lato", sans-serif;
-}
-
-.homeStartScreenContainer {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
+.homeStartScreenContainer p {
+  font-family: var(--fontText);
+}
+
 .homeStartScreenContainer img {
+  max-width: 100vw;
   display: inline-block;
   opacity: 0;
   transform: translateY(-30px);
@@ -41,7 +39,7 @@
   transform: translateY(-30px);
 }
 
-.headerLogo {
+.homeTitleImg {
   animation: apparition 0.8s 1s ease-out forwards;
 }
 
@@ -51,17 +49,14 @@
 
 .homeStartScreenTextArea p {
   animation: apparition 0.8s 1.5s ease-out forwards;
+  margin-top: 5vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.7rem;
 }
 
 .homeStartScreenTextArea h1 {
-  margin-top: 7vh;
-}
-
-.homeStartScreenTextArea p {
-  margin-top: 15vh;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 1.3rem;
+  font-size: 3rem;
 }
 
 .homeContent,
@@ -114,6 +109,11 @@
 
 .homeArticles {
   gap: 9vh;
+}
+
+.homeArticles p {
+  font-family: var(--fontText);
+  font-size: 1.2rem;
 }
 
 .homeArticles article {
@@ -176,13 +176,42 @@
 /* --- Media queries tablet--- */
 
 @media only screen and (min-width: 600px) {
+
   .homeStartScreenContainer {
     align-items: center;
+    position: relative;
+    max-height: unset;
+    height: unset;
   }
 
   .homeStartScreenContainer img {
-    max-width: 60%;
+    max-height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    max-width: unset;
   }
+
+  .homeStartScreenTextArea {
+    position: absolute;
+    max-width: 50%;
+    height: 100%;
+  }
+
+  .homeStartScreenTextArea h1,
+  .homeStartScreenTextArea p {
+    border-radius: 10px;
+    backdrop-filter: blur(30px) brightness(1.8);
+  }
+
+  .homeStartScreenTextArea h1 {
+    margin-top: 12%;
+  }
+
+  .homeStartScreenTextArea p {
+    margin-top: 30%;
+    font-size: 2rem;
+  }
+  /* Start screen end */
 
   .homePresentationTitleContainer h2 span {
     font-size: 1.8rem;
@@ -192,14 +221,13 @@
     width: 84vw;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 1rem;
+    grid-template-rows: 1fr auto;
+    row-gap: 3rem;
     column-gap: 2rem;
   }
 
   .homeValuesArticle {
     grid-column-end: span 2;
-    height: 70%;
   }
 
   .homeMosaic {
@@ -215,7 +243,7 @@
   }
 
   .homeMosaic img {
-    max-width: 50vw;
+    max-width: 100%;
   }
 }
 
@@ -223,11 +251,7 @@
 
 @media only screen and (min-width: 1024px) {
   .homeStartScreenContainer {
-    height: 70vh;
-  }
-
-  .homeStartScreenContainer img {
-    display: none;
+    height: 85vh;
   }
 
   .homePresentationTitleContainer h2 span {
@@ -270,9 +294,5 @@
 
   .homeMosaic {
     grid-template-columns: 45vw 45vw;
-  }
-
-  .homeMosaic img {
-    max-width: 50vw;
   }
 }
