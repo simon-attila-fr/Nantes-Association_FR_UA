@@ -1,8 +1,8 @@
 import JoinForm from "../components/JoinForm";
 import ContactForm from "../components/ContactForm";
 import "../../assets/styles/Involve.css";
-import corner from "../../assets/img/corner.png";
-import hand1 from "../../assets/img/hand1.png";
+import Kalina1 from "../../assets/img/Kalina1.svg";
+import hand1 from "../../assets/img/hand1.jpg";
 import hand2 from "../../assets/img/hand2.png";
 import hand3 from "../../assets/img/hand3.png";
 import heart from "../../assets/img/heart.png";
@@ -46,7 +46,7 @@ export default function Involve() {
                 <p className="involve-p">
                   <Traduction reference="involve_donate_content" />
                 </p>
-                <img className="corner-icon" alt="corner" src={corner} />
+                <img className="Kalina1-icon" alt="Kalina1" src={Kalina1} />
               </div>
               <div className="card-back">
                 <div>
@@ -75,7 +75,7 @@ export default function Involve() {
                 <p className="involve-p">
                   <Traduction reference="involve_join_content" />
                 </p>
-                <img className="corner-icon" alt="corner" src={corner} />
+                <img className="Kalina1-icon" alt="Kalina1" src={Kalina1} />
               </div>
               <div className="card-back">
                 <div>
@@ -104,7 +104,7 @@ export default function Involve() {
                 <p className="involve-p">
                   <Traduction reference="involve_engage_content" />
                 </p>
-                <img className="corner-icon" alt="corner" src={corner} />
+                <img className="Kalina1-icon" alt="Kalina1" src={Kalina1} />
               </div>
               <div className="card-back">
                 <img className="involve-pic" alt="heart" src={heart} />
@@ -146,6 +146,7 @@ export default function Involve() {
             </svg>
           </div>
         </div>
+        <Separator />
       </div>
       <Footer />
     </div>

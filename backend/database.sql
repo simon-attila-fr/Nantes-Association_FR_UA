@@ -77,10 +77,10 @@ ALTER TABLE `content` ADD FOREIGN KEY (`traduction_id`) REFERENCES `traduction` 
 ALTER TABLE `newscontent` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
 
 INSERT INTO content (body, language_code, traduction_id) VALUES
-("Ceci est un titre", "FR", 1),
-("Це титул", "UK", 1),
-("Ceci est une citation", "FR", 2),
-("Це цитата", "UK", 2),
+("Association Avenir Franco-Ukrainien", "FR", 1),
+("Франко-українська асоціація майбутнього", "UK", 1),
+("« La vraie générosité envers l'avenir consiste à tout donner au présent. » Albert Camus ", "FR", 2),
+("« Справжня щедрість щодо майбутнього полягає в тому, щоб віддавати все теперішньому» Альбер Камю", "UK", 2),
 ("Qui nous sommes", "FR", 3),
 ("Хто ми", "UK", 3),
 ("Présentation", "FR", 4),
@@ -103,35 +103,37 @@ INSERT INTO content (body, language_code, traduction_id) VALUES
 , "FR", 9);
 
 INSERT INTO content (body, language_code, traduction_id) VALUES 
-("Ceci est un slogan 1", "FR", 10),
-("це гасло 1", "UK", 10),
-("Ceci est un slogan 2", "FR", 11),
-("це гасло 2", "UK", 11),
-("Ceci est un titre", "FR", 12),
-("Це титул", "UK", 12),
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Choisissez la paix", "FR", 10),
+("вибрати мир", "UK", 10),
+("Soutenez l'Ukraine", "FR", 11),
+("Підтримайте Україну!", "UK", 11),
+("Donnez !", "FR", 12),
+("Дайте!", "UK", 12),
+("Faire un don c'est nous permettre d'agir, en menant des actions d'aides humanitaires vers les civils ukrainiens victimes de la guerre, et de soutenir les réfugiés en France. Votre don est précieux, nous avons besoin de votre générosité pour intervenir en toute indépendance, afin de soutenir l’Ukraine."
 , "FR", 13), 
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Здійснення пожертвування дозволяє нам існувати, проводячи гуманітарні акції для мирних громадян України, які постраждали внаслідок війни, та підтримувати біженців у Франції. Ми цінуємо Вашу щедрість, кожна пожертва є дорогоцінною та дає нам можливість самостійно підтримувати Україну."
 , "UK", 13),
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Votre don vous donne droit à une réduction d'impôts de 75% de son montant dans la limite de 1000 euros de dons (plafond 2020). Au-delà, la réduction d’impôt est de 66 % du montant dans la limite de 20 % de vos revenus nets imposables. Nous pouvons vous adresser un reçu fiscal sur demande, pour se faire merci de nous adresser vos coordonnées par mail."
 , "FR", 14), 
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Ваша пожертва дає вам право на зниження податку на 75% від його суми до ліміту в 1000 євро пожертв (стеля 2020). Крім того, зменшення податку становить 66% суми в межах 20% вашого чистого оподатковуваного доходу. Для отримання податкової квитанції, надішліть нам свої дані на електронну пошту."
 , "UK", 14), 
-("Ceci est un titre", "FR", 15),
-("Це титул", "UK", 15),
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Adhérez !", "FR", 15),
+("Приєднуйтесь!", "UK", 15),
+("Adhérer à Avenir Franco-Ukrainien c'est soutenir l'Ukraine, en lui apportant un peu de votre temps et de vos compétences, c'est également contribuer au développement de l'association par les participations aux manifestations extérieures : marches pour la paix, expositions culturelles, missions de bénévolat."
 , "FR", 16), 
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Приєднатися до Avenir Franco-Ukrainien – це підтримувати Україну, вносячи трохи свого часу та своїх навичок, а також сприяти розвитку асоціації, беручи участь у зовнішніх заходах: маршах миру, культурних виставках, волонтерських місіях."
 , "UK", 16),
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Le montant de votre cotisation sera fonction de votre statut de membre : adhérents (15€), adhérents jeunes (8€), ou encore adhérents bienfaiteurs, associations, collectivités publiques, et autres personnes morales ou membres honoraires (100€). Merci de votre engagement et à bientôt parmi nous"
 , "FR", 17), 
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Корисно знати: сума вашого внеску буде залежати від вашого статусу членства: члени (15 євро), молоді члени (8 євро), або навіть благодійники, асоціації, органи державної влади та інші юридичні особи чи почесні члени (100 євро). Дякуємо за вашу відданість і до скорої зустрічі."
 , "UK", 17), 
-("Ceci est un titre", "FR", 18),
-("Це титул", "UK", 18),
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Renseignements", "FR", 18),
+("Інформація:", "UK", 18),
+("Julia Lambert 06.71.73.83.49 (Vertou)
+Oleksandra Rouxel 06.32.41.44.56 (Nantes)"
 , "FR", 19), 
-("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sollicitudin massa. Praesent in malesUKda sem. Sed accumsan neque arcu. Mauris vehicula ex et felis gravida blandit. Duis faucibus, magna nec accumsan molestie, mi urna elementum dolor, quis pharetra qUKm enim non justo. In commodo suscipit elit vel sagittis. Quisque non viverra ante. Sed blandit lorem et eros bibendum hendrerit. Donec dignissim mauris ligula, vitae fermentum risus posuere auctor."
+("Юлія Ламберт 06.71.73.83.49 (Верту)
+Олександра Руксель 06.32.41.44.56(Нант)"
 , "UK", 19),
 ("Adhérer", "FR", 20),
 ("Приєднуйтесь", "UK", 20),
