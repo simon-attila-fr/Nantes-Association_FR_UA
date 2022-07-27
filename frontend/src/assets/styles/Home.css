@@ -176,14 +176,42 @@
 /* --- Media queries tablet--- */
 
 @media only screen and (min-width: 600px) {
+
   .homeStartScreenContainer {
     align-items: center;
-    height: 85vh;
+    position: relative;
+    max-height: unset;
+    height: unset;
   }
 
   .homeStartScreenContainer img {
-    max-width: 60%;
+    max-height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    max-width: unset;
   }
+
+  .homeStartScreenTextArea {
+    position: absolute;
+    max-width: 50%;
+    height: 100%;
+  }
+
+  .homeStartScreenTextArea h1,
+  .homeStartScreenTextArea p {
+    border-radius: 10px;
+    backdrop-filter: blur(30px) brightness(1.8);
+  }
+
+  .homeStartScreenTextArea h1 {
+    margin-top: 12%;
+  }
+
+  .homeStartScreenTextArea p {
+    margin-top: 30%;
+    font-size: 2rem;
+  }
+  /* Start screen end */
 
   .homePresentationTitleContainer h2 span {
     font-size: 1.8rem;
@@ -215,7 +243,7 @@
   }
 
   .homeMosaic img {
-    max-width: 50vw;
+    max-width: 100%;
   }
 }
 
@@ -223,36 +251,7 @@
 
 @media only screen and (min-width: 1024px) {
   .homeStartScreenContainer {
-    position: relative;
-    max-height: unset;
-  }
-
-  .homeStartScreenContainer img {
-    max-height: 100%;
-    width: 100vw;
-    object-fit: cover;
-    max-width: unset;
-  }
-
-  .homeStartScreenTextArea {
-    position: absolute;
-    max-width: 50%;
-    height: 100%;
-  }
-
-  .homeStartScreenTextArea h1,
-  .homeStartScreenTextArea p {
-    border-radius: 10px;
-    backdrop-filter: blur(30px) brightness(1.8);
-  }
-
-  .homeStartScreenTextArea h1 {
-    margin-top: 12%;
-  }
-
-  .homeStartScreenTextArea p {
-    margin-top: 30%;
-    font-size: 2rem;
+    height: 85vh;
   }
 
   .homePresentationTitleContainer h2 span {
