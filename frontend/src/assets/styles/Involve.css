@@ -137,7 +137,7 @@
 }
 
 .involve-p {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 5vw, 1rem);
   line-height: 1.25rem;
   padding-top: 1rem;
   font-family: var(--fontText);

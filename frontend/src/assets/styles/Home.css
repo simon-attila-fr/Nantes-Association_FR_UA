@@ -271,6 +271,6 @@
   }
 
   .homeMosaic img {
-    max-width: 50vw;
+    max-width: 100%;
   }
 }
