@@ -75,7 +75,7 @@
 }
 
 .homePresentationTitleContainer h2 span {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .separator {
@@ -83,14 +83,19 @@
 }
 
 .homePresentationTitleContainer {
-  width: clamp(335px, 45vw, 50vw);
-  height: clamp(110px, 20vh, 40vh);
+  width: 350px;
+  height: 100px;
   margin-top: 3vh;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("../img/HomeIntroBckGround.svg");
-  background-size: clamp(335px, 45vw, 50vw) clamp(110px, 20vh, 40vh);
+  border-radius: 10px;
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  border-bottom: solid 3px var(--mainColor);
+  border-left: solid 3px var(--mainColor);
+  border-right: solid 3px var(--mainColor);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +109,8 @@
 
 .homePresentationAssociation article p {
   width: 70vw;
-  margin: 0.5rem 1rem;
+  margin: 1rem 1rem;
+  font-size: 1.25rem;
 }
 
 .homeArticles {
@@ -119,15 +125,18 @@
 .homeArticles article {
   background-color: white;
   padding: 30px;
+  box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
   border-bottom: solid 3px var(--mainColor);
   border-left: solid 3px var(--mainColor);
   border-right: solid 3px var(--mainColor);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .homeArticleImageContainer img {
   display: block;
-  max-height: 5vh;
+  max-height: 3vh;
   margin: auto;
   margin-top: calc(2vh + 30px);
   margin-bottom: 2vh;
@@ -136,23 +145,12 @@
 .homeSectionTitleZone {
   display: flex;
   justify-content: center;
-  margin-top: 2vh;
-  margin-bottom: 1vh;
-  gap: 10px;
-  /* -- Boxshadows & funny things -- */
   width: max-content;
-  position: relative;
-  padding: 0.2rem;
+  padding: 0.5rem;
   margin: auto;
-  top: calc(-2vh - 30px);
   background-color: white;
-  border: 0px;
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px 0px var(--mainColor);
-}
-
-.homeSectionTitleZone img {
-  height: 2rem;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 .homeMosaic {
@@ -286,8 +284,8 @@
   }
 
   .homeValuesArticle {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
     grid-column-start: 3;
     grid-column-end: 5;
   }
@@ -295,4 +293,9 @@
   .homeMosaic {
     grid-template-columns: 45vw 45vw;
   }
+  
+  .homeMosaic img {
+    max-width: 100%;
+  }
+
 }
