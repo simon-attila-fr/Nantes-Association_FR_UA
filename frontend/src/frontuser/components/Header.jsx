@@ -2,15 +2,28 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import GlobalContext from "../contexts/GlobalContext";
-import logo from "../../assets/img/logo.png";
 import Translate from "./Translate";
-import compass from "../../assets/img/compass.png";
 import Traduction from "./Traduction";
+import compass from "../../assets/img/compass.png";
+import logo from "../../assets/img/logo.png";
+
 import "../../assets/styles/Header.css";
 
 export default function Header() {
   const { setLang } = useContext(GlobalContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      position: "center",
+      icon: "info",
+      title: "module de paiement à venir",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   return (
     <nav className="nav-main">
@@ -30,7 +43,7 @@ export default function Header() {
       </div>
 
       <div className="nav-gift-btn">
-        <a href="" className="gift-btn">
+        <a href="" onClick={handleSubmit} className="gift-btn">
           <span className="gift-span-btn">
             <Traduction reference="other_button_gift" />
           </span>
