@@ -174,7 +174,6 @@
 /* --- Media queries tablet--- */
 
 @media only screen and (min-width: 600px) {
-
   .homeStartScreenContainer {
     align-items: center;
     position: relative;
@@ -293,9 +292,8 @@
   .homeMosaic {
     grid-template-columns: 45vw 45vw;
   }
-  
+
   .homeMosaic img {
     max-width: 100%;
   }
-
 }
