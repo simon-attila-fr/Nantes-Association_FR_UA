@@ -295,8 +295,4 @@
   .homeMosaic {
     grid-template-columns: 45vw 45vw;
   }
-
-  .homeMosaic img {
-    max-width: 50vw;
-  }
 }
