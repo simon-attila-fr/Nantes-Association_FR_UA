@@ -229,6 +229,9 @@
 
   .homeStartScreenContainer img {
     max-height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    max-width: unset;
   }
 
   .homeStartScreenTextArea {
@@ -240,8 +243,7 @@
   .homeStartScreenTextArea h1,
   .homeStartScreenTextArea p {
     border-radius: 10px;
-    width: 80%;
-    backdrop-filter: blur(30px) brightness(2);
+    backdrop-filter: blur(30px) brightness(1.8);
   }
 
   .homeStartScreenTextArea h1 {
@@ -250,7 +252,7 @@
 
   .homeStartScreenTextArea p {
     margin-top: 30%;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .homePresentationTitleContainer h2 span {
