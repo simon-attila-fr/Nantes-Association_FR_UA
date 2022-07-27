@@ -5,7 +5,7 @@ import Traduction from "../components/Traduction";
 import Mosaic from "../components/Mosaic";
 import KalinaMobile from "../../assets/img/MotifKalinaMobile.svg";
 import Separator from "../components/Separator";
-import Logo from "../components/Logo";
+import HomeTitleImage from "../components/HomeTitleImage";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <div className="homeContent">
         <div className="homeStartScreenContainer">
-          <Logo />
+          <HomeTitleImage />
           <div className="homeStartScreenTextArea">
             <h1>
               <Traduction reference="home_website_title" />
