@@ -33,6 +33,7 @@ export default function Footer() {
         showConfirmButton: false,
         timer: 1500,
       });
+      setEmail("");
     }
   };
 
