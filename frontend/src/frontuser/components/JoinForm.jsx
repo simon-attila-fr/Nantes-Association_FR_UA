@@ -29,15 +29,30 @@ export default function JoinForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/member`, members).then(
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Le contenu a bien été mis à jour",
-        showConfirmButton: false,
-        timer: 1500,
-      })
-    );
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_URL}/member`, members)
+      .then(
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Le contenu a bien été mis à jour",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      )
+      .then(
+        setMembers({
+          ...members,
+          name: "",
+          lastName: "",
+          email: "",
+          address: "",
+          phone: "",
+          cotisation: 0,
+          newsletter: 0,
+        })
+      )
+      .then(setIsChecked(false));
   };
   const changeName = (e) => {
     setMembers({ ...members, name: e.target.value });
@@ -83,6 +98,7 @@ export default function JoinForm() {
                 <input
                   className="forminput"
                   type="text"
+                  value={members.name}
                   name="firstname"
                   onChange={changeName}
                 />
@@ -95,6 +111,7 @@ export default function JoinForm() {
                 <input
                   className="forminput"
                   type="text"
+                  value={members.lastName}
                   name="lastname"
                   onChange={changeLastname}
                 />
@@ -110,6 +127,7 @@ export default function JoinForm() {
                 <input
                   className="forminput"
                   type="email"
+                  value={members.email}
                   name="email"
                   onChange={changeEmail}
                 />
@@ -123,6 +141,7 @@ export default function JoinForm() {
                 <input
                   className="forminput"
                   type="text"
+                  value={members.phone}
                   name="phone"
                   onChange={changePhone}
                 />
@@ -136,6 +155,7 @@ export default function JoinForm() {
               <textarea
                 className="formtextarea"
                 id="address"
+                value={members.address}
                 name="address"
                 cols="35"
                 rows="10"
@@ -189,6 +209,7 @@ export default function JoinForm() {
               <label>
                 <input
                   type="checkbox"
+                  value={members.newsletter}
                   checked={isChecked}
                   onChange={checkHandler}
                 />
