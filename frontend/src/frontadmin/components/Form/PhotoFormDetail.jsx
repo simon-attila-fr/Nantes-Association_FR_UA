@@ -55,7 +55,10 @@ export default function PhotoFormDetail({ initialContent }) {
     >
       <div className="admin-form">
         <h3 className="photoFormCardTitle">Photo n° {initialContent.id}</h3>
-        <img src={initialContent.photo_url} alt={initialContent.photo_name} />
+        <img
+          src={`${import.meta.env.VITE_BACKEND_URL}${initialContent.photo_url}`}
+          alt={initialContent.photo_name}
+        />
         <input type="file" name="myfile" onChange={handleFileChange} />
         <input
           type="text"

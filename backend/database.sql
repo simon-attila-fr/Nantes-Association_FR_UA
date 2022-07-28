@@ -254,9 +254,9 @@ INSERT INTO content (body, language_code, traduction_id) VALUES
 
 
 INSERT INTO photo (photo_name, photo_url, updated_at, description) VALUES
-("mosaic1", "", "2022-07-28", "mosaic1Description"),
-("mosaic2", "", "2022-07-28", "mosaic2Description"),
-("mosaic3", "", "2022-07-28", "mosaic3Description"),
-("mosaic4", "", "2022-07-28", "mosaic4Description"),
-("mosaic5", "", "2022-07-28", "mosaic5Description"),
-("mosaic6", "", "2022-07-28", "mosaic6Description");
+("mosaic1", "/assets/images/1.jpg1658999782702.jpg", "2022-07-28", "Chargement du camion avec un drapeau ukranien"),
+("mosaic2", "/assets/images/2.jpg1658999792885.jpg", "2022-07-28", "Camion de l'association"),
+("mosaic3", "/assets/images/3.png1658999804430.png", "2022-07-28", "Chargement du camion"),
+("mosaic4", "/assets/images/4.png1658999815240.png", "2022-07-28", "Camion3"),
+("mosaic5", "/assets/images/5.png1658999830794.png", "2022-07-28", "L'équipe avec un camion chargé"),
+("mosaic6", "/assets/images/6.jpg1659000859595.jpg", "2022-07-28", "Ukranien figurines");
