@@ -12,6 +12,10 @@ export default function Mosaic() {
   }, []);
 
   return mosaic.map((e) => (
-    <img key={e.id} src={e.photo_url} alt={e.photo_name} />
+    <img
+      key={e.id}
+      src={`${import.meta.env.VITE_BACKEND_URL}${e.photo_url}`}
+      alt={e.photo_name}
+    />
   ));
 }

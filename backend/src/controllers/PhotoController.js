@@ -32,7 +32,7 @@ class PhotoController {
   static edit = (req, res) => {
     const photo = req.body;
     photo.photo_url = req.file.path;
-    photo.photo_url = `${process.env.VITE_BACKEND_URL}/${photo.photo_url
+    photo.photo_url = `/${photo.photo_url
       .replace(/\\/g, "/")
       .replace("public/", "")}`;
     photo.id = parseInt(req.params.id, 10);

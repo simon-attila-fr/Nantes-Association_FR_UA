@@ -252,6 +252,7 @@ INSERT INTO content (body, language_code, traduction_id) VALUES
 ("Nous avons bien reçu votre demande d'abonnement à notre newsletter", "FR", 41),
 ("Ми отримали ваш запит на підписку на нашу розсилку.", "UK", 41);
 
+
 INSERT INTO traduction (ref, definition, type) VALUES
 ('home_website_title', 'Titre du site', 0),
 ('home_website_subtitle', 'Sous-titre du site', 0),
@@ -305,6 +306,7 @@ INSERT INTO traduction (ref, definition, type) VALUES
 ('other_button_contact', 'Contact : bouton envoi message', 0),
 ('other_button_upload', 'Adhésion : bouton téléchargement formulaire', 0),
 ('other_button_newsletter', 'Newsletter : bouton abonnement newsletter', 0);
+
 
 INSERT INTO photo (photo_name, photo_url, updated_at, description) VALUES
 ("mosaic1", "/assets/images/1.jpg1658999782702.jpg", "2022-07-28", "Chargement du camion avec un drapeau ukranien"),
