@@ -1,19 +1,38 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import GlobalContext from "../contexts/GlobalContext";
-import logo from "../../assets/img/logo.png";
 import Translate from "./Translate";
-import compass from "../../assets/img/compass.png";
 import Traduction from "./Traduction";
+import compass from "../../assets/img/compass.png";
+import logo from "../../assets/img/logo.png";
+
 import "../../assets/styles/Header.css";
+import MenuBurger from "./MenuBurger";
 
 export default function Header() {
+  const [showLinks, setShowLinks] = useState(false);
   const { setLang } = useContext(GlobalContext);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      position: "center",
+      icon: "info",
+      title: "module de paiement à venir",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+
+  };
+
   return (
-    <nav className="nav-main">
+    <nav className={`nav-main ${showLinks ? "show_nav" : null}  `}>
       <div>
         <Link to="/">
           <div className="nav-logo">
@@ -30,7 +49,7 @@ export default function Header() {
       </div>
 
       <div className="nav-gift-btn">
-        <a href="" className="gift-btn">
+        <a href="" onClick={handleSubmit} className="gift-btn">
           <span className="gift-span-btn">
             <Traduction reference="other_button_gift" />
           </span>
@@ -44,9 +63,7 @@ export default function Header() {
       </div>
 
       <div className="nav-menu">
-        <a href="#" className="menu-toggler" aria-label="page menu">
-          <img className="menu-icon" src={compass} alt="menu-icon" />
-        </a>
+        <MenuBurger handleShowLinks={handleShowLinks} />
 
         <NavLink
           to="/"

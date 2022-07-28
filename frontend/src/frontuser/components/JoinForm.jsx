@@ -27,33 +27,6 @@ export default function JoinForm() {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/member`, members)
-      .then(
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Le contenu a bien été mis à jour",
-          showConfirmButton: false,
-          timer: 1500,
-        })
-      )
-      .then(
-        setMembers({
-          ...members,
-          name: "",
-          lastName: "",
-          email: "",
-          address: "",
-          phone: "",
-          cotisation: 0,
-          newsletter: 0,
-        })
-      )
-      .then(setIsChecked(false));
-  };
   const changeName = (e) => {
     setMembers({ ...members, name: e.target.value });
   };
@@ -72,6 +45,47 @@ export default function JoinForm() {
   };
   const changeCotisation = (e) => {
     setMembers({ ...members, cotisation: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      !members.name ||
+      !members.lastName ||
+      !members.email ||
+      !members.address ||
+      !members.cotisation
+    ) {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title:
+          "Merci de renseigner vos prénom, nom, email, adresse et la cotisation choisie",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    } else {
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/member`, members).then(
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Le contenu a bien été mis à jour",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      );
+      setMembers({
+        ...members,
+        name: "",
+        lastName: "",
+        email: "",
+        address: "",
+        phone: "",
+        cotisation: 0,
+        newsletter: 0,
+      });
+      setIsChecked(false);
+    }
   };
 
   return (
