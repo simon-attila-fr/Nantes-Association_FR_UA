@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Swal from "sweetalert2";
 import JoinForm from "../components/JoinForm";
 import ContactForm from "../components/ContactForm";
 import "../../assets/styles/Involve.css";
@@ -13,6 +15,17 @@ import Separator from "../components/Separator";
 import adhesion from "../../assets/adhesion.pdf";
 
 export default function Involve() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      position: "center",
+      icon: "info",
+      title: "module de paiement à venir",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
   return (
     <div className="InvolvePage">
       <Header />
@@ -127,7 +140,7 @@ export default function Involve() {
               </a>
             </div>
             <div className="gift-btn-form">
-              <a href="crédit mutuel" className="gift-btn">
+              <a href="#" onClick={handleSubmit} className="gift-btn">
                 <span className="gift-span-btn">
                   <Traduction reference="other_button_gift" />
                 </span>
