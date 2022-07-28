@@ -251,3 +251,12 @@ INSERT INTO content (body, language_code, traduction_id) VALUES
 ("Введіть свою електронну пошту", "UK", 40),
 ("Nous avons bien reçu votre demande d'abonnement à notre newsletter", "FR", 41),
 ("Ми отримали ваш запит на підписку на нашу розсилку.", "UK", 41);
+
+
+INSERT INTO photo (photo_name, photo_url, updated_at, description) VALUES
+("mosaic1", "", "2022-07-28", "mosaic1Description"),
+("mosaic2", "", "2022-07-28", "mosaic2Description"),
+("mosaic3", "", "2022-07-28", "mosaic3Description"),
+("mosaic4", "", "2022-07-28", "mosaic4Description"),
+("mosaic5", "", "2022-07-28", "mosaic5Description"),
+("mosaic6", "", "2022-07-28", "mosaic6Description");
