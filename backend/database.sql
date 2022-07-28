@@ -70,8 +70,6 @@ ALTER TABLE `news` ADD FOREIGN KEY (`photo_id`) REFERENCES `photo` (`id`);
 
 ALTER TABLE `newscontent` ADD FOREIGN KEY (`news_id`) REFERENCES `news` (`id`);
 
-ALTER TABLE `content` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
-
 ALTER TABLE `content` ADD FOREIGN KEY (`traduction_id`) REFERENCES `traduction` (`id`);
 
 ALTER TABLE `newscontent` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
@@ -193,8 +191,8 @@ INSERT INTO content (body, language_code, traduction_id) VALUES
 ("Приєднуйтесь", "UK", 49),
 ("Contacter", "FR", 50 ),
 ("контакт", "UK", 50),
-("Télécharger", "FR", 51),
-("Завантажити", "UK", 51),
+("Télécharger le formulaire d'adhésion", "FR", 51),
+("Завантажте форму членства", "UK", 51),
 ("Inscrivez-vous à la newsletter", "FR", 39),
 ("Підпишіться на розсилку", "UK", 39),
 ("Entrez votre email", "FR", 40),
@@ -254,3 +252,11 @@ INSERT INTO traduction (ref, definition, type) VALUES
 ('other_button_contact', 'Contact : bouton envoi message', 0),
 ('other_button_upload', 'Adhésion : bouton téléchargement formulaire', 0),
 ('other_button_newsletter', 'Newsletter : bouton abonnement newsletter', 0);
+
+INSERT INTO photo (photo_name, photo_url, updated_at, description) VALUES
+("mosaic1", "/assets/images/1.jpg1658999782702.jpg", "2022-07-28", "Chargement du camion avec un drapeau ukranien"),
+("mosaic2", "/assets/images/2.jpg1658999792885.jpg", "2022-07-28", "Camion de l'association"),
+("mosaic3", "/assets/images/3.png1658999804430.png", "2022-07-28", "Chargement du camion"),
+("mosaic4", "/assets/images/4.png1658999815240.png", "2022-07-28", "Camion3"),
+("mosaic5", "/assets/images/5.png1658999830794.png", "2022-07-28", "L'équipe avec un camion chargé"),
+("mosaic6", "/assets/images/6.jpg1659000859595.jpg", "2022-07-28", "Ukranien figurines");
