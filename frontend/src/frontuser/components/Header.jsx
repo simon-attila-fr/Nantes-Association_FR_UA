@@ -25,10 +25,9 @@ export default function Header() {
       showConfirmButton: false,
       timer: 1500,
     });
-
+  };
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
-
   };
 
   return (
