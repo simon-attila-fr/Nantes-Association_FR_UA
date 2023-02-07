@@ -2,17 +2,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react";
 import Swal from "sweetalert2";
-import data from "./data";
+import Traduction from "./Traduction";
 import Legal from "./Legal";
 import "../../assets/styles/Footer.css";
 import facebook from "../../assets/img/facebook.svg";
 import instagram from "../../assets/img/instagram.svg";
 import mail from "../../assets/img/mail.svg";
 import tel from "../../assets/img/phone.svg";
+import send from "../../assets/img/send.png";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
-  const [questions, setQuestions] = useState(data);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +33,7 @@ export default function Footer() {
         showConfirmButton: false,
         timer: 1500,
       });
+      setEmail("");
     }
   };
 
@@ -88,7 +89,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <h5 className="signupTitle">Inscrivez vous à la newsletter</h5>
+          <h5 className="signupTitle">
+            <Traduction reference="other_newsletter_title" />
+          </h5>
           <div className="signupFormContainer">
             <form onSubmit={handleSubmit} className="newsletterSignup">
               <input
@@ -96,12 +99,11 @@ export default function Footer() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="Entrez votre email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button className="newsletterSubmit" type="submit" value="submit">
-                Envoyer
+                <img src={send} alt="send-icon" />
               </button>
             </form>
           </div>
@@ -109,16 +111,13 @@ export default function Footer() {
             <div className="container">
               <div className="legalMentions" id="ancre1" />
               <section className="info">
-                {questions.map((question) => (
-                  <Legal key={question.id} {...question} />
-                ))}
+                <Legal />
               </section>
             </div>
           </div>
         </div>
         <div className="copyrightContainer">
           <p className="copyright">
-            {" "}
             &copy;{new Date().getFullYear()} Association Avenir Franco Ukrainien
           </p>
         </div>

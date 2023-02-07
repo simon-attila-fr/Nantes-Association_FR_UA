@@ -16,8 +16,8 @@ class UserManager extends AbstractManager {
 
   insert(user) {
     return this.connection.query(
-      `insert into ${UserManager.table} (email, password) values (?, ?)`,
-      [user.email, user.password]
+      `insert into ${UserManager.table} (email, password, status) values (?, ?, ?)`,
+      [user.email, user.password, user.status]
     );
   }
 

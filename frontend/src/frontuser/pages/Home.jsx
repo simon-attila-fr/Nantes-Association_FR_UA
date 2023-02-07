@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import "../../assets/styles/Home.css";
 import Traduction from "../components/Traduction";
 import Mosaic from "../components/Mosaic";
-import HomeH2Img from "../../assets/img/HomeH2Img.png1657639372003.png";
+import KalinaMobile from "../../assets/img/MotifKalinaMobile.svg";
 import Separator from "../components/Separator";
-import Logo from "../components/Logo";
+import HomeTitleImage from "../components/HomeTitleImage";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <div className="homeContent">
         <div className="homeStartScreenContainer">
-          <Logo />
+          <HomeTitleImage />
           <div className="homeStartScreenTextArea">
             <h1>
               <Traduction reference="home_website_title" />
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="homeArticles">
             <article className="homePresentationArticle">
               <div className="homeSectionTitleZone">
-                <img src={HomeH2Img} alt="a" />
+                {/* <img src={Kalina1} alt="a" /> */}
                 <h3>
                   <Traduction reference="home_presentation_title" />
                 </h3>
@@ -40,10 +40,13 @@ export default function Home() {
               <p>
                 <Traduction reference="home_presentation_content" />
               </p>
+              <div className="homeArticleImageContainer">
+                <img src={KalinaMobile} alt="" />
+              </div>
             </article>
             <article className="homeMissionArticle">
               <div className="homeSectionTitleZone">
-                <img src={HomeH2Img} alt="a" />
+                {/* <img src={Kalina1} alt="" /> */}
                 <h3>
                   <Traduction reference="home_mission_title" />
                 </h3>
@@ -51,10 +54,13 @@ export default function Home() {
               <p>
                 <Traduction reference="home_mission_content" />
               </p>
+              <div className="homeArticleImageContainer">
+                <img src={KalinaMobile} alt="" />
+              </div>
             </article>
             <article className="homeValuesArticle">
               <div className="homeSectionTitleZone">
-                <img src={HomeH2Img} alt="a" />
+                {/* <img src={Kalina1} alt="" /> */}
                 <h3>
                   <Traduction reference="home_values_title" />
                 </h3>
@@ -62,6 +68,9 @@ export default function Home() {
               <p>
                 <Traduction reference="home_values_content" />
               </p>
+              <div className="homeArticleImageContainer">
+                <img src={KalinaMobile} alt="" />
+              </div>
             </article>
           </div>
         </section>

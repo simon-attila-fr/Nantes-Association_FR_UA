@@ -1,21 +1,61 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import Swal from "sweetalert2";
-// import axios from "axios";
+import axios from "axios";
+import Traduction from "./Traduction";
 import "../../assets/styles/Form.css";
+import like from "../../assets/img/like.png";
 
 export default function JoinForm() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [contribution, setContribution] = useState("");
-  const [newsletter, setNewsletter] = useState("");
+  const [members, setMembers] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    address: "",
+    phone: "",
+    cotisation: 0,
+    newsletter: 0,
+  });
+
+  const [isChecked, setIsChecked] = useState(false);
+  const checkHandler = () => {
+    setIsChecked(!isChecked);
+    if (isChecked) {
+      setMembers({ ...members, newsletter: 0 });
+    } else {
+      setMembers({ ...members, newsletter: 1 });
+    }
+  };
+
+  const changeName = (e) => {
+    setMembers({ ...members, name: e.target.value });
+  };
+
+  const changeLastname = (e) => {
+    setMembers({ ...members, lastName: e.target.value });
+  };
+  const changeEmail = (e) => {
+    setMembers({ ...members, email: e.target.value });
+  };
+  const changeAddress = (e) => {
+    setMembers({ ...members, address: e.target.value });
+  };
+  const changePhone = (e) => {
+    setMembers({ ...members, phone: e.target.value });
+  };
+  const changeCotisation = (e) => {
+    setMembers({ ...members, cotisation: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!firstname || !lastname || !email || !address || !contribution) {
+    if (
+      !members.name ||
+      !members.lastName ||
+      !members.email ||
+      !members.address ||
+      !members.cotisation
+    ) {
       Swal.fire({
         position: "center",
         icon: "error",
@@ -25,29 +65,35 @@ export default function JoinForm() {
         timer: 2000,
       });
     } else {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Votre demande d'adhésion a bien été envoyée",
-        showConfirmButton: false,
-        timer: 1500,
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/member`, members).then(
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Le contenu a bien été mis à jour",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      );
+      setMembers({
+        ...members,
+        name: "",
+        lastName: "",
+        email: "",
+        address: "",
+        phone: "",
+        cotisation: 0,
+        newsletter: 0,
       });
+      setIsChecked(false);
     }
-    // axios.post(`${import.meta.env.VITE_BACKEND_URL}/member, members`).then(
-    // Swal.fire({
-    //   position: "center",
-    //   icon: "success",
-    //   title: "Le contenu a bien été mis à jour",
-    //   showConfirmButton: false,
-    //   timer: 1500,
-    // })
-    // );
   };
 
   return (
     <div className="form-container">
       <div className="formrow formheader">
-        <h1 className="form-h1">ADHERER</h1>
+        <h1 className="form-h1">
+          <Traduction reference="involve_joinform_title" />
+        </h1>
       </div>
       <div className="formbody">
         <form
@@ -60,26 +106,28 @@ export default function JoinForm() {
             <li className="form-li">
               <p className="stay-left">
                 <label className="form-label" htmlFor="firstname">
-                  Prénom <span className="req">*</span>
+                  <Traduction reference="involve_joinform_label_firstname" />
+                  <span className="req">*</span>
                 </label>
                 <input
                   className="forminput"
                   type="text"
+                  value={members.name}
                   name="firstname"
-                  value={firstname}
-                  onChange={(e) => setFirstname(e.target.value)}
+                  onChange={changeName}
                 />
               </p>
               <p className="stay-left">
                 <label className="form-label" htmlFor="lastname">
-                  Nom <span className="req">*</span>
+                  <Traduction reference="involve_joinform_label_lastname" />
+                  <span className="req">*</span>
                 </label>
                 <input
                   className="forminput"
                   type="text"
+                  value={members.lastName}
                   name="lastname"
-                  value={lastname}
-                  onChange={(e) => setLastname(e.target.value)}
+                  onChange={changeLastname}
                 />
               </p>
             </li>
@@ -87,84 +135,87 @@ export default function JoinForm() {
             <li className="form-li">
               <p className="stay-left">
                 <label className="form-label" htmlFor="email">
-                  email <span className="req">*</span>
+                  <Traduction reference="involve_joinform_label_email" />
+                  <span className="req">*</span>
                 </label>
                 <input
                   className="forminput"
                   type="email"
+                  value={members.email}
                   name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={changeEmail}
                 />
               </p>
             </li>
             <li className="form-li">
               <p className="stay-left">
                 <label className="form-label" htmlFor="phone">
-                  Téléphone
+                  <Traduction reference="involve_joinform_label_phone" />
                 </label>
                 <input
                   className="forminput"
                   type="text"
+                  value={members.phone}
                   name="phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={changePhone}
                 />
               </p>
             </li>
             <li className="form-li">
               <label className="form-label" htmlFor="address">
-                Adresse <span className="req">*</span>
+                <Traduction reference="involve_joinform_label_address" />{" "}
+                <span className="req">*</span>
               </label>
               <textarea
                 className="formtextarea"
                 id="address"
+                value={members.address}
                 name="address"
                 cols="35"
                 rows="10"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                onChange={changeAddress}
               />
             </li>
 
             <div className="form-radio">
               <h4 className="form-h4">
-                Choisissez votre cotisation <span className="req">*</span>
+                <Traduction reference="involve_joinform_label_contribution_title" />{" "}
+                <span className="req">*</span>
               </h4>
               <div className="radio">
                 <label>
                   <input
                     type="radio"
-                    name="radio"
-                    value={contribution}
-                    onChange={(e) => setContribution(e.target.value)}
+                    name="cotisation"
+                    value="18"
+                    onChange={changeCotisation}
                   />
                   <i className="helper" />
-                  Adhérent : 18€
+                  <Traduction reference="involve_joinform_label_contribution_adherent" />
                 </label>
               </div>
               <div className="radio">
                 <label>
                   <input
                     type="radio"
-                    name="radio"
-                    value={contribution}
-                    onChange={(e) => setContribution(e.target.value)}
+                    name="cotisation"
+                    value="8"
+                    onChange={changeCotisation}
                   />
                   <i className="helper" />
-                  Adhérent jeune : 8€
+                  <Traduction reference="involve_joinform_label_contribution_adherentjeune" />
                 </label>
               </div>
               <div className="radio">
                 <label>
                   <input
                     type="radio"
-                    name="radio"
-                    value={contribution}
-                    onChange={(e) => setContribution(e.target.value)}
+                    name="cotisation"
+                    value="100"
+                    onChange={changeCotisation}
                   />
                   <i className="helper" />
-                  Adhérent Bienfaiteur : 100€
+                  <Traduction reference="involve_joinform_label_contribution_adherentbienfaiteur" />
                 </label>
               </div>
             </div>
@@ -172,11 +223,12 @@ export default function JoinForm() {
               <label>
                 <input
                   type="checkbox"
-                  value={newsletter}
-                  onChange={(e) => setNewsletter(e.target.value)}
+                  value={members.newsletter}
+                  checked={isChecked}
+                  onChange={checkHandler}
                 />
                 <i className="helper" />
-                Cochez pour vous inscrire à notre newsletter
+                <Traduction reference="involve_joinform_label_newsletter" />
               </label>
             </div>
 
@@ -189,8 +241,12 @@ export default function JoinForm() {
                 type="submit"
                 value="adhérer"
               >
-                <span>Merci !</span>
-                <span>Adhérer</span>
+                <span>
+                  <img className="like-icon" src={like} alt="like-icon" />
+                </span>
+                <span>
+                  <Traduction reference="other_button_join" />
+                </span>
               </button>
             </li>
           </ul>

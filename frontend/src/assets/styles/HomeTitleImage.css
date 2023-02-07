@@ -1,0 +1,15 @@
+.homeTitleImgContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.homeTitleImgContainer img {
+  height: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .homeTitleImgContainer img {
+    height: unset;
+  }
+}

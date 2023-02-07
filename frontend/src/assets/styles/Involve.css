@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-
 .involve-container {
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontTitle);
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -12,7 +10,12 @@
   margin-right: auto;
 }
 
+.form-container {
+  font-family: var(--fontTitle);
+}
+
 .involve-title {
+  font-family: var(--fontTitle);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 0px;
@@ -125,6 +128,17 @@
   align-items: center;
 }
 
+.card-front h2 {
+  font-family: var(--fontTitle);
+  text-transform: uppercase;
+}
+
+.card-front p,
+.card-back p {
+  font-family: var(--fontText);
+  font-size: 1.25rem;
+}
+
 .card-wrapper .card-front {
   box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 14px 14px 0px -1px rgba(0, 0, 0, 0.3);
@@ -134,16 +148,24 @@
   border-right: solid 3px var(--mainColor);
 }
 
-.involve-p {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  padding-top: 1rem;
+.card-front h2 {
+  text-transform: uppercase;
+  font-family: var(--fontTitle);
 }
 
-.corner-icon {
+.involve-p {
+  font-size: clamp(1.25rem, 5vw, 1rem);
+  line-height: 1.25rem;
+  padding-top: 1rem;
+  font-family: var(--fontText);
+}
+
+.Kalina1-icon {
   position: absolute;
   right: 10px;
   bottom: 10px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .card-back {
@@ -155,7 +177,7 @@
 }
 
 .card-back p {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   padding-bottom: 2rem;
 }
 

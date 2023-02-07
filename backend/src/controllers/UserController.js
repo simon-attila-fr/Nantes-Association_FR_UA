@@ -3,31 +3,49 @@ const jwt = require("jsonwebtoken");
 const models = require("../models");
 
 class UserController {
+  // eslint-disable-next-line consistent-return
   static register = async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      res.status(400).send("Vous devez entrer un email et un mot de passe");
+      return res
+        .status(400)
+        .send("Vous devez entrer un email et un mot de passe");
     }
 
     try {
-      const hash = await argon2.hash(password);
-      models.user
-        .insert({
-          email,
-          password: hash,
-        })
-        .then(([result]) => {
-          res.status(201).send({ id: result.insertId, email });
-        })
-        .catch((err) => {
-          console.error(err);
-          res.status(500).send({
-            error: err.message,
-          });
-        });
-    } catch (err) {
-      res.status(500).send("Erreur lors du chiffrement du mot de passe");
+      // eslint-disable-next-line consistent-return
+      models.user.findByMail(email).then(async ([result]) => {
+        if (result.length > 0) {
+          return res.status(409).json({ message: "Conflict." });
+        }
+
+        try {
+          const hash = await argon2.hash(password);
+          models.user
+            .insert({
+              email,
+              password: hash,
+              status: "user",
+            })
+            .then(([resultTwo]) => {
+              return res.status(201).send({ id: resultTwo.insertId, email });
+            })
+            .catch((err) => {
+              console.error(err);
+              return res.status(500).send({
+                error: err.message,
+              });
+            });
+        } catch (err) {
+          return res
+            .status(500)
+            .send("Erreur lors du chiffrement du mot de passe");
+        }
+      });
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: "Une erreur est survenue." });
     }
   };
 
@@ -46,12 +64,12 @@ class UserController {
             .status(403)
             .send("L'email ou le mot de passe ne sont pas valides");
         } else {
-          const { id, email: mail, password: hash } = rows[0];
+          const { id, email: mail, password: hash, status } = rows[0];
 
           try {
             if (await argon2.verify(hash, password)) {
               const token = await jwt.sign(
-                { id },
+                { id, status },
                 process.env.JWT_AUTH_SECRET,
                 { expiresIn: "1h" }
               );
@@ -61,7 +79,7 @@ class UserController {
                   secure: process.env.NODE_ENV === "production",
                 })
                 .status(200)
-                .send({ id, mail });
+                .send({ id, mail, status });
             } else {
               res
                 .status(403)
@@ -95,14 +113,14 @@ class UserController {
   };
 
   static authorization = (req, res, next) => {
-    const token = req.cookies.access_token;
-    if (!token) {
-      return res.sendStatus(401);
+    if (!req.cookies.access_token) {
+      return res.status(401).json({ message: "Please sign in!" });
     }
+    const token = req.cookies.access_token;
     try {
       const data = jwt.verify(token, process.env.JWT_AUTH_SECRET);
       req.userId = data.id;
-      req.userRole = data.role;
+      req.userStatus = data.status;
       return next();
     } catch {
       return res.sendStatus(401);
@@ -111,7 +129,7 @@ class UserController {
 
   // eslint-disable-next-line consistent-return
   static isAdmin = (req, res, next) => {
-    if (req.userRole === "ROLE_ADMIN") {
+    if (req.userStatus === "admin") {
       return next();
     }
     res.sendStatus(403);

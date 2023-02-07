@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Swal from "sweetalert2";
 import JoinForm from "../components/JoinForm";
 import ContactForm from "../components/ContactForm";
 import "../../assets/styles/Involve.css";
-import corner from "../../assets/img/corner.png";
-import hand1 from "../../assets/img/hand1.png";
+import Kalina1 from "../../assets/img/Kalina1.svg";
+import hand1 from "../../assets/img/hand1.jpg";
 import hand2 from "../../assets/img/hand2.png";
 import hand3 from "../../assets/img/hand3.png";
 import heart from "../../assets/img/heart.png";
@@ -10,17 +12,33 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Traduction from "../components/Traduction";
 import Separator from "../components/Separator";
+import adhesion from "../../assets/adhesion.pdf";
 
 export default function Involve() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      position: "center",
+      icon: "info",
+      title: "module de paiement à venir",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
   return (
     <div className="InvolvePage">
       <Header />
       <div className="involve-container">
         <p className="involve-title">
-          <span className="involve-span-title">Choisissez la Paix,</span>
+          <span className="involve-span-title">
+            <Traduction reference="involve_slogan1" />
+          </span>
         </p>
         <p className="involve-title">
-          <span className="involve-span-title">soutenez l'Ukraine ! </span>
+          <span className="involve-span-title">
+            <Traduction reference="involve_slogan2" />
+          </span>
         </p>
 
         <div className="card-container">
@@ -41,7 +59,7 @@ export default function Involve() {
                 <p className="involve-p">
                   <Traduction reference="involve_donate_content" />
                 </p>
-                <img className="corner-icon" alt="corner" src={corner} />
+                <img className="Kalina1-icon" alt="Kalina1" src={Kalina1} />
               </div>
               <div className="card-back">
                 <div>
@@ -70,7 +88,7 @@ export default function Involve() {
                 <p className="involve-p">
                   <Traduction reference="involve_join_content" />
                 </p>
-                <img className="corner-icon" alt="corner" src={corner} />
+                <img className="Kalina1-icon" alt="Kalina1" src={Kalina1} />
               </div>
               <div className="card-back">
                 <div>
@@ -99,7 +117,7 @@ export default function Involve() {
                 <p className="involve-p">
                   <Traduction reference="involve_engage_content" />
                 </p>
-                <img className="corner-icon" alt="corner" src={corner} />
+                <img className="Kalina1-icon" alt="Kalina1" src={Kalina1} />
               </div>
               <div className="card-back">
                 <img className="involve-pic" alt="heart" src={heart} />
@@ -115,19 +133,17 @@ export default function Involve() {
           <div className="contact-form">
             <ContactForm />
             <div className="upload-btn-form">
-              <a
-                href="../../assets/adhesion.pdf"
-                download
-                className="upload-btn"
-              >
+              <a href={adhesion} download className="upload-btn">
                 <span className="upload-span-btn">
-                  Télécharger le formulaire d'adhésion
+                  <Traduction reference="other_button_upload" />
                 </span>
               </a>
             </div>
             <div className="gift-btn-form">
-              <a href="crédit mutuel" className="gift-btn">
-                <span className="gift-span-btn">Faire un don</span>
+              <a href="#" onClick={handleSubmit} className="gift-btn">
+                <span className="gift-span-btn">
+                  <Traduction reference="other_button_gift" />
+                </span>
               </a>
             </div>
           </div>
@@ -143,6 +159,7 @@ export default function Involve() {
             </svg>
           </div>
         </div>
+        <Separator />
       </div>
       <Footer />
     </div>
