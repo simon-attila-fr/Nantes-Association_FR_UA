@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const AdminRouter = require("./routes/AdminRouter");
+const UserRouter = require("./routes/UserRouter");
 const ContentRouter = require("./routes/ContentRouter");
 const MailRouter = require("./routes/MailRouter");
 const MemberRouter = require("./routes/MemberRouter");
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, "../public/assets/images")));
 app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 
 // API routes
-app.use("/user", AdminRouter);
+app.use("/user", UserRouter);
 app.use("/content", ContentRouter);
 app.use("/sendmail", MailRouter);
 app.use("/member", MemberRouter);

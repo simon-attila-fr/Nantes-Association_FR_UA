@@ -4,7 +4,8 @@ USE afu;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `email` varchar(255) UNIQUE NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `status` varchar(10) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `member` (
