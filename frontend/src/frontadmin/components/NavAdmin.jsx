@@ -1,7 +1,31 @@
-import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AiOutlineEdit, AiOutlineHeart } from "react-icons/ai";
+import useAuth from "../../hooks/useAuth";
 
 export default function NavAdmin() {
+  const { auth, setAuth } = useAuth();
+  const navigate = useNavigate();
+
+  async function handleLogout(e) {
+    e.preventDefault();
+    await axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/user/logout`, {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true,
+      })
+      .then(
+        setAuth({
+          id: "",
+          email: "",
+          status: [""],
+          loggedIn: false,
+        })
+      )
+      .then(navigate("/admin/", { replace: true }))
+      .catch((error) => console.error(error));
+  }
+
   return (
     <aside className="sidebar">
       <div>
@@ -56,9 +80,13 @@ export default function NavAdmin() {
           </ul>
         </nav>
       </div>
-      <NavLink to="/admin/logout">
-        <div className="disconnect"> Se déconnecter</div>
-      </NavLink>
+      <div
+        className={auth.loggedIn === true ? "disconnect" : "disconnect-hidden"}
+      >
+        <button type="submit" onClick={handleLogout}>
+          Se déconnecter
+        </button>
+      </div>
     </aside>
   );
 }

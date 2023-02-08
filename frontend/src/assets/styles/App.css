@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+p, a, button, label {
+  font-family: var(--fontText);
+}
+
 :root {
   --mainColor: #2559b6;
   --mainColorLight: #a7bce1;
