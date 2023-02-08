@@ -59,7 +59,7 @@
   font-size: 12px;
 }
 
-.login-box form a {
+.login-box form article {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -73,7 +73,7 @@
   letter-spacing: 4px;
 }
 
-.login-box a:hover {
+.login-box article:hover {
   background: #f8d849;
   color: #2559b6;
   border-radius: 5px;
@@ -81,12 +81,12 @@
     0 0 100px #f8d849;
 }
 
-.login-box a span {
+.login-box article span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+.login-box article span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -105,7 +105,7 @@
   }
 }
 
-.login-box a span:nth-child(2) {
+.login-box article span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -125,7 +125,7 @@
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box article span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -145,7 +145,7 @@
   }
 }
 
-.login-box a span:nth-child(4) {
+.login-box article span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -165,17 +165,28 @@
   }
 }
 
-button {
-  background-color: #f8d849;
+.login-box button {
+  text-transform: uppercase;
+  background-color: transparent;
   border: none;
 }
 
-a {
-  text-decoration: none;
-  font-size: small;
+.login-box button:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, transparent, #f8d849);
 }
 
-a:visited {
+.login-box article {
+  text-decoration: none;
+  /* font-size: small; */
+}
+
+.login-box a {
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.login-box a:visited {
   color: black;
 }
 
