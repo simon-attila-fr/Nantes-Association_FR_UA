@@ -9,7 +9,10 @@ export default function ContentOther() {
   // Récupérer la donnée initial à afficher dans le formulaire
   async function getInitialData() {
     await axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/content/other`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/content/other`, {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true,
+      })
       .then((data) => setContent(data.data))
       .then()
       .catch((error) => {
