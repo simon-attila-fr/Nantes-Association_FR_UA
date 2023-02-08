@@ -15,6 +15,7 @@ import ContentPhoto from "./frontadmin/pages/ContentPhoto";
 import MemberForm from "./frontadmin/components/Form/MemberForm";
 import Members from "./frontadmin/pages/Members";
 import Register from "./frontadmin/pages/Register";
+import RequireAuth from "./hooks/RequireAuth";
 
 export default function App() {
   const [traduction, setTraduction] = useState({});
@@ -33,15 +34,17 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/involve" element={<Involve />} />
           <Route path="/admin/" element={<LayoutAdmin />}>
-            <Route index element={<ContentHome />} />
             <Route path="/admin/login" element={<Login />} />
-            <Route path="/admin/register" element={<Register />} />
-            <Route path="/admin/accueil" element={<ContentHome />} />
-            <Route path="/admin/donation" element={<ContentInvolve />} />
-            <Route path="/admin/other" element={<ContentOther />} />
-            <Route path="/admin/photos" element={<ContentPhoto />} />
-            <Route path="/admin/membre" element={<Members />} />
-            <Route path="/admin/addmembre" element={<MemberForm />} />
+            <Route element={<RequireAuth allowedStatuses={["admin"]} />}>
+              <Route index element={<ContentHome />} />
+              <Route path="/admin/register" element={<Register />} />
+              <Route path="/admin/accueil" element={<ContentHome />} />
+              <Route path="/admin/donation" element={<ContentInvolve />} />
+              <Route path="/admin/other" element={<ContentOther />} />
+              <Route path="/admin/photos" element={<ContentPhoto />} />
+              <Route path="/admin/membre" element={<Members />} />
+              <Route path="/admin/addmembre" element={<MemberForm />} />
+            </Route>
           </Route>
         </Routes>
       </GlobalContext.Provider>
