@@ -8,7 +8,10 @@ export default function ContentInvolve() {
   // Récupérer la donnée initial à afficher dans le formulaire
   async function getInitialData() {
     await axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/content/involve`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/content/involve`, {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true,
+      })
       .then((data) => setContent(data.data))
       .catch((error) => {
         console.error(error);

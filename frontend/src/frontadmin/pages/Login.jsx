@@ -72,33 +72,40 @@ function Login() {
       <p ref={errorRef} aria-live="assertive">
         {errorMsg}
       </p>
-      <h1>Sign In</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          ref={emailRef}
-          id="email"
-          autoComplete="off"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          required
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          autoComplete="off"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-          required
-        />
+        <section className="user-box">
+          <input
+            type="email"
+            ref={emailRef}
+            id="email"
+            autoComplete="off"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            required
+          />
+          <label htmlFor="email">Email:</label>
+        </section>
+        <section className="user-box">
+          <input
+            type="password"
+            id="password"
+            autoComplete="off"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            required
+          />
+          <label htmlFor="password">Password</label>
+        </section>
         <div className="submit-box">
-          <span>
+          <article>
+            <span />
+            <span />
+            <span />
+            <span />
             <button type="submit" value="Se connecter">
               Se connecter
             </button>
-          </span>
+          </article>
         </div>
       </form>
       <Link to="/">Retour à la page d'accueil</Link>

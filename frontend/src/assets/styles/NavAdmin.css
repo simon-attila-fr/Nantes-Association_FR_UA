@@ -1,12 +1,12 @@
 .sidebar {
   background-color: #2559b6;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   width: 15rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .espace-admin {
@@ -28,14 +28,27 @@
   border-radius: 2rem 0 0;
   border-top: 0.1rem solid white;
   text-decoration: none;
+  /* color: white; */
+}
+
+.disconnect button {
+  font-size: 16px;
+  border: none;
+  background-color: #2559b6;
   color: white;
+  cursor: pointer;
+}
+
+.disconnect-hidden {
+  display: none;
 }
 
 .disconnect:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.sidebar nav ul li a {
+.sidebar nav ul li a,
+.sidebar button {
   list-style: none;
   text-decoration: none;
 
