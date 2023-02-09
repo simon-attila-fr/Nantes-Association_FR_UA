@@ -11,7 +11,14 @@ export default function ContentFormDetail({ initialContent }) {
     e.preventDefault();
 
     axios
-      .put(`${import.meta.env.VITE_BACKEND_URL}/content/${content.id}`, content)
+      .put(
+        `${import.meta.env.VITE_BACKEND_URL}/content/${content.id}`,
+        content,
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      )
       .then(
         Swal.fire({
           position: "center",
