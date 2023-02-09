@@ -14,9 +14,9 @@ CREATE TABLE IF NOT EXISTS `member` (
   `lastName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `address` varchar(255),
-  `phone` int,
-  `cotisation` INT NOT NULL,
-  `newsletter` boolean
+  `phone` varchar(10),
+  `cotisation` varchar(10) NOT NULL,
+  `newsletter` varchar(1)
 );
 
 CREATE TABLE IF NOT EXISTS `news` (
