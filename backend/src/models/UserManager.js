@@ -11,7 +11,7 @@ class UserManager extends AbstractManager {
   }
 
   findAll() {
-    return this.connection.query(`select id, email from ${this.table}`);
+    return this.connection.query(`select id, email, status from ${this.table}`);
   }
 
   insert(user) {
@@ -21,10 +21,17 @@ class UserManager extends AbstractManager {
     );
   }
 
-  update(user) {
+  updateEmail(user) {
     return this.connection.query(
-      `update ${UserManager.table} set email = ?, password = ?, where id = ?`,
-      [user.email, user.password, user.id]
+      `update ${UserManager.table} set email = ? where id = ?`,
+      [user.email, user.id]
+    );
+  }
+
+  updateStatus(user) {
+    return this.connection.query(
+      `update ${UserManager.table} set status = ? where id = ?`,
+      [user.status, user.id]
     );
   }
 }

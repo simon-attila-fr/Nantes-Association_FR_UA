@@ -159,6 +159,27 @@ class UserController {
       });
   };
 
+  // modifyemail
+  static modifyEmail = (req, res) => {
+    const user = {};
+    user.id = parseInt(req.params.id, 10);
+    user.email = req.body.email;
+
+    models.user
+      .updateEmail(user)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.status(204).json({ message: "L'adresse a bien été modifiée." });
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
   static delete = (req, res) => {
     models.user
       .delete(req.params.id)

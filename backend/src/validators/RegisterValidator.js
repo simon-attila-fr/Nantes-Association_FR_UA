@@ -24,6 +24,28 @@ const validateRegister = async (req, res, next) => {
   return next();
 };
 
+const emailSchema = Joi.object({
+  email: Joi.string().email({ minDomainSegments: 2 }).required(),
+});
+
+const validateEmail = async (req, res, next) => {
+  if (!req.body.email) {
+    return res.status(400).json({ message: "Missing email." });
+  }
+
+  const { email } = req.body;
+
+  const { error } = await emailSchema.validate(
+    { email },
+    { abortEarly: false }
+  );
+  if (error) {
+    return res.status(422).json({ validationErrors: error.details[0].message });
+  }
+  return next();
+};
+
 module.exports = {
   validateRegister,
+  validateEmail,
 };
