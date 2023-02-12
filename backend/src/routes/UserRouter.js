@@ -3,6 +3,7 @@ const { authorization, isAdmin } = require("../controllers/UserController");
 const {
   validateRegister,
   validateEmail,
+  validateStatus,
 } = require("../validators/RegisterValidator");
 const { UserController } = require("../controllers");
 
@@ -17,6 +18,12 @@ router.put(
   authorization,
   validateEmail,
   UserController.modifyEmail
+);
+router.put(
+  "/modifystatus/:id",
+  authorization,
+  validateStatus,
+  UserController.modifyStatus
 );
 // router.get("/modifypassword", authorization, UserController.logout);
 // router.get("/deleteaccount", authorization, UserController.logout);

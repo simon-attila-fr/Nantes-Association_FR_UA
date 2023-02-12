@@ -171,8 +171,28 @@ class UserController {
         if (result.affectedRows === 0) {
           res.sendStatus(404);
         } else {
-          res.status(204).json({ message: "L'adresse a bien été modifiée." });
+          res.status(200).json({ message: "L'adresse a bien été modifiée." });
         }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
+  // modifystatus
+  static modifyStatus = (req, res) => {
+    const user = {};
+    user.id = parseInt(req.params.id, 10);
+    user.status = req.body.status;
+
+    models.user
+      .updateStatus(user)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          return res.sendStatus(404);
+        }
+        return res.status(200).send({ message: "Le rôle a bien été modifié." });
       })
       .catch((err) => {
         console.error(err);

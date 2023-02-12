@@ -45,7 +45,21 @@ const validateEmail = async (req, res, next) => {
   return next();
 };
 
+const validateStatus = (req, res, next) => {
+  if (!req.body.status) {
+    return res.status(400).json({ message: "Missing status." });
+  }
+
+  const { status } = req.body;
+
+  if (status !== "user" && status !== "admin") {
+    return res.status(422).json({ message: "Wrong status value." });
+  }
+  return next();
+};
+
 module.exports = {
   validateRegister,
   validateEmail,
+  validateStatus,
 };
