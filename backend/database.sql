@@ -71,7 +71,11 @@ ALTER TABLE `news` ADD FOREIGN KEY (`photo_id`) REFERENCES `photo` (`id`);
 
 ALTER TABLE `newscontent` ADD FOREIGN KEY (`news_id`) REFERENCES `news` (`id`);
 
+ALTER TABLE `content` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
+
 ALTER TABLE `content` ADD FOREIGN KEY (`traduction_id`) REFERENCES `traduction` (`id`);
+
+ALTER TABLE `newscontent` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
 
 INSERT INTO traduction (ref, definition, type) VALUES
 ('home_website_title', 'Titre du site', 0),
