@@ -89,8 +89,9 @@ PhotoFormDetail.defaultProps = {
   initialContent: PropTypes.shape({
     id: 1,
     photo_name: "mosaic1",
-    photo_url:
-      "http://localhost:5000/assets/images/ProfilAttila.png1657924240178.png",
+    photo_url: `${
+      import.meta.env.VITE_BACKEND_URL
+    }/assets/images/ProfilAttila.png1657924240178.png`,
     description: "Description",
   }),
 };
