@@ -1,6 +1,9 @@
+require("dotenv").config();
 const argon2 = require("argon2");
 const jwt = require("jsonwebtoken");
 const models = require("../models");
+
+const defaultUserRole = process.env.REGISTER_DEFAULT_USER_ROLE;
 
 class UserController {
   // eslint-disable-next-line consistent-return
@@ -26,7 +29,7 @@ class UserController {
             .insert({
               email,
               password: hash,
-              status: "user",
+              status: defaultUserRole,
             })
             .then(([resultTwo]) => {
               return res.status(201).send({ id: resultTwo.insertId, email });
@@ -152,6 +155,47 @@ class UserController {
         } else {
           res.sendStatus(204);
         }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
+  // modifyemail
+  static modifyEmail = (req, res) => {
+    const user = {};
+    user.id = parseInt(req.params.id, 10);
+    user.email = req.body.email;
+
+    models.user
+      .updateEmail(user)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.status(200).json({ message: "L'adresse a bien été modifiée." });
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
+  // modifystatus
+  static modifyStatus = (req, res) => {
+    const user = {};
+    user.id = parseInt(req.params.id, 10);
+    user.status = req.body.status;
+
+    models.user
+      .updateStatus(user)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          return res.sendStatus(404);
+        }
+        return res.status(200).send({ message: "Le rôle a bien été modifié." });
       })
       .catch((err) => {
         console.error(err);
