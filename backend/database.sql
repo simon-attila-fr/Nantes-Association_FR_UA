@@ -14,9 +14,9 @@ CREATE TABLE IF NOT EXISTS `member` (
   `lastName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `address` varchar(255),
-  `phone` int,
-  `cotisation` INT NOT NULL,
-  `newsletter` boolean
+  `phone` varchar(10),
+  `cotisation` varchar(10) NOT NULL,
+  `newsletter` varchar(1)
 );
 
 CREATE TABLE IF NOT EXISTS `news` (
@@ -71,7 +71,11 @@ ALTER TABLE `news` ADD FOREIGN KEY (`photo_id`) REFERENCES `photo` (`id`);
 
 ALTER TABLE `newscontent` ADD FOREIGN KEY (`news_id`) REFERENCES `news` (`id`);
 
+ALTER TABLE `content` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
+
 ALTER TABLE `content` ADD FOREIGN KEY (`traduction_id`) REFERENCES `traduction` (`id`);
+
+ALTER TABLE `newscontent` ADD FOREIGN KEY (`language_code`) REFERENCES `language` (`code`);
 
 INSERT INTO traduction (ref, definition, type) VALUES
 ('home_website_title', 'Titre du site', 0),
