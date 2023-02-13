@@ -1,6 +1,9 @@
+require("dotenv").config();
 const argon2 = require("argon2");
 const jwt = require("jsonwebtoken");
 const models = require("../models");
+
+const defaultUserRole = process.env.REGISTER_DEFAULT_USER_ROLE;
 
 class UserController {
   // eslint-disable-next-line consistent-return
@@ -26,7 +29,7 @@ class UserController {
             .insert({
               email,
               password: hash,
-              status: "user",
+              status: defaultUserRole,
             })
             .then(([resultTwo]) => {
               return res.status(201).send({ id: resultTwo.insertId, email });
